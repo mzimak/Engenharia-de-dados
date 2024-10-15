@@ -1,0 +1,94 @@
+-- Criação da Tabela Dim_Produto
+CREATE TABLE Dim_Produto (
+    Produto_ID SERIAL PRIMARY KEY,
+    Nome VARCHAR(255) NOT NULL,
+    Categoria VARCHAR(255)
+);
+
+-- Criação da Tabela Dim_Canal
+CREATE TABLE Dim_Canal (
+    Canal_ID SERIAL PRIMARY KEY,
+    Nome VARCHAR(255) NOT NULL,
+    Região VARCHAR(255)
+);
+
+-- Criação da Tabela Dim_Data
+CREATE TABLE Dim_Data (
+    Data_ID SERIAL PRIMARY KEY,
+    Dia INT NOT NULL,
+    Mês INT NOT NULL,
+    Ano INT NOT NULL,
+    Data_Completa DATE NOT NULL
+);
+
+-- Criação da Tabela Dim_Cliente
+CREATE TABLE Dim_Cliente (
+    Cliente_ID SERIAL PRIMARY KEY,
+    Nome VARCHAR(255) NOT NULL,
+    Tipo VARCHAR(255),
+    Cidade VARCHAR(255),
+    Estado VARCHAR(50),
+    País VARCHAR(255)
+);
+
+-- Criação da Tabela Fato_Venda com chave primária composta
+CREATE TABLE Fato_Venda (
+    Produto_ID INT NOT NULL,
+    Canal_ID INT NOT NULL,
+    Data_ID INT NOT NULL,
+    Cliente_ID INT NOT NULL,
+    Valor DECIMAL(10, 2) NOT NULL,
+    Quantidade INT NOT NULL,
+    PRIMARY KEY (Produto_ID, Canal_ID, Data_ID, Cliente_ID),
+    FOREIGN KEY (Produto_ID) REFERENCES Dim_Produto(Produto_ID),
+    FOREIGN KEY (Canal_ID) REFERENCES Dim_Canal(Canal_ID),
+    FOREIGN KEY (Data_ID) REFERENCES Dim_Data(Data_ID),
+    FOREIGN KEY (Cliente_ID) REFERENCES Dim_Cliente(Cliente_ID)
+);
+
+-- Índices na tabela Fato_Venda para otimizar as consultas
+
+-- Índices simples para cada chave estrangeira
+CREATE INDEX idx_fato_venda_produto_id ON Fato_Venda(Produto_ID);
+CREATE INDEX idx_fato_venda_canal_id ON Fato_Venda(Canal_ID);
+CREATE INDEX idx_fato_venda_data_id ON Fato_Venda(Data_ID);
+CREATE INDEX idx_fato_venda_cliente_id ON Fato_Venda(Cliente_ID);
+
+-- Índice composto para consultas envolvendo Produto_ID e Data_ID
+CREATE INDEX idx_fato_venda_produto_data ON Fato_Venda(Produto_ID, Data_ID);
+
+-- Índice composto para consultas envolvendo Canal_ID e Data_ID
+CREATE INDEX idx_fato_venda_canal_data ON Fato_Venda(Canal_ID, Data_ID);
+
+-- Índice composto para consultas envolvendo Cliente_ID e Produto_ID
+CREATE INDEX idx_fato_venda_cliente_produto ON Fato_Venda(Cliente_ID, Produto_ID);
+
+-- Índice composto para consultas envolvendo Data_ID e Cliente_ID
+CREATE INDEX idx_fato_venda_data_cliente ON Fato_Venda(Data_ID, Cliente_ID);
+
+Explicação do Modelo Físico:
+Tabelas Dimensionais:
+
+Dim_Produto, Dim_Canal, Dim_Data, e Dim_Cliente possuem colunas de chave primária (Produto_ID, Canal_ID, Data_ID, Cliente_ID) definidas como SERIAL, o que significa que o PostgreSQL gerará automaticamente valores únicos e incrementais para essas colunas.
+Tabela Fato com Chave Primária Composta:
+
+A tabela Fato_Venda possui uma chave primária composta pelas colunas Produto_ID, Canal_ID, Data_ID, e Cliente_ID. Essa combinação de colunas garante que cada venda seja única e esteja associada a um produto, um canal de venda, uma data e um cliente específicos.
+As chaves estrangeiras (FOREIGN KEY) asseguram que os valores nessas colunas existam nas tabelas dimensionais correspondentes, mantendo a integridade referencial.
+Índices Simples:
+
+Índices simples são criados em cada coluna de chave estrangeira (Produto_ID, Canal_ID, Data_ID, Cliente_ID) para acelerar as operações de busca e junção (JOIN) que envolvem essas colunas.
+Índices Compostos:
+
+Índices compostos são criados para cobrir as combinações de colunas que são frequentemente usadas em consultas, como Produto_ID com Data_ID, Canal_ID com Data_ID, Cliente_ID com Produto_ID, e Data_ID com Cliente_ID. Esses índices compostos ajudam a melhorar o desempenho das consultas que filtram ou ordenam por essas combinações de colunas.
+Este modelo físico é projetado para maximizar o desempenho e a eficiência no acesso aos dados, ao mesmo tempo em que assegura a integridade e a consistência dos dados em um Data Warehouse no PostgreSQL.
+
+
+
+
+
+
+
+
+
+
+
