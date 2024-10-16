@@ -1,0 +1,24 @@
+--- TESTE --- WITH Case When
+Geração dos indicadores de produto
+2º passo Extrair conexões automaticas
+---
+where_conexoes_automaticas
+with
+step1 AS (
+select distinct cat.connection conexao, '' clausula_where
+from v_connection cat
+where cat.status = 'CATEGORIZED'
+and cat.month = '01'
+and cat.year = '2023'
+and cat.connection not in (
+select distinct cat.connection conexao
+from v_connection cat
+inner join v_connection conn
+on cat.connection = conn.connection
+and cat.day = conn.day
+and cat.month = conn.month
+and cat.year = conn.year
+and conn.status in ('CONNECTION_CREATED', 'CONNECTION_UPDATED', 'CONNECTION_MIGRATED')
+where cat.status = 'CATEGORIZED'
+and cat.month = '01'
+and cat.year = '2023'
