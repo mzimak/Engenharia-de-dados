@@ -7,8 +7,11 @@
 
 Introdução
 02 - Tarefas de Extração, Transformação e Carga em Engenharia de Dados - Parte 1
-03 - Tarefas de Extração, Transformação e Carga em Engenharia de Dados - Parte 2
+
+03 - Tarefas de Extração, Transformação e Carga em Engenharia de Dados - Parte 
+
 04 - Preparação do Ambiente de Trabalho com Airbyte
+
 05 - Extração de Dados com Airbyte - Parte 1
 06 - Extração de Dados com Airbyte - Parte 2
 07 - Checkpoint de Conhecimento
