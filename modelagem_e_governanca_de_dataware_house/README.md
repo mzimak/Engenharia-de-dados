@@ -2,8 +2,8 @@
 
 <b><H2>Modelagem, Implementação e Governança de Data Warehouses </H2></b> 
   
-02
-Preparação do Ambiente de Trabalho
+02 - Preparação do Ambiente de Trabalho
+
 Introdução
 Iniciando a Jornada de Aprendizagem
 Ferramentas Usadas Neste Curso - Parte 1/3
@@ -18,8 +18,7 @@ Acessando o Banco de Dados no Docker
 Convenções Usadas Neste Curso
 Arquivos Usados Neste Capítulo
 Bibliografia, Referências e Links Úteis
-03
-Linguagem SQL Para Engenheiros de Dados - Parte 1
+03 - Linguagem SQL Para Engenheiros de Dados - Parte 1
 Introdução
 Linguagem SQL - Mais Jovem do Que Nunca
 Preparando o Banco de Dados
@@ -40,8 +39,7 @@ Subconsultas e CTEs (Common Table Expressions) - Parte 2/3
 Subconsultas e CTEs (Common Table Expressions) - Parte 3/3
 Arquivos Usados Neste Capítulo
 Bibliografia, Referências e Links Úteis
-04
-Linguagem SQL Para Engenheiros de Dados - Parte 2
+04 - Linguagem SQL Para Engenheiros de Dados - Parte 2
 Continuação do Capítulo Anterior
 Agora é Nível Ninja - Programação de Banco de Dados
 Preparando o Banco de Dados
@@ -64,8 +62,7 @@ Controle de Transações - COMMIT, ROLLBACK
 Indexação e Otimização de Consultas
 Arquivos Usados Neste Capítulo
 Bibliografia, Referências e Links Úteis
-05
-Linguagem SQL Para Engenheiros de Dados - Parte 3
+05 - Linguagem SQL Para Engenheiros de Dados - Parte 3
 Introdução
 Lab 1 - Automação da Infraestrutura de Consultas SQL com Terraform e BigQuery no Google Cloud Platform
 Lab 1 - Visão Geral
@@ -94,15 +91,13 @@ Lab 1 - Destruindo a Infraestrutura
 Lab 1 - Conclusão
 Arquivos Usados Neste Capítulo
 Bibliografia, Referências e Links Úteis
-06
-Checkpoint de Conhecimento
+06 - Checkpoint de Conhecimento
 Introdução
 Exercícios
 O Futuro dos Dados
 A Importância da Arquitetura na Governança de Dados
 Bibliografia
-07
-Modelagem Dimensional Para Data Warehouses
+07 - Modelagem Dimensional Para Data Warehouses
 Introdução
 Vamos Modelar Data Warehouses
 Conceitos Fundamentais de Modelagem Dimensional
@@ -131,8 +126,7 @@ Lab 2 - Implementação Parte 6/7
 Lab 2 - Implementação Parte 7/7
 Arquivos Usados Neste Capítulo
 Bibliografia, Referências e Links Úteis
-08
-Projeto 1 - Data Warehouse em Ambiente Local - Modelagem
+08 - Projeto 1 - Data Warehouse em Ambiente Local - Modelagem
 Introdução
 Definição do Projeto 1 - Data Warehouse em Ambiente Local - Modelagem e Implementação
 Vamos Modelar Um DW a Partir do Zero?
@@ -165,8 +159,7 @@ Volumetria de Data Warehouses
 Documentação e Diagramas
 Projeto 1 - Concluindo a Etapa de Modelagem
 Bibliografia, Referências e Links Úteis
-09
-Projeto 1 - Data Warehouse em Ambiente Local - Implementação
+09 - Projeto 1 - Data Warehouse em Ambiente Local - Implementação
 Introdução
 Projeto 1 - Depois da Modelagem, Agora Sim, a Implementação do DW
 Projeto 1 - Scripts de Implementação
@@ -201,8 +194,7 @@ Projeto 1 - Conclusão
 Projeto 1 - Plano de Custos da Implementação Local do DW
 Arquivos Usados Neste Capítulo
 Bibliografia, Referências e Links Úteis
-10
-Extração, Transformação e Carga de Dados (ETL) com Airbyte e SQL - Parte 1
+10 - Extração, Transformação e Carga de Dados (ETL) com Airbyte e SQL - Parte 1
 Introdução
 Definindo o Processo - ETL x ELT
 Traditional ETL x Modern Data Stack ETL
@@ -231,8 +223,7 @@ Lab 3 - Criação e Carga da Staging Area com Airbyte - Parte 7/7
 Lab 3 - Concluindo a Primeira Parte do Lab
 Arquivos Usados Neste Capítulo
 Bibliografia, Referências e Links Úteis
-11
-Extração, Transformação e Carga de Dados (ETL) com Airbyte e SQL - Parte 2
+11 - Extração, Transformação e Carga de Dados (ETL) com Airbyte e SQL - Parte 2
 Introdução
 Fluxos de Trabalho e Orquestração
 Lab 3 - Como Levar os Dados da Staging Area Para o DW?
@@ -253,8 +244,7 @@ Lab 3 - Conclusão
 Melhores Práticas em ETL/ELT
 Arquivos Usados Neste Capítulo
 Bibliografia, Referências e Links Úteis
-12
-Módulo Especial - Assistentes Pessoais Baseados em IA
+12 - Módulo Especial - Assistentes Pessoais Baseados em IA
 Introdução
 O Que São Assistentes Virtuais Baseados em Inteligência Artificial
 Todos os Assistentes Virtuais de IA Respondem Por Voz?
@@ -276,8 +266,7 @@ Guia Completo Sobre Inteligência Artificial Generativa
 Inteligência Artificial - Salários em Direção ao Céu
 Exercícios de Revisão
 Bibliografia, Referências e Links Úteis
-13
-Projeto 2 - Data Warehouse na Nuvem com Amazon Redshift e Terraform - Arquitetura e Infraestrutura
+13 - Projeto 2 - Data Warehouse na Nuvem com Amazon Redshift e Terraform - Arquitetura e Infraestrutura
 Introdução
 Objetivo e Visão Geral do Projeto 2
 Vamos Modelar, Planejar e Implementar um DW na Nuvem Através de IaC (Infraestrutura Como Código)?
@@ -318,8 +307,7 @@ Agora é com Você! Crie o Modelo de Dados Para o Problema de Negócio!
 Definição de Requisitos do Negócio
 Arquivos Usados Neste Capítulo
 Bibliografia, Referências e Links Úteis
-14
-Projeto 2 - Data Warehouse na Nuvem com Amazon Redshift e Terraform - Modelagem e Implementação - Parte 1
+14 - Projeto 2 - Data Warehouse na Nuvem com Amazon Redshift e Terraform - Modelagem e Implementação - Parte 1
 Introdução
 Principais Características, Vantagens e Desvantagens do Amazon Redshift
 Projeto 2 - Parte 2 - Modelagem e Implementação de DW na Nuvem com Amazon Redshift e Terraform
@@ -343,8 +331,7 @@ Projeto 2 - Definindo os Arquivos de Configuração - Redshift Role - Parte 1/2
 Projeto 2 - Definindo os Arquivos de Configuração - Redshift Role - Parte 2/2
 Arquivos Usados Neste Capítulo
 Bibliografia, Referências e Links Úteis
-15
-Projeto 2 - Data Warehouse na Nuvem com Amazon Redshift e Terraform - Modelagem e Implementação - Parte 2
+15 - Projeto 2 - Data Warehouse na Nuvem com Amazon Redshift e Terraform - Modelagem e Implementação - Parte 2
 Introdução
 Projeto 2 - Estrutura de Execução do Projeto
 Projeto 2 - Configurando o Repositório da Fonte de Dados no Amazon S3 - Parte 1/2
@@ -371,8 +358,7 @@ Projeto 2 - Opções de Segurança no Acesso aos Dados com Amazon Redshift
 Projeto 2 - Conclusão
 Arquivos Usados Neste Capítulo
 Bibliografia, Referências e Links Úteis
-16
-Governança e Data Quality com Great Expectations
+16 - Governança e Data Quality com Great Expectations
 Introdução
 O Que é Governança de Dados?
 O Que é Qualidade de Dados (Data Quality)?
@@ -410,8 +396,7 @@ Estudo de Caso: Como Implementar ETL Reverso em Uma Empresa de E-commerce - Part
 Estudo de Caso: Como Implementar ETL Reverso em Uma Empresa de E-commerce - Parte 2/2
 Arquivos Usados Neste Capítulo
 Bibliografia, Referências e Links Úteis
-17
-Otimização, Manutenção e Migração de Data Warehouse Local Para Nuvem
+17 - Otimização, Manutenção e Migração de Data Warehouse Local Para Nuvem
 Introdução
 Lab 5 - Migração de Data Warehouse Local Para a Nuvem
 Lab 5 - Visão Geral
