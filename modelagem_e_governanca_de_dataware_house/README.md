@@ -631,112 +631,215 @@ Projeto 2 - Modelo Dimensional - Parte 1/2
 Projeto 2 - Modelo Dimensional - Parte 2/2
 
 Projeto 2 - Modelo Lógico - Parte 1/2
+
 Projeto 2 - Modelo Lógico - Parte 2/2
+
 Projeto 2 - Modelo Físico
+
 Projeto 2 - Arquivos de Configuração do Terraform
+
 Projeto 2 - Definindo os Arquivos de Configuração - Provider
+
 Projeto 2 - Definindo os Arquivos de Configuração - Cluster Redshift - Parte 1/5
+
 Projeto 2 - Definindo os Arquivos de Configuração - Cluster Redshift - Parte 2/5
+
 Projeto 2 - Definindo os Arquivos de Configuração - Cluster Redshift - Parte 3/5
+
 Projeto 2 - Definindo os Arquivos de Configuração - Cluster Redshift - Parte 4/5
+
 Projeto 2 - Definindo os Arquivos de Configuração - Cluster Redshift - Parte 5/5
+
 Projeto 2 - Definindo os Arquivos de Configuração - Redshift Role - Parte 1/2
+
 Projeto 2 - Definindo os Arquivos de Configuração - Redshift Role - Parte 2/2
+
 Arquivos Usados Neste Capítulo
-Bibliografia, Referências e Links Úteis
-15 - Projeto 2 - Data Warehouse na Nuvem com Amazon Redshift e Terraform - Modelagem e Implementação - Parte 2
-Introdução
-Projeto 2 - Estrutura de Execução do Projeto
-Projeto 2 - Configurando o Repositório da Fonte de Dados no Amazon S3 - Parte 1/2
-Projeto 2 - Configurando o Repositório da Fonte de Dados no Amazon S3 - Parte 2/2
-Projeto 2 - Preparando a Máquina Cliente com Terraform - Parte 1/2
-Projeto 2 - Preparando a Máquina Cliente com Terraform - Parte 2/2
-Projeto 2 - Executando o Deploy da Infraestrutura do DW com IaC
-Projeto 2 - Verificando os Recursos Criados Através de IaC
-Projeto 2 - Construção do Processo ETL
-Projeto 2 - Carga Inicial e Incremental de Dados
-Projeto 2 - Executando o Processo ETL Para Carga de Dados no DW - Parte 1/2
-Projeto 2 - Executando o Processo ETL Para Carga de Dados no DW - Parte 2/2
-Projeto 2 - ALERTA DE APRENDIZADO VALIOSO E TROUBLESHOOTING
-Projeto 2 - Modificando a Infraestrutura em Tempo Real com Terraform
-Projeto 2 - Verificando o Resultado do Processo ETL
-Projeto 2 - Monitoramento e Logs com CloudWatch
-Projeto 2 - Otimização de Queries e Performance no Amazon Redshift
-Projeto 2 - Conectando no DW com Ferramenta de BI Para Extração de Relatórios - Parte 1/2
-Projeto 2 - Conectando no DW com Ferramenta de BI Para Extração de Relatórios - Parte 2/2
-Projeto 2 - Analisando Dados do DW
-Projeto 2 - Manutenção, Backup e Snapshosts no Amazon Redshift
-Projeto 2 - Destruindo a Infraestrutura na Nuvem AWS
-Projeto 2 - Opções de Segurança no Acesso aos Dados com Amazon Redshift
-Projeto 2 - Conclusão
-Arquivos Usados Neste Capítulo
-Bibliografia, Referências e Links Úteis
-16 - Governança e Data Quality com Great Expectations
-Introdução
-O Que é Governança de Dados?
-O Que é Qualidade de Dados (Data Quality)?
-O Que é e Quando Usamos a Ferramenta Great Expectations?
-Primeiros Passos com Great Expectations - Parte 1/3
-Primeiros Passos com Great Expectations - Parte 2/3
-Primeiros Passos com Great Expectations - Parte 3/3
-Arquitetura e Funcionamento do Great Expectations - GX Core
-Arquitetura e Funcionamento do Great Expectations - GX Cloud
-Preparando o Ambiente Python no Windows
-Preparando o Ambiente Python no MacOS
-Preparando o Ambiente Python no Linux
-Criação do Script de Validações e Expectativas Para Testes de Qualidade de Dados - Parte 1/3
-Criação do Script de Validações e Expectativas Para Testes de Qualidade de Dados - Parte 2/3
-Criação do Script de Validações e Expectativas Para Testes de Qualidade de Dados - Parte 3/3
-Executando o Script, Gerando Documentação Web e Analisando o Resultado - Parte 1/2
-Executando o Script, Gerando Documentação Web e Analisando o Resultado - Parte 2/2
-Lab 4 - Processo de Governança e Qualidade de Dados no Data Warehouse
-Lab 4 - Visão Geral
-Lab 4 - Estrutura do Lab
-Lab 4 - Recriando o Data Warehouse do Projeto 1
-Lab 4 - Configurando a Conexão ao SGBD com Linguagem Python
-Lab 4 - Configurando o Data Source
-Lab 4 - Módulo de Automação da Validação de Expectativas - Parte 1/2
-Lab 4 - Módulo de Automação da Validação de Expectativas - Parte 2/2
-Lab 4 - Criando Expectativas Para as Dimensões - Parte 1/3
-Lab 4 - Criando Expectativas Para as Dimensões - Parte 2/3
-Lab 4 - Criando Expectativas Para as Dimensões - Parte 3/3
-Lab 4 - Criando Expectativas Para a Tabela Fato
-Lab 4 - Executando o Lab
-Lab 4 - Analisando os Relatórios de Checagem de Qualidade dos Dados
-Lab 4 - Conclusão
-Estudo de Caso - O Que é e Como Implementar ETL Reverso?
-Estudo de Caso: Como Implementar ETL Reverso em Uma Empresa de E-commerce - Parte 1/2
-Estudo de Caso: Como Implementar ETL Reverso em Uma Empresa de E-commerce - Parte 2/2
-Arquivos Usados Neste Capítulo
-Bibliografia, Referências e Links Úteis
-17 - Otimização, Manutenção e Migração de Data Warehouse Local Para Nuvem
-Introdução
-Lab 5 - Migração de Data Warehouse Local Para a Nuvem
-Lab 5 - Visão Geral
-Lab 5 - Cenário Atual - Justificativa Para Migração
-Lab 5 - Cenário Atual - Desafios e Limitações do DW Local - Parte 1/2
-Lab 5 - Cenário Atual - Desafios e Limitações do DW Local - Parte 2/2
-Lab 5 - Desafios da Migração de DW Local Para Nuvem
-Lab 5 - 10 Possíveis Estratégias de Migração
-Lab 5 - Estratégia Considerada no Lab
-Lab 5 - Planejamento e Estratégia de Migração
-Lab 5 - Avaliação do Ambiente Atual
-Lab 5 - Seleção do Provedor de Cloud Computing
-Lab 5 - Ferramentas e Serviços Para Migração
-Lab 5 - Conversão do Esquema com AWS Schema Conversion Tool (SCT)
-Lab 5 - Planejamento de Scripts e Ferramentas
-Lab 5 - Transferência e Carregamento de Dados
-Lab 5 - AWS Data Migration Service (DMS)
-Lab 5 - S3 + COPY Command
-Lab 5 - Testes e Validação Após Migração
-Lab 5 - Consultas e Performance - Parte 1/2
-Lab 5 - Consultas e Performance - Parte 2/2
-Lab 5 - Revisão de Custos
-Lab 5 - Encerramento e Desativação de Ambientes Locais
-Lab 5 - Estratégias de Backup e Disaster Recovery
-Lab 5 - Manutenção e Monitoramento Contínuo
-Lab 5 - Conclusão
+
 Bibliografia, Referências e Links Úteis
 
-      
-  
+15 - Projeto 2 - Data Warehouse na Nuvem com Amazon Redshift e Terraform - Modelagem e Implementação - Parte 2
+
+Introdução
+
+Projeto 2 - Estrutura de Execução do Projeto
+
+Projeto 2 - Configurando o Repositório da Fonte de Dados no Amazon S3 - Parte 1/2
+
+Projeto 2 - Configurando o Repositório da Fonte de Dados no Amazon S3 - Parte 2/2
+
+Projeto 2 - Preparando a Máquina Cliente com Terraform - Parte 1/2
+
+Projeto 2 - Preparando a Máquina Cliente com Terraform - Parte 2/2
+
+Projeto 2 - Executando o Deploy da Infraestrutura do DW com IaC
+
+Projeto 2 - Verificando os Recursos Criados Através de IaC
+
+Projeto 2 - Construção do Processo ETL
+
+Projeto 2 - Carga Inicial e Incremental de Dados
+
+Projeto 2 - Executando o Processo ETL Para Carga de Dados no DW - Parte 1/2
+
+Projeto 2 - Executando o Processo ETL Para Carga de Dados no DW - Parte 2/2
+
+Projeto 2 - ALERTA DE APRENDIZADO VALIOSO E TROUBLESHOOTING
+
+Projeto 2 - Modificando a Infraestrutura em Tempo Real com Terraform
+
+Projeto 2 - Verificando o Resultado do Processo ETL
+
+Projeto 2 - Monitoramento e Logs com CloudWatch
+
+Projeto 2 - Otimização de Queries e Performance no Amazon Redshift
+
+Projeto 2 - Conectando no DW com Ferramenta de BI Para Extração de Relatórios - Parte 1/2
+
+Projeto 2 - Conectando no DW com Ferramenta de BI Para Extração de Relatórios - Parte 2/2
+
+Projeto 2 - Analisando Dados do DW
+
+Projeto 2 - Manutenção, Backup e Snapshosts no Amazon Redshift
+
+Projeto 2 - Destruindo a Infraestrutura na Nuvem AWS
+
+Projeto 2 - Opções de Segurança no Acesso aos Dados com Amazon Redshift
+
+Projeto 2 - Conclusão
+
+Arquivos Usados Neste Capítulo
+
+Bibliografia, Referências e Links Úteis
+
+16 - Governança e Data Quality com Great Expectations
+
+Introdução
+
+O Que é Governança de Dados?
+
+O Que é Qualidade de Dados (Data Quality)?
+
+O Que é e Quando Usamos a Ferramenta Great Expectations?
+
+Primeiros Passos com Great Expectations - Parte 1/3
+
+Primeiros Passos com Great Expectations - Parte 2/3
+
+Primeiros Passos com Great Expectations - Parte 3/3
+
+Arquitetura e Funcionamento do Great Expectations - GX Core
+
+Arquitetura e Funcionamento do Great Expectations - GX Cloud
+
+Preparando o Ambiente Python no Windows
+
+Preparando o Ambiente Python no MacOS
+
+Preparando o Ambiente Python no Linux
+
+Criação do Script de Validações e Expectativas Para Testes de Qualidade de Dados - Parte 1/3
+
+Criação do Script de Validações e Expectativas Para Testes de Qualidade de Dados - Parte 2/3
+
+Criação do Script de Validações e Expectativas Para Testes de Qualidade de Dados - Parte 3/3
+
+Executando o Script, Gerando Documentação Web e Analisando o Resultado - Parte 1/2
+
+Executando o Script, Gerando Documentação Web e Analisando o Resultado - Parte 2/2
+
+Lab 4 - Processo de Governança e Qualidade de Dados no Data Warehouse
+
+Lab 4 - Visão Geral
+
+Lab 4 - Estrutura do Lab
+
+Lab 4 - Recriando o Data Warehouse do Projeto 1
+
+Lab 4 - Configurando a Conexão ao SGBD com Linguagem Python
+
+Lab 4 - Configurando o Data Source
+
+Lab 4 - Módulo de Automação da Validação de Expectativas - Parte 1/2
+
+Lab 4 - Módulo de Automação da Validação de Expectativas - Parte 2/2
+
+Lab 4 - Criando Expectativas Para as Dimensões - Parte 1/3
+
+Lab 4 - Criando Expectativas Para as Dimensões - Parte 2/3
+
+Lab 4 - Criando Expectativas Para as Dimensões - Parte 3/3
+
+Lab 4 - Criando Expectativas Para a Tabela Fato
+
+Lab 4 - Executando o Lab
+
+Lab 4 - Analisando os Relatórios de Checagem de Qualidade dos Dados
+
+Lab 4 - Conclusão
+
+Estudo de Caso - O Que é e Como Implementar ETL Reverso?
+
+Estudo de Caso: Como Implementar ETL Reverso em Uma Empresa de E-commerce - Parte 1/2
+
+Estudo de Caso: Como Implementar ETL Reverso em Uma Empresa de E-commerce - Parte 2/2
+
+Arquivos Usados Neste Capítulo
+
+Bibliografia, Referências e Links Úteis
+
+17 - Otimização, Manutenção e Migração de Data Warehouse Local Para Nuvem
+
+Introdução
+
+Lab 5 - Migração de Data Warehouse Local Para a Nuvem
+
+Lab 5 - Visão Geral
+
+Lab 5 - Cenário Atual - Justificativa Para Migração
+
+Lab 5 - Cenário Atual - Desafios e Limitações do DW Local - Parte 1/2
+
+Lab 5 - Cenário Atual - Desafios e Limitações do DW Local - Parte 2/2
+
+Lab 5 - Desafios da Migração de DW Local Para Nuvem
+
+Lab 5 - 10 Possíveis Estratégias de Migração
+
+Lab 5 - Estratégia Considerada no Lab
+
+Lab 5 - Planejamento e Estratégia de Migração
+
+Lab 5 - Avaliação do Ambiente Atual
+
+Lab 5 - Seleção do Provedor de Cloud Computing
+
+Lab 5 - Ferramentas e Serviços Para Migração
+
+Lab 5 - Conversão do Esquema com AWS Schema Conversion Tool (SCT)
+
+Lab 5 - Planejamento de Scripts e Ferramentas
+
+Lab 5 - Transferência e Carregamento de Dados
+
+Lab 5 - AWS Data Migration Service (DMS)
+
+Lab 5 - S3 + COPY Command
+
+Lab 5 - Testes e Validação Após Migração
+
+Lab 5 - Consultas e Performance - Parte 1/2
+
+Lab 5 - Consultas e Performance - Parte 2/2
+
+Lab 5 - Revisão de Custos
+
+Lab 5 - Encerramento e Desativação de Ambientes Locais
+
+Lab 5 - Estratégias de Backup e Disaster Recovery
+
+Lab 5 - Manutenção e Monitoramento Contínuo
+
+Lab 5 - Conclusão
+
+Bibliografia, Referências e Links Úteis
