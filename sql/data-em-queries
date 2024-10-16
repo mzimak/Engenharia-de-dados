@@ -1,0 +1,11 @@
+---
+-- Colocar em todas as queries com data
+---
+
+AT TIME ZONE 'UTC' AT TIME ZONE 'America/Sao_Paulo'
+select I.NAME AS INSTITUTION_NAME,
+C.ID AS CONNECTION_ID,
+C.STATUS,
+C.SCRAPE_STATUS AS DATAILED_STATUS,
+C.CREATED_AT AT TIME ZONE 'UTC' AT TIME ZONE 'America/Sao_Paulo',
+C.UPDATED_AT AT TIME ZONE 'UTC' AT TIME ZONE 'America/Sao_Paulo',
