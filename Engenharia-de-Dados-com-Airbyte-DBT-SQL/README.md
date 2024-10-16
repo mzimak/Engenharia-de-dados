@@ -6,6 +6,7 @@
 <b><H2>Engenharia de Dados com Airbyte, DBT e SQL </H2></b>  
 
 01 - Introdução
+
 02 - Tarefas de Extração, Transformação e Carga em Engenharia de Dados - Parte 1
 
 03 - Tarefas de Extração, Transformação e Carga em Engenharia de Dados - Parte 
