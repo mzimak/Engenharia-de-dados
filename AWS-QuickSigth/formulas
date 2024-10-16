@@ -1,0 +1,32 @@
+
+-SST Primeiro registro - Sub SubType
+minIf(lastupdate, isNotNull(subsubtype))
+
+-SST Último registro - Sub SubType
+maxIf(lastupdate, isNotNull(subsubtype))
+
+-SST Total Geral - Sub SubType
+count({Data de Inclusão})
+
+-SST % registros em branco
+coalesce({SST qtd. de registros em branco} / {SST Total Geral Sub SubType},0)
+
+-SST Qtd. de registros válidos
+{SST Total Geral - Sub SubType} - ({SST qtd registros nulos } + {SST qtd. de registros em branco})
+
+##countif((Data de Inclussol, isnotNull(id) or id >= 0)
+
+SST % de registros válidos
+coalesce({SST Qtd. de registros válidos} / {SST Total Geral - Sub SubType),0)
+
+SST qtd registros nulos
+countIf({Data de Inclusão}, isNull(subsubtype))
+
+SST % de registros nulos
+coalesce({SST qtd registros nulos } / {SST Total Geral Sub SubType},0)
+
+SST qtd. de registros em branco
+countIf{{Data de Inclusão), subsubtype = '')
+
+
+
