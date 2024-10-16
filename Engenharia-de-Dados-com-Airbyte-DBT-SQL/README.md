@@ -75,9 +75,7 @@ Versionamento de Pipelines de Dados
 
 Bibliografia, Referências e Links Úteis
 
-04
-
-Preparação do Ambiente de Trabalho com Airbyte
+04 - Preparação do Ambiente de Trabalho com Airbyte
 
 Introdução
 
@@ -105,9 +103,7 @@ Troubleshooting Para Usuários Windows
 
 Bibliografia, Referências e Links Úteis
 
-05
-
-Extração de Dados com Airbyte - Parte 1
+05 - Extração de Dados com Airbyte - Parte 1
 
 Introdução
 
@@ -149,9 +145,7 @@ Arquivos Usados Neste Capítulo
 
 Bibliografia, Referências e Links Úteis
 
-06
-
-Extração de Dados com Airbyte - Parte 2
+06 - Extração de Dados com Airbyte - Parte 2
 
 Introdução
 
@@ -207,9 +201,7 @@ Arquivos Usados Neste Capítulo
 
 Bibliografia, Referências e Links Úteis
 
-07
-
-Checkpoint de Conhecimento
+07 - Checkpoint de Conhecimento
 
 Introdução
 
@@ -221,9 +213,7 @@ Airbyte – ETL e ELT Para Engenharia de Dados
 
 Bibliografia
 
-08
-
-Carga e Sincronização de Dados com Airbyte - Parte 1
+08 - Carga e Sincronização de Dados com Airbyte - Parte 1
 
 Introdução
 
@@ -261,9 +251,7 @@ Arquivos Usados Neste Capítulo
 
 Bibliografia, Referências e Links Úteis
 
-09
-
-Carga e Sincronização de Dados com Airbyte - Parte 2
+09 - Carga e Sincronização de Dados com Airbyte - Parte 2
 
 Introdução
 
@@ -303,9 +291,7 @@ Arquivos Usados Neste Capítulo
 
 Bibliografia, Referências e Links Úteis
 
-10
-
-SQL Avançado Para Transformações de Dados
+10 - SQL Avançado Para Transformações de Dados
 
 Introdução
 
@@ -361,9 +347,7 @@ Arquivos Usados Neste Capítulo
 
 Bibliografia, Referências e Links Úteis
 
-11
-
-Módulo Especial - Assistentes Pessoais Baseados em IA
+11 - Módulo Especial - Assistentes Pessoais Baseados em IA
 
 Introdução
 
@@ -407,9 +391,7 @@ Exercícios de Revisão
 
 Bibliografia, Referências e Links Úteis
 
-12
-
-Analytics Engineering com SQL
+12 - Analytics Engineering com SQL
 
 Introdução
 
@@ -467,9 +449,7 @@ Arquivos Usados Neste Capítulo
 
 Bibliografia, Referências e Links Úteis
 
-13
-
-Fundamentos do DBT (Data Build Tool) - Parte 1
+13 - Fundamentos do DBT (Data Build Tool) - Parte 1
 
 Introdução
 
@@ -527,9 +507,7 @@ Arquivos Usados Neste Capítulo
 
 Bibliografia, Referências e Links Úteis
 
-14
-
-Fundamentos do DBT (Data Build Tool) - Parte 2
+14 - Fundamentos do DBT (Data Build Tool) - Parte 2
 
 Introdução
 
@@ -595,9 +573,7 @@ Arquivos Usados Neste Capítulo
 
 Bibliografia, Referências e Links Úteis
 
-15
-
-Transformações de Dados com DBT - Entregando Consistência
+15 - Transformações de Dados com DBT - Entregando Consistência
 
 Introdução
 
@@ -671,9 +647,7 @@ Arquivos Usados Neste Capítulo
 
 Bibliografia, Referências e Links Úteis
 
-16
-
-Transformações de Dados com DBT - Entregando Confiabilidade
+16 - Transformações de Dados com DBT - Entregando Confiabilidade
 
 Introdução
 
@@ -727,9 +701,7 @@ Arquivos Usados Neste Capítulo
 
 Bibliografia, Referências e Links Úteis
 
-17
-
-Transformações de Dados com DBT - Entregando Qualidade e Automação
+17 - Transformações de Dados com DBT - Entregando Qualidade e Automação
 
 Introdução
 
@@ -779,9 +751,7 @@ Arquivos Usados Neste Capítulo
 
 Bibliografia, Referências e Links Úteis
 
-18
-
-Projeto Final de Integração Entre Airbyte, DBT e SQL
+18 - Projeto Final de Integração Entre Airbyte, DBT e SQL
 
 Introdução
 
@@ -818,10 +788,6 @@ Lições Aprendidas e Dicas Para o Mercado de Trabalho
 Arquivos Usados Neste Capítulo
 
 Bibliografia, Referências e Links Úteis
-
-19
-
-Avaliação e Certificado de Conclusão
 
 
 
