@@ -8,8 +8,8 @@ Ementa do Curso
 01 - Introdução
 
 02 - Tarefas de Extração, Transformação e Carga em Engenharia de Dados - Parte 1
-Introdução
-Iniciando Sua Jornada de Aprendizagem
+  Introdução
+  Iniciando Sua Jornada de Aprendizagem
 Conceito de ETL (Extração, Transformação e Carga)
 Processo de Extração de Dados
 Processo de Transformação de Dados
