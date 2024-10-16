@@ -1,9 +1,6 @@
 <b><H1>Engenharia de Dados</H1></b>
 
 <b><H2>Engenharia de Dados com Airbyte, DBT e SQL </H2></b> 
-  
-      
-<b><H2>Engenharia de Dados com Airbyte, DBT e SQL </H2></b>  
 
 01 - Introdução
 
