@@ -12,35 +12,35 @@ Ementa do Curso
 
 02 - Tarefas de Extração, Transformação e Carga em Engenharia de Dados - Parte 1
 
-Introdução
+<p>&#9745 - Introdução
   
-Iniciando Sua Jornada de Aprendizagem
+<p>&#9745 - Iniciando Sua Jornada de Aprendizagem
   
-Conceito de ETL (Extração, Transformação e Carga)
+<p>&#9745 - Conceito de ETL (Extração, Transformação e Carga)
 
-Processo de Extração de Dados
+<p>&#9745 - Processo de Extração de Dados
 
-Processo de Transformação de Dados
+<p>&#9745 - Processo de Transformação de Dados
 
-Processo de Carga de Dados
+<p>&#9745 - Processo de Carga de Dados
 
-ETL Como Parte do Processo de Engenharia de Dados
+<p>&#9745 - ETL Como Parte do Processo de Engenharia de Dados
 
-Diferença Entre ETL e ELT
+<p>&#9745 - Diferença Entre ETL e ELT
 
-Principais Características de ETL x ELT
+<p>&#9745 - Principais Características de ETL x ELT
 
-Ferramentas Para ETL
+<p>&#9745 - Ferramentas Para ETL
 
-Ferramentas Para ELT
+<p>&#9745 - Ferramentas Para ELT
 
-O Que é Modern Data Stack?
+<p>&#9745 - O Que é Modern Data Stack?
 
-Então ETL e ELT Fazem Parte do Processo de Integração de Dados no Modern Data Stack?
+<p>&#9745 - Então ETL e ELT Fazem Parte do Processo de Integração de Dados no Modern Data Stack?
 
-Desafios Comuns em Projetos de ETL
+<p>&#9745 - Desafios Comuns em Projetos de ETL
 
-Bibliografia, Referências e Links Úteis
+<p>&#9745 - Bibliografia, Referências e Links Úteis
 
 
 03 - Tarefas de Extração, Transformação e Carga em Engenharia de Dados - Parte 2
