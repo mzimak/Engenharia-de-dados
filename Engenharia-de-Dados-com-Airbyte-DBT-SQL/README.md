@@ -1,3 +1,5 @@
+<html>
+  <body>
 <b><H1>Engenharia de Dados</H1></b>
 
 <b><H2>Engenharia de Dados com Airbyte, DBT e SQL </H2></b> 
@@ -461,7 +463,7 @@ Principais Características do DBT - Parte 2/2
 
 Modern Data Stack com DBT
 
-DBT Cloud vs DBT Core
+<p>&#9745 - DBT Cloud vs DBT Core </p>
 
 O Que é e Quando Usar DBT Cloud? - Parte 1/2
 
@@ -789,5 +791,5 @@ Arquivos Usados Neste Capítulo
 
 Bibliografia, Referências e Links Úteis
 
-
-
+  </body>
+</html>
