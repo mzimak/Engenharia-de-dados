@@ -76,9 +76,7 @@ Ferramentas e Tecnologias no Mercado Para Data Lakehouses
 
 Bibliografia, Referências e Links Úteis
 
-03
-
-Fundamentos de Data Lakes e Data Lakehouses - Parte 2
+03 - Fundamentos de Data Lakes e Data Lakehouses - Parte 2
 
 Introdução
 
@@ -112,9 +110,7 @@ Lab 1 - Cenário 2 - Custo Total
 
 Bibliografia, Referências e Links Úteis
 
-04
-
-Fundamentos de Data Lakes e Data Lakehouses - Parte 3
+04 - Fundamentos de Data Lakes e Data Lakehouses - Parte 3
 
 Introdução
 
@@ -140,9 +136,7 @@ O Futuro dos Data Lakes e Data Lakehouses
 
 Bibliografia, Referências e Links Úteis
 
-05
-
-Checkpoint de Conhecimento
+05 - Checkpoint de Conhecimento
 
 Introdução
 
@@ -154,9 +148,7 @@ Os 4 Estágios Para Construir um Data Lake de Forma Eficiente
 
 Bibliografia
 
-06
-
-Preparação do Ambiente de Trabalho Local
+06 - Preparação do Ambiente de Trabalho Local
 
 Introdução
 
@@ -176,9 +168,7 @@ Convenções Usadas Neste Curso
 
 Bibliografia, Referências e Links Úteis
 
-07
-
-Implementação de Data Lake Local - Parte 1
+07 - Implementação de Data Lake Local - Parte 1
 
 Introdução
 
@@ -232,9 +222,7 @@ Arquivos Usados Neste Capítulo
 
 Bibliografia, Referências e Links Úteis
 
-08
-
-Implementação de Data Lake Local - Parte 2
+08 - Implementação de Data Lake Local - Parte 2
 
 Introdução
 
@@ -276,9 +264,7 @@ Arquivos Usados Neste Capítulo
 
 Bibliografia, Referências e Links Úteis
 
-09
-
-Módulo Especial - Assistentes Pessoais Baseados em IA
+09 - Módulo Especial - Assistentes Pessoais Baseados em IA
 
 Introdução
 
@@ -322,9 +308,7 @@ Exercícios de Revisão
 
 Bibliografia, Referências e Links Úteis
 
-10
-
-Implementação de Data Lake na Nuvem AWS
+10 - Implementação de Data Lake na Nuvem AWS
 
 Introdução
 
@@ -392,9 +376,7 @@ Arquivos Usados Neste Capítulo
 
 Bibliografia, Referências e Links Úteis
 
-11
-
-Linhagem, Observabilidade, Qualidade, Enriquecimento e Governança de Dados
+11 - Linhagem, Observabilidade, Qualidade, Enriquecimento e Governança de Dados
 
 Introdução
 
@@ -448,9 +430,7 @@ Arquivos Usados Neste Capítulo
 
 Bibliografia, Referências e Links Úteis
 
-12
-
-Extração, Carga e Transformação de Dados (ELT) com Azure Synapse Analytics
+12 - Extração, Carga e Transformação de Dados (ELT) com Azure Synapse Analytics
 
 Introdução
 
@@ -490,9 +470,7 @@ Arquivos Usados Neste Capítulo
 
 Bibliografia, Referências e Links Úteis
 
-13
-
-Data Lakehouse - Convergência entre Data Lakes e Data Warehouses
+13 - Data Lakehouse - Convergência entre Data Lakes e Data Warehouses
 
 Introdução
 
@@ -534,9 +512,7 @@ Arquivos Usados Neste Capítulo
 
 Bibliografia, Referências e Links Úteis
 
-14
-
-Fundamentos do Delta Lake
+14 - Fundamentos do Delta Lake
 
 Introdução
 
@@ -580,9 +556,7 @@ Arquivos Usados Neste Capítulo
 
 Bibliografia, Referências e Links Úteis
 
-15
-
-Projeto de Implementação de Data Lakehouse com Databricks e Delta Lake - Parte 1
+15 - Projeto de Implementação de Data Lakehouse com Databricks e Delta Lake - Parte 1
 
 Introdução
 
@@ -622,9 +596,7 @@ Arquivos Usados Neste Capítulo
 
 Bibliografia, Referências e Links Úteis
 
-16
-
-Projeto de Implementação de Data Lakehouse com Databricks e Delta Lake - Parte 2
+16 - Projeto de Implementação de Data Lakehouse com Databricks e Delta Lake - Parte 2
 
 Continuação do Projeto
 
@@ -664,9 +636,7 @@ Arquivos Usados Neste Capítulo
 
 Bibliografia, Referências e Links Úteis
 
-17
-
-Pipelines de Engenharia de Dados com a Plataforma Lakehouse da Databricks
+17 - Pipelines de Engenharia de Dados com a Plataforma Lakehouse da Databricks
 
 Introdução
 
