@@ -1,3 +1,4 @@
+#### Algumas fórmuls utilizadas na construção de indicadores a serem exibidos em gráficos do Quicksigth ####
 
 -SST Primeiro registro - Sub SubType
 minIf(lastupdate, isNotNull(subsubtype))
