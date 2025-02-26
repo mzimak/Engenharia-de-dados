@@ -1,5 +1,0 @@
-pandas
-sqlalchemy
-psycopg2
-langchain_core
-langchain_community
