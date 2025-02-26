@@ -1,0 +1,29 @@
+Embora não possa criar imagens diretamente, posso descrever como você pode criar uma imagem que represente um pipeline de dados usando DBT (Data Build Tool). Aqui estão as etapas que você pode incluir:
+
+### Título: Pipeline de Dados com DBT
+
+1. **Ingestão de Dados**
+   - Representação de fontes de dados (bancos de dados, APIs, arquivos).
+
+2. **Armazenamento de Dados**
+   - Um armazenamento central, como um data warehouse (ex: Snowflake, BigQuery).
+
+3. **Transformação de Dados (DBT)**
+   - Modelos DBT: Mostre a construção de tabelas e visualizações.
+   - Gráficos de dependência: Como as transformações estão relacionadas.
+
+4. **Documentação**
+   - Ícone de documentação ou um gráfico que mostra a geração de documentação automática.
+
+5. **Teste de Dados**
+   - Ícone de verificação ou um gráfico que representa a validação dos dados.
+
+6. **Visualização e Análise**
+   - Ferramentas de BI (ex: Tableau, Looker) conectadas ao data warehouse.
+
+### Design Sugestão:
+- Use caixas ou círculos para cada etapa.
+- Setas entre as etapas para mostrar o fluxo de dados.
+- Cores diferentes para cada parte do processo para facilitar a leitura.
+
+Se você precisar de mais detalhes sobre cada etapa ou dicas sobre ferramentas para criar essa imagem, é só avisar!

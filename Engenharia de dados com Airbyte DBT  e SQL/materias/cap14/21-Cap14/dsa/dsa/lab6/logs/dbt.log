@@ -1,0 +1,2026 @@
+[0m00:43:26.408745 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1734cc0c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f17347f43d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f17347f4290>]}
+
+
+============================== 00:43:26.415221 | 22ce2a11-b89a-4360-a9f0-f854a650e9a1 ==============================
+[0m00:43:26.415221 [info ] [MainThread]: Running with dbt=1.5.11
+[0m00:43:26.417543 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/dsa/lab6/logs', 'fail_fast': 'False', 'profiles_dir': '/root/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m00:43:26.419807 [info ] [MainThread]: dbt version: 1.5.11
+[0m00:43:26.425674 [info ] [MainThread]: python version: 3.11.10
+[0m00:43:26.429352 [info ] [MainThread]: python path: /usr/local/bin/python3.11
+[0m00:43:26.433718 [info ] [MainThread]: os info: Linux-6.10.0-linuxkit-x86_64-with-glibc2.36
+[0m00:43:26.438765 [info ] [MainThread]: Using profiles.yml file at /root/.dbt/profiles.yml
+[0m00:43:26.445499 [info ] [MainThread]: Using dbt_project.yml file at /dsa/lab6/dbt_project.yml
+[0m00:43:26.450352 [info ] [MainThread]: Configuration:
+[0m00:43:26.537956 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m00:43:26.594619 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m00:43:26.595964 [info ] [MainThread]: Required dependencies:
+[0m00:43:26.598357 [debug] [MainThread]: Executing "git --help"
+[0m00:43:26.735372 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:43:26.736633 [debug] [MainThread]: STDERR: "b''"
+[0m00:43:26.737925 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:43:26.739713 [info ] [MainThread]: Connection:
+[0m00:43:26.741917 [info ] [MainThread]:   database: lab6.db
+[0m00:43:26.746685 [info ] [MainThread]:   schema: main
+[0m00:43:26.753079 [info ] [MainThread]:   schemas_and_paths: {'main': '/dsa/lab6/dados/lab6.db'}
+[0m00:43:26.756094 [info ] [MainThread]:   schema_directory: /dsa/lab6/dados
+[0m00:43:26.762365 [info ] [MainThread]: Registered adapter: sqlite=1.5.0
+[0m00:43:26.765193 [debug] [MainThread]: Acquiring new sqlite connection 'debug'
+[0m00:43:26.770522 [debug] [MainThread]: Using sqlite connection "debug"
+[0m00:43:26.772194 [debug] [MainThread]: On debug: select 1 as id
+[0m00:43:26.774363 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:43:26.781095 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m00:43:26.786198 [debug] [MainThread]: On debug: Close
+[0m00:43:26.792746 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m00:43:26.796378 [info ] [MainThread]: [32mAll checks passed![0m
+[0m00:43:26.808313 [debug] [MainThread]: Command `dbt debug` succeeded at 00:43:26.804781 after 0.41 seconds
+[0m00:43:26.810810 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m00:43:26.813217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f17389284d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1738a5c290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1738a5d250>]}
+[0m00:43:26.821838 [debug] [MainThread]: Flushing usage events
+[0m01:33:42.342210 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d0b679910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d0ccfe2d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d0b678710>]}
+
+
+============================== 01:33:42.346938 | 22ad9620-884a-4e41-938b-93a1e4ea82ff ==============================
+[0m01:33:42.346938 [info ] [MainThread]: Running with dbt=1.5.11
+[0m01:33:42.349103 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/dsa/lab6/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m01:33:42.483346 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '22ad9620-884a-4e41-938b-93a1e4ea82ff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d0b10e210>]}
+[0m01:33:42.523261 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '22ad9620-884a-4e41-938b-93a1e4ea82ff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d0af84ad0>]}
+[0m01:33:42.524620 [info ] [MainThread]: Registered adapter: sqlite=1.5.0
+[0m01:33:42.550391 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m01:33:42.553437 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m01:33:42.555635 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '22ad9620-884a-4e41-938b-93a1e4ea82ff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d0af86d10>]}
+[0m01:33:43.482861 [debug] [MainThread]: 1699: static parser successfully parsed clientes.sql
+[0m01:33:43.567181 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '22ad9620-884a-4e41-938b-93a1e4ea82ff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d0a869190>]}
+[0m01:33:43.582095 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '22ad9620-884a-4e41-938b-93a1e4ea82ff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d0a866d50>]}
+[0m01:33:43.583436 [info ] [MainThread]: Found 1 model, 0 tests, 0 snapshots, 0 analyses, 311 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m01:33:43.584892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '22ad9620-884a-4e41-938b-93a1e4ea82ff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d0d9c7850>]}
+[0m01:33:43.589849 [info ] [MainThread]: 
+[0m01:33:43.594658 [debug] [MainThread]: Acquiring new sqlite connection 'master'
+[0m01:33:43.597472 [debug] [ThreadPool]: Acquiring new sqlite connection 'list_lab6.db'
+[0m01:33:43.620392 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db"
+[0m01:33:43.621512 [debug] [ThreadPool]: On list_lab6.db: BEGIN
+[0m01:33:43.622702 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:33:43.625852 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m01:33:43.626669 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db"
+[0m01:33:43.627738 [debug] [ThreadPool]: On list_lab6.db: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db"} */
+
+        pragma database_list
+    
+[0m01:33:43.631190 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m01:33:43.640359 [debug] [ThreadPool]: On list_lab6.db: ROLLBACK
+[0m01:33:43.643197 [debug] [ThreadPool]: On list_lab6.db: Close
+[0m01:33:43.649807 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab6.db, now list_lab6.db_main)
+[0m01:33:43.666220 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m01:33:43.668081 [debug] [ThreadPool]: On list_lab6.db_main: BEGIN
+[0m01:33:43.670050 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m01:33:43.673407 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m01:33:43.674417 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m01:33:43.675713 [debug] [ThreadPool]: On list_lab6.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db_main"} */
+
+        pragma database_list
+    
+[0m01:33:43.677115 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m01:33:43.681915 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m01:33:43.682921 [debug] [ThreadPool]: On list_lab6.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db_main"} */
+
+            SELECT
+                'lab6.db' as database
+                ,name
+                ,'main' AS schema
+                ,type as data_type
+            FROM
+                main.sqlite_master
+            WHERE
+                name NOT LIKE 'sqlite_%'
+        
+[0m01:33:43.686869 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m01:33:43.690427 [debug] [ThreadPool]: On list_lab6.db_main: ROLLBACK
+[0m01:33:43.691478 [debug] [ThreadPool]: On list_lab6.db_main: Close
+[0m01:33:43.696118 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '22ad9620-884a-4e41-938b-93a1e4ea82ff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d0ae70dd0>]}
+[0m01:33:43.698206 [debug] [MainThread]: Using sqlite connection "master"
+[0m01:33:43.700180 [debug] [MainThread]: On master: BEGIN
+[0m01:33:43.701812 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m01:33:43.711497 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m01:33:43.714450 [debug] [MainThread]: On master: COMMIT
+[0m01:33:43.719319 [debug] [MainThread]: Using sqlite connection "master"
+[0m01:33:43.722195 [debug] [MainThread]: On master: COMMIT
+[0m01:33:43.724703 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m01:33:43.728014 [debug] [MainThread]: On master: Close
+[0m01:33:43.732860 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m01:33:43.735454 [info ] [MainThread]: 
+[0m01:33:43.801785 [debug] [Thread-1 (]: Began running node model.lab6.clientes
+[0m01:33:43.803547 [info ] [Thread-1 (]: 1 of 1 START sql view model main.clientes ...................................... [RUN]
+[0m01:33:43.808421 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_lab6.db_main, now model.lab6.clientes)
+[0m01:33:43.810529 [debug] [Thread-1 (]: Began compiling node model.lab6.clientes
+[0m01:33:43.837060 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab6.clientes"
+[0m01:33:43.865771 [debug] [Thread-1 (]: Timing info for model.lab6.clientes (compile): 01:33:43.815855 => 01:33:43.865119
+[0m01:33:43.867647 [debug] [Thread-1 (]: Began executing node model.lab6.clientes
+[0m01:33:43.907319 [debug] [Thread-1 (]: Writing runtime sql for node "model.lab6.clientes"
+[0m01:33:43.914106 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.clientes"
+[0m01:33:43.915600 [debug] [Thread-1 (]: On model.lab6.clientes: BEGIN
+[0m01:33:43.917270 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m01:33:43.920782 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m01:33:43.922102 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.clientes"
+[0m01:33:43.925620 [debug] [Thread-1 (]: On model.lab6.clientes: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.clientes"} */
+
+    
+    create view main."clientes" as
+      -- Configura o modelo para ser materializado como uma "view" no banco de dados
+                                   -- Não é uma view materializada e sim um consulta armazenada ( código sql)
+WITH clientes_base AS (  -- Criação de uma CTE (Common Table Expression) chamada "clientes_base"
+    SELECT *
+    FROM tb_clientes  -- Seleciona todos os campos da tabela "tb_clientes"
+)
+
+SELECT
+    id,  -- Seleciona a coluna "id" do cliente
+    nome,  -- Seleciona a coluna "nome" do cliente
+    email,  -- Seleciona a coluna "email" do cliente
+    status,  -- Seleciona a coluna "status" do cliente
+    data_cadastro  -- Seleciona a coluna "data_cadastro" do cliente
+FROM clientes_base  -- Utiliza a CTE "clientes_base" como a fonte dos dados;
+[0m01:33:43.933232 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m01:33:43.950920 [debug] [Thread-1 (]: On model.lab6.clientes: COMMIT
+[0m01:33:43.952540 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.clientes"
+[0m01:33:43.956290 [debug] [Thread-1 (]: On model.lab6.clientes: COMMIT
+[0m01:33:43.976244 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m01:33:43.979294 [debug] [Thread-1 (]: Timing info for model.lab6.clientes (execute): 01:33:43.868631 => 01:33:43.978716
+[0m01:33:43.980668 [debug] [Thread-1 (]: On model.lab6.clientes: Close
+[0m01:33:43.983453 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '22ad9620-884a-4e41-938b-93a1e4ea82ff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d0a6f9dd0>]}
+[0m01:33:43.984918 [info ] [Thread-1 (]: 1 of 1 OK created sql view model main.clientes ................................. [[32mOK[0m in 0.18s]
+[0m01:33:43.988053 [debug] [Thread-1 (]: Finished running node model.lab6.clientes
+[0m01:33:43.993836 [debug] [MainThread]: Using sqlite connection "master"
+[0m01:33:43.995725 [debug] [MainThread]: On master: BEGIN
+[0m01:33:43.998129 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m01:33:44.004365 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m01:33:44.006429 [debug] [MainThread]: On master: COMMIT
+[0m01:33:44.008672 [debug] [MainThread]: Using sqlite connection "master"
+[0m01:33:44.010251 [debug] [MainThread]: On master: COMMIT
+[0m01:33:44.013194 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m01:33:44.015513 [debug] [MainThread]: On master: Close
+[0m01:33:44.018740 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m01:33:44.019771 [debug] [MainThread]: Connection 'model.lab6.clientes' was properly closed.
+[0m01:33:44.021931 [info ] [MainThread]: 
+[0m01:33:44.023631 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.43 seconds (0.43s).
+[0m01:33:44.027151 [debug] [MainThread]: Command end result
+[0m01:33:44.054634 [info ] [MainThread]: 
+[0m01:33:44.056919 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m01:33:44.058807 [info ] [MainThread]: 
+[0m01:33:44.061492 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m01:33:44.068735 [debug] [MainThread]: Command `dbt run` succeeded at 01:33:44.066879 after 1.74 seconds
+[0m01:33:44.072633 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d0b11a2d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d0ae70b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3d0ec26690>]}
+[0m01:33:44.074268 [debug] [MainThread]: Flushing usage events
+[0m01:41:47.748492 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9066b96cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9066ff4690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9066fc3210>]}
+
+
+============================== 01:41:47.757127 | 1ad673a3-3ca1-46ad-9bca-ebda465f8f70 ==============================
+[0m01:41:47.757127 [info ] [MainThread]: Running with dbt=1.5.11
+[0m01:41:47.763262 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/dsa/lab6/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m01:41:48.040172 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1ad673a3-3ca1-46ad-9bca-ebda465f8f70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9066e3a090>]}
+[0m01:41:48.163568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1ad673a3-3ca1-46ad-9bca-ebda465f8f70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f906664ebd0>]}
+[0m01:41:48.165655 [info ] [MainThread]: Registered adapter: sqlite=1.5.0
+[0m01:41:48.224443 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m01:41:48.374578 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m01:41:48.378668 [debug] [MainThread]: Partial parsing: added file: lab6://models/pedidos.sql
+[0m01:41:48.496044 [debug] [MainThread]: 1699: static parser successfully parsed pedidos.sql
+[0m01:41:48.578047 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1ad673a3-3ca1-46ad-9bca-ebda465f8f70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9066ff49d0>]}
+[0m01:41:48.610697 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1ad673a3-3ca1-46ad-9bca-ebda465f8f70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f90666ede90>]}
+[0m01:41:48.615377 [info ] [MainThread]: Found 2 models, 0 tests, 0 snapshots, 0 analyses, 311 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m01:41:48.618950 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1ad673a3-3ca1-46ad-9bca-ebda465f8f70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9069667710>]}
+[0m01:41:48.625016 [info ] [MainThread]: 
+[0m01:41:48.633770 [debug] [MainThread]: Acquiring new sqlite connection 'master'
+[0m01:41:48.643153 [debug] [ThreadPool]: Acquiring new sqlite connection 'list_lab6.db'
+[0m01:41:48.697821 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db"
+[0m01:41:48.700618 [debug] [ThreadPool]: On list_lab6.db: BEGIN
+[0m01:41:48.707160 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:41:48.724108 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m01:41:48.729723 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db"
+[0m01:41:48.735843 [debug] [ThreadPool]: On list_lab6.db: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db"} */
+
+        pragma database_list
+    
+[0m01:41:48.750824 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m01:41:48.773791 [debug] [ThreadPool]: On list_lab6.db: ROLLBACK
+[0m01:41:48.781449 [debug] [ThreadPool]: On list_lab6.db: Close
+[0m01:41:48.797464 [debug] [ThreadPool]: Acquiring new sqlite connection 'list_lab6.db_main'
+[0m01:41:48.845000 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m01:41:48.847510 [debug] [ThreadPool]: On list_lab6.db_main: BEGIN
+[0m01:41:48.851455 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:41:48.865799 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m01:41:48.870617 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m01:41:48.874258 [debug] [ThreadPool]: On list_lab6.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db_main"} */
+
+        pragma database_list
+    
+[0m01:41:48.879103 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m01:41:48.885833 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m01:41:48.887762 [debug] [ThreadPool]: On list_lab6.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db_main"} */
+
+            SELECT
+                'lab6.db' as database
+                ,name
+                ,'main' AS schema
+                ,type as data_type
+            FROM
+                main.sqlite_master
+            WHERE
+                name NOT LIKE 'sqlite_%'
+        
+[0m01:41:48.893474 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m01:41:48.900727 [debug] [ThreadPool]: On list_lab6.db_main: ROLLBACK
+[0m01:41:48.903422 [debug] [ThreadPool]: On list_lab6.db_main: Close
+[0m01:41:48.918392 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1ad673a3-3ca1-46ad-9bca-ebda465f8f70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f90666d1290>]}
+[0m01:41:48.921269 [debug] [MainThread]: Using sqlite connection "master"
+[0m01:41:48.926617 [debug] [MainThread]: On master: BEGIN
+[0m01:41:48.933734 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m01:41:48.948198 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m01:41:48.955760 [debug] [MainThread]: On master: COMMIT
+[0m01:41:48.960426 [debug] [MainThread]: Using sqlite connection "master"
+[0m01:41:48.964130 [debug] [MainThread]: On master: COMMIT
+[0m01:41:48.969086 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m01:41:48.976352 [debug] [MainThread]: On master: Close
+[0m01:41:48.990470 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m01:41:48.995879 [info ] [MainThread]: 
+[0m01:41:49.030466 [debug] [Thread-1 (]: Began running node model.lab6.pedidos
+[0m01:41:49.035852 [info ] [Thread-1 (]: 1 of 1 START sql view model main.pedidos ....................................... [RUN]
+[0m01:41:49.045603 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_lab6.db_main, now model.lab6.pedidos)
+[0m01:41:49.057545 [debug] [Thread-1 (]: Began compiling node model.lab6.pedidos
+[0m01:41:49.095697 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab6.pedidos"
+[0m01:41:49.111574 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos (compile): 01:41:49.062015 => 01:41:49.109387
+[0m01:41:49.119804 [debug] [Thread-1 (]: Began executing node model.lab6.pedidos
+[0m01:41:49.199288 [debug] [Thread-1 (]: Writing runtime sql for node "model.lab6.pedidos"
+[0m01:41:49.206634 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos"
+[0m01:41:49.213394 [debug] [Thread-1 (]: On model.lab6.pedidos: BEGIN
+[0m01:41:49.217338 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m01:41:49.224409 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m01:41:49.226814 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos"
+[0m01:41:49.234587 [debug] [Thread-1 (]: On model.lab6.pedidos: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.pedidos"} */
+
+    
+    create view main."pedidos" as
+      -- Configura o modelo para ser materializado como uma "view" no banco de dados
+
+WITH pedidos_base AS (  -- Criação de uma CTE (Common Table Expression) chamada "pedidos_base"
+    SELECT
+        id_pedido,  -- Seleciona a coluna "id_pedido" da tabela "tb_pedidos"
+        id_cliente,  -- Seleciona a coluna "id_cliente" da tabela "tb_pedidos"
+        data_pedido,  -- Seleciona a coluna "data_pedido" da tabela "tb_pedidos"
+        valor_total  -- Seleciona a coluna "valor_total" da tabela "tb_pedidos"
+    FROM tb_pedidos  -- Fonte dos dados: tabela "tb_pedidos"
+    WHERE valor_total > 200  -- Filtra os pedidos com valor total maior que 200
+)
+
+SELECT
+    id_pedido,  -- Seleciona a coluna "id_pedido" da CTE "pedidos_base"
+    id_cliente,  -- Seleciona a coluna "id_cliente" da CTE "pedidos_base"
+    data_pedido,  -- Seleciona a coluna "data_pedido" da CTE "pedidos_base"
+    valor_total  -- Seleciona a coluna "valor_total" da CTE "pedidos_base"
+FROM pedidos_base  -- Utiliza a CTE "pedidos_base" como a fonte dos dados;
+[0m01:41:49.263144 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m01:41:49.303280 [debug] [Thread-1 (]: On model.lab6.pedidos: COMMIT
+[0m01:41:49.309708 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos"
+[0m01:41:49.313015 [debug] [Thread-1 (]: On model.lab6.pedidos: COMMIT
+[0m01:41:49.346478 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m01:41:49.355197 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos (execute): 01:41:49.122955 => 01:41:49.354190
+[0m01:41:49.358155 [debug] [Thread-1 (]: On model.lab6.pedidos: Close
+[0m01:41:49.366354 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1ad673a3-3ca1-46ad-9bca-ebda465f8f70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f90667196d0>]}
+[0m01:41:49.369019 [info ] [Thread-1 (]: 1 of 1 OK created sql view model main.pedidos .................................. [[32mOK[0m in 0.32s]
+[0m01:41:49.376302 [debug] [Thread-1 (]: Finished running node model.lab6.pedidos
+[0m01:41:49.398417 [debug] [MainThread]: Using sqlite connection "master"
+[0m01:41:49.403059 [debug] [MainThread]: On master: BEGIN
+[0m01:41:49.405171 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m01:41:49.420213 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m01:41:49.421661 [debug] [MainThread]: On master: COMMIT
+[0m01:41:49.426778 [debug] [MainThread]: Using sqlite connection "master"
+[0m01:41:49.429674 [debug] [MainThread]: On master: COMMIT
+[0m01:41:49.435371 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m01:41:49.439585 [debug] [MainThread]: On master: Close
+[0m01:41:49.451520 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m01:41:49.455441 [debug] [MainThread]: Connection 'list_lab6.db' was properly closed.
+[0m01:41:49.462617 [debug] [MainThread]: Connection 'model.lab6.pedidos' was properly closed.
+[0m01:41:49.467726 [info ] [MainThread]: 
+[0m01:41:49.470591 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.84 seconds (0.84s).
+[0m01:41:49.479432 [debug] [MainThread]: Command end result
+[0m01:41:49.573613 [info ] [MainThread]: 
+[0m01:41:49.582502 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m01:41:49.589859 [info ] [MainThread]: 
+[0m01:41:49.594771 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m01:41:49.615993 [debug] [MainThread]: Command `dbt run` succeeded at 01:41:49.610159 after 1.89 seconds
+[0m01:41:49.628044 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f906a928310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f906a87e690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9066b8dbd0>]}
+[0m01:41:49.650511 [debug] [MainThread]: Flushing usage events
+[0m01:46:28.959837 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f233a1ed390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f233a0b2c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f233a1e2d90>]}
+
+
+============================== 01:46:28.975304 | 175489dd-c706-48ca-b79b-5780be9f8c83 ==============================
+[0m01:46:28.975304 [info ] [MainThread]: Running with dbt=1.5.11
+[0m01:46:28.985514 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/dsa/lab6/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m01:46:29.251907 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '175489dd-c706-48ca-b79b-5780be9f8c83', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f233a1af5d0>]}
+[0m01:46:29.339687 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '175489dd-c706-48ca-b79b-5780be9f8c83', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2339846350>]}
+[0m01:46:29.344543 [info ] [MainThread]: Registered adapter: sqlite=1.5.0
+[0m01:46:29.421230 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m01:46:29.558609 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m01:46:29.560785 [debug] [MainThread]: Partial parsing: added file: lab6://models/mart/pedidos_clientes1.sql
+[0m01:46:29.719408 [debug] [MainThread]: 1699: static parser successfully parsed mart/pedidos_clientes1.sql
+[0m01:46:29.823699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '175489dd-c706-48ca-b79b-5780be9f8c83', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f233a002050>]}
+[0m01:46:29.868785 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '175489dd-c706-48ca-b79b-5780be9f8c83', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f233965d890>]}
+[0m01:46:29.877874 [info ] [MainThread]: Found 3 models, 0 tests, 0 snapshots, 0 analyses, 311 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m01:46:29.886490 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '175489dd-c706-48ca-b79b-5780be9f8c83', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f233c893310>]}
+[0m01:46:29.895147 [info ] [MainThread]: 
+[0m01:46:29.907605 [debug] [MainThread]: Acquiring new sqlite connection 'master'
+[0m01:46:29.921481 [debug] [ThreadPool]: Acquiring new sqlite connection 'list_lab6.db'
+[0m01:46:30.000132 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db"
+[0m01:46:30.014309 [debug] [ThreadPool]: On list_lab6.db: BEGIN
+[0m01:46:30.018969 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:46:30.033582 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m01:46:30.039248 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db"
+[0m01:46:30.047894 [debug] [ThreadPool]: On list_lab6.db: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db"} */
+
+        pragma database_list
+    
+[0m01:46:30.056762 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m01:46:30.068364 [debug] [ThreadPool]: On list_lab6.db: ROLLBACK
+[0m01:46:30.071502 [debug] [ThreadPool]: On list_lab6.db: Close
+[0m01:46:30.079809 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab6.db, now list_lab6.db_main)
+[0m01:46:30.116872 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m01:46:30.118545 [debug] [ThreadPool]: On list_lab6.db_main: BEGIN
+[0m01:46:30.120771 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m01:46:30.124641 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m01:46:30.127880 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m01:46:30.130037 [debug] [ThreadPool]: On list_lab6.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db_main"} */
+
+        pragma database_list
+    
+[0m01:46:30.135946 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m01:46:30.148406 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m01:46:30.150400 [debug] [ThreadPool]: On list_lab6.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db_main"} */
+
+            SELECT
+                'lab6.db' as database
+                ,name
+                ,'main' AS schema
+                ,type as data_type
+            FROM
+                main.sqlite_master
+            WHERE
+                name NOT LIKE 'sqlite_%'
+        
+[0m01:46:30.154796 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m01:46:30.166343 [debug] [ThreadPool]: On list_lab6.db_main: ROLLBACK
+[0m01:46:30.169303 [debug] [ThreadPool]: On list_lab6.db_main: Close
+[0m01:46:30.180161 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '175489dd-c706-48ca-b79b-5780be9f8c83', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f233993d090>]}
+[0m01:46:30.184001 [debug] [MainThread]: Using sqlite connection "master"
+[0m01:46:30.187121 [debug] [MainThread]: On master: BEGIN
+[0m01:46:30.192348 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m01:46:30.196655 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m01:46:30.202763 [debug] [MainThread]: On master: COMMIT
+[0m01:46:30.206240 [debug] [MainThread]: Using sqlite connection "master"
+[0m01:46:30.209013 [debug] [MainThread]: On master: COMMIT
+[0m01:46:30.213409 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m01:46:30.219466 [debug] [MainThread]: On master: Close
+[0m01:46:30.232598 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m01:46:30.235625 [info ] [MainThread]: 
+[0m01:46:30.269155 [debug] [Thread-1 (]: Began running node model.lab6.clientes
+[0m01:46:30.276173 [info ] [Thread-1 (]: 1 of 3 START sql view model main.clientes ...................................... [RUN]
+[0m01:46:30.289989 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_lab6.db_main, now model.lab6.clientes)
+[0m01:46:30.302099 [debug] [Thread-1 (]: Began compiling node model.lab6.clientes
+[0m01:46:30.340666 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab6.clientes"
+[0m01:46:30.351499 [debug] [Thread-1 (]: Timing info for model.lab6.clientes (compile): 01:46:30.309472 => 01:46:30.349511
+[0m01:46:30.359568 [debug] [Thread-1 (]: Began executing node model.lab6.clientes
+[0m01:46:30.447419 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.clientes"
+[0m01:46:30.449570 [debug] [Thread-1 (]: On model.lab6.clientes: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.clientes"} */
+drop view if exists "main"."clientes"
+[0m01:46:30.467925 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m01:46:30.572621 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m01:46:30.606942 [debug] [Thread-1 (]: Writing runtime sql for node "model.lab6.clientes"
+[0m01:46:30.622082 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.clientes"
+[0m01:46:30.635700 [debug] [Thread-1 (]: On model.lab6.clientes: BEGIN
+[0m01:46:30.639693 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m01:46:30.642403 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.clientes"
+[0m01:46:30.644809 [debug] [Thread-1 (]: On model.lab6.clientes: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.clientes"} */
+
+    
+    create view main."clientes" as
+      -- Configura o modelo para ser materializado como uma "view" no banco de dados
+                                   -- Não é uma view materializada e sim um consulta armazenada ( código sql)
+WITH clientes_base AS (  -- Criação de uma CTE (Common Table Expression) chamada "clientes_base"
+    SELECT *
+    FROM tb_clientes  -- Seleciona todos os campos da tabela "tb_clientes"
+)
+
+SELECT
+    id,  -- Seleciona a coluna "id" do cliente
+    nome,  -- Seleciona a coluna "nome" do cliente
+    email,  -- Seleciona a coluna "email" do cliente
+    status,  -- Seleciona a coluna "status" do cliente
+    data_cadastro  -- Seleciona a coluna "data_cadastro" do cliente
+FROM clientes_base  -- Utiliza a CTE "clientes_base" como a fonte dos dados;
+[0m01:46:30.657452 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m01:46:30.674968 [debug] [Thread-1 (]: On model.lab6.clientes: COMMIT
+[0m01:46:30.676437 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.clientes"
+[0m01:46:30.682126 [debug] [Thread-1 (]: On model.lab6.clientes: COMMIT
+[0m01:46:30.745174 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m01:46:30.752671 [debug] [Thread-1 (]: Timing info for model.lab6.clientes (execute): 01:46:30.368933 => 01:46:30.751686
+[0m01:46:30.763154 [debug] [Thread-1 (]: On model.lab6.clientes: Close
+[0m01:46:30.773810 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '175489dd-c706-48ca-b79b-5780be9f8c83', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f233a026d10>]}
+[0m01:46:30.779811 [info ] [Thread-1 (]: 1 of 3 OK created sql view model main.clientes ................................. [[32mOK[0m in 0.48s]
+[0m01:46:30.804512 [debug] [Thread-1 (]: Finished running node model.lab6.clientes
+[0m01:46:30.819651 [debug] [Thread-1 (]: Began running node model.lab6.pedidos
+[0m01:46:30.833097 [info ] [Thread-1 (]: 2 of 3 START sql view model main.pedidos ....................................... [RUN]
+[0m01:46:30.843880 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.lab6.clientes, now model.lab6.pedidos)
+[0m01:46:30.853576 [debug] [Thread-1 (]: Began compiling node model.lab6.pedidos
+[0m01:46:30.870137 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab6.pedidos"
+[0m01:46:30.884970 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos (compile): 01:46:30.856957 => 01:46:30.881594
+[0m01:46:30.892075 [debug] [Thread-1 (]: Began executing node model.lab6.pedidos
+[0m01:46:30.919688 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos"
+[0m01:46:30.930449 [debug] [Thread-1 (]: On model.lab6.pedidos: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.pedidos"} */
+drop view if exists "main"."pedidos"
+[0m01:46:30.937821 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m01:46:31.019642 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m01:46:31.025112 [debug] [Thread-1 (]: Writing runtime sql for node "model.lab6.pedidos"
+[0m01:46:31.031106 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos"
+[0m01:46:31.033990 [debug] [Thread-1 (]: On model.lab6.pedidos: BEGIN
+[0m01:46:31.035831 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m01:46:31.038501 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos"
+[0m01:46:31.042292 [debug] [Thread-1 (]: On model.lab6.pedidos: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.pedidos"} */
+
+    
+    create view main."pedidos" as
+      -- Configura o modelo para ser materializado como uma "view" no banco de dados
+
+WITH pedidos_base AS (  -- Criação de uma CTE (Common Table Expression) chamada "pedidos_base"
+    SELECT
+        id_pedido,  -- Seleciona a coluna "id_pedido" da tabela "tb_pedidos"
+        id_cliente,  -- Seleciona a coluna "id_cliente" da tabela "tb_pedidos"
+        data_pedido,  -- Seleciona a coluna "data_pedido" da tabela "tb_pedidos"
+        valor_total  -- Seleciona a coluna "valor_total" da tabela "tb_pedidos"
+    FROM tb_pedidos  -- Fonte dos dados: tabela "tb_pedidos"
+    WHERE valor_total > 200  -- Filtra os pedidos com valor total maior que 200
+)
+
+SELECT
+    id_pedido,  -- Seleciona a coluna "id_pedido" da CTE "pedidos_base"
+    id_cliente,  -- Seleciona a coluna "id_cliente" da CTE "pedidos_base"
+    data_pedido,  -- Seleciona a coluna "data_pedido" da CTE "pedidos_base"
+    valor_total  -- Seleciona a coluna "valor_total" da CTE "pedidos_base"
+FROM pedidos_base  -- Utiliza a CTE "pedidos_base" como a fonte dos dados;
+[0m01:46:31.071429 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m01:46:31.078273 [debug] [Thread-1 (]: On model.lab6.pedidos: COMMIT
+[0m01:46:31.082646 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos"
+[0m01:46:31.089684 [debug] [Thread-1 (]: On model.lab6.pedidos: COMMIT
+[0m01:46:31.146795 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m01:46:31.154805 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos (execute): 01:46:30.899018 => 01:46:31.152133
+[0m01:46:31.159074 [debug] [Thread-1 (]: On model.lab6.pedidos: Close
+[0m01:46:31.170374 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '175489dd-c706-48ca-b79b-5780be9f8c83', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f23394d5990>]}
+[0m01:46:31.174262 [info ] [Thread-1 (]: 2 of 3 OK created sql view model main.pedidos .................................. [[32mOK[0m in 0.33s]
+[0m01:46:31.194800 [debug] [Thread-1 (]: Finished running node model.lab6.pedidos
+[0m01:46:31.200315 [debug] [Thread-1 (]: Began running node model.lab6.pedidos_clientes1
+[0m01:46:31.205092 [info ] [Thread-1 (]: 3 of 3 START sql view model main.pedidos_clientes1 ............................. [RUN]
+[0m01:46:31.214146 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.lab6.pedidos, now model.lab6.pedidos_clientes1)
+[0m01:46:31.218995 [debug] [Thread-1 (]: Began compiling node model.lab6.pedidos_clientes1
+[0m01:46:31.228270 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab6.pedidos_clientes1"
+[0m01:46:31.243927 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos_clientes1 (compile): 01:46:31.222078 => 01:46:31.242929
+[0m01:46:31.246858 [debug] [Thread-1 (]: Began executing node model.lab6.pedidos_clientes1
+[0m01:46:31.261767 [debug] [Thread-1 (]: Writing runtime sql for node "model.lab6.pedidos_clientes1"
+[0m01:46:31.295884 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos_clientes1"
+[0m01:46:31.300406 [debug] [Thread-1 (]: On model.lab6.pedidos_clientes1: BEGIN
+[0m01:46:31.306877 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m01:46:31.316303 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m01:46:31.322658 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos_clientes1"
+[0m01:46:31.333835 [debug] [Thread-1 (]: On model.lab6.pedidos_clientes1: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.pedidos_clientes1"} */
+
+    
+    create view main."pedidos_clientes1" as
+    SELECT
+    c.id AS cliente_id,  -- Seleciona o ID do cliente e o renomeia como "cliente_id"
+    c.nome,  -- Seleciona o nome do cliente
+    c.email,  -- Seleciona o email do cliente
+    COUNT(p.id_pedido) AS numero_pedidos,  -- Conta o número de pedidos associados ao cliente e renomeia como "numero_pedidos"
+    SUM(p.valor_total) AS valor_total_pedidos  -- Soma o valor total dos pedidos do cliente e renomeia como "valor_total_pedidos"
+FROM clientes c  -- Fonte dos dados: tabela "clientes" com alias "c"
+LEFT JOIN pedidos p  -- Realiza uma junção à esquerda com a tabela "pedidos" usando alias "p"
+    ON c.id = p.id_cliente  -- Condição de junção: relaciona clientes aos seus pedidos pelo ID do cliente
+GROUP BY c.id, c.nome, c.email  -- Agrupa os resultados por ID, nome, sobrenome e email do cliente;
+[0m01:46:31.384238 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m01:46:31.406427 [debug] [Thread-1 (]: On model.lab6.pedidos_clientes1: COMMIT
+[0m01:46:31.408691 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos_clientes1"
+[0m01:46:31.412785 [debug] [Thread-1 (]: On model.lab6.pedidos_clientes1: COMMIT
+[0m01:46:31.472499 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m01:46:31.478041 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos_clientes1 (execute): 01:46:31.250592 => 01:46:31.476929
+[0m01:46:31.480353 [debug] [Thread-1 (]: On model.lab6.pedidos_clientes1: Close
+[0m01:46:31.488370 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '175489dd-c706-48ca-b79b-5780be9f8c83', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f23394e3750>]}
+[0m01:46:31.490814 [info ] [Thread-1 (]: 3 of 3 OK created sql view model main.pedidos_clientes1 ........................ [[32mOK[0m in 0.28s]
+[0m01:46:31.493972 [debug] [Thread-1 (]: Finished running node model.lab6.pedidos_clientes1
+[0m01:46:31.509939 [debug] [MainThread]: Using sqlite connection "master"
+[0m01:46:31.513515 [debug] [MainThread]: On master: BEGIN
+[0m01:46:31.517627 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m01:46:31.539346 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m01:46:31.543033 [debug] [MainThread]: On master: COMMIT
+[0m01:46:31.550912 [debug] [MainThread]: Using sqlite connection "master"
+[0m01:46:31.555446 [debug] [MainThread]: On master: COMMIT
+[0m01:46:31.560317 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m01:46:31.563431 [debug] [MainThread]: On master: Close
+[0m01:46:31.578106 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m01:46:31.583976 [debug] [MainThread]: Connection 'model.lab6.pedidos_clientes1' was properly closed.
+[0m01:46:31.603172 [info ] [MainThread]: 
+[0m01:46:31.612484 [info ] [MainThread]: Finished running 3 view models in 0 hours 0 minutes and 1.70 seconds (1.70s).
+[0m01:46:31.644538 [debug] [MainThread]: Command end result
+[0m01:46:31.729651 [info ] [MainThread]: 
+[0m01:46:31.743331 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m01:46:31.752127 [info ] [MainThread]: 
+[0m01:46:31.768758 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m01:46:31.782299 [debug] [MainThread]: Command `dbt run` succeeded at 01:46:31.781785 after 2.88 seconds
+[0m01:46:31.790860 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f233db5a1d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f233daba550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2339d5ffd0>]}
+[0m01:46:31.813697 [debug] [MainThread]: Flushing usage events
+[0m02:00:58.140825 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ffd242fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ffd03a8d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ffd11ec10>]}
+
+
+============================== 02:00:58.158184 | eaebee86-ddf1-433d-9fb8-92dc9d003c54 ==============================
+[0m02:00:58.158184 [info ] [MainThread]: Running with dbt=1.5.11
+[0m02:00:58.174927 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/dsa/lab6/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m02:00:58.398292 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'eaebee86-ddf1-433d-9fb8-92dc9d003c54', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ffd473f50>]}
+[0m02:00:58.488730 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'eaebee86-ddf1-433d-9fb8-92dc9d003c54', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ffd473f50>]}
+[0m02:00:58.492138 [info ] [MainThread]: Registered adapter: sqlite=1.5.0
+[0m02:00:58.552928 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m02:00:58.673647 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 1 files added, 0 files changed.
+[0m02:00:58.676592 [debug] [MainThread]: Partial parsing: added file: lab6://models/mart/pedidos_clientes.sql
+[0m02:00:58.682346 [debug] [MainThread]: Partial parsing: deleted file: lab6://models/mart/pedidos_clientes1.sql
+[0m02:00:58.771156 [debug] [MainThread]: 1699: static parser successfully parsed mart/pedidos_clientes.sql
+[0m02:00:58.889064 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'eaebee86-ddf1-433d-9fb8-92dc9d003c54', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ffc9e7250>]}
+[0m02:00:58.927604 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'eaebee86-ddf1-433d-9fb8-92dc9d003c54', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ffca4e950>]}
+[0m02:00:58.936935 [info ] [MainThread]: Found 3 models, 0 tests, 0 snapshots, 0 analyses, 311 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m02:00:58.945835 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'eaebee86-ddf1-433d-9fb8-92dc9d003c54', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ffd490910>]}
+[0m02:00:58.966936 [info ] [MainThread]: 
+[0m02:00:58.974520 [debug] [MainThread]: Acquiring new sqlite connection 'master'
+[0m02:00:58.989462 [debug] [ThreadPool]: Acquiring new sqlite connection 'list_lab6.db'
+[0m02:00:59.059950 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db"
+[0m02:00:59.064094 [debug] [ThreadPool]: On list_lab6.db: BEGIN
+[0m02:00:59.066558 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:00:59.070751 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:00:59.073018 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db"
+[0m02:00:59.079025 [debug] [ThreadPool]: On list_lab6.db: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db"} */
+
+        pragma database_list
+    
+[0m02:00:59.084869 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:00:59.105100 [debug] [ThreadPool]: On list_lab6.db: ROLLBACK
+[0m02:00:59.111616 [debug] [ThreadPool]: On list_lab6.db: Close
+[0m02:00:59.141272 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab6.db, now list_lab6.db_main)
+[0m02:00:59.196221 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m02:00:59.200847 [debug] [ThreadPool]: On list_lab6.db_main: BEGIN
+[0m02:00:59.209795 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m02:00:59.227668 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:00:59.231858 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m02:00:59.245619 [debug] [ThreadPool]: On list_lab6.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db_main"} */
+
+        pragma database_list
+    
+[0m02:00:59.262326 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:00:59.282100 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m02:00:59.288747 [debug] [ThreadPool]: On list_lab6.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db_main"} */
+
+            SELECT
+                'lab6.db' as database
+                ,name
+                ,'main' AS schema
+                ,type as data_type
+            FROM
+                main.sqlite_master
+            WHERE
+                name NOT LIKE 'sqlite_%'
+        
+[0m02:00:59.300326 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:00:59.308039 [debug] [ThreadPool]: On list_lab6.db_main: ROLLBACK
+[0m02:00:59.311314 [debug] [ThreadPool]: On list_lab6.db_main: Close
+[0m02:00:59.330759 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'eaebee86-ddf1-433d-9fb8-92dc9d003c54', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ffe193690>]}
+[0m02:00:59.333631 [debug] [MainThread]: Using sqlite connection "master"
+[0m02:00:59.335840 [debug] [MainThread]: On master: BEGIN
+[0m02:00:59.339353 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m02:00:59.350717 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m02:00:59.353526 [debug] [MainThread]: On master: COMMIT
+[0m02:00:59.360763 [debug] [MainThread]: Using sqlite connection "master"
+[0m02:00:59.364318 [debug] [MainThread]: On master: COMMIT
+[0m02:00:59.368231 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m02:00:59.370598 [debug] [MainThread]: On master: Close
+[0m02:00:59.383782 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m02:00:59.396663 [info ] [MainThread]: 
+[0m02:00:59.430234 [debug] [Thread-1 (]: Began running node model.lab6.clientes
+[0m02:00:59.435748 [info ] [Thread-1 (]: 1 of 3 START sql view model main.clientes ...................................... [RUN]
+[0m02:00:59.444815 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_lab6.db_main, now model.lab6.clientes)
+[0m02:00:59.454338 [debug] [Thread-1 (]: Began compiling node model.lab6.clientes
+[0m02:00:59.508496 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab6.clientes"
+[0m02:00:59.541236 [debug] [Thread-1 (]: Timing info for model.lab6.clientes (compile): 02:00:59.462559 => 02:00:59.540377
+[0m02:00:59.551753 [debug] [Thread-1 (]: Began executing node model.lab6.clientes
+[0m02:00:59.730326 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.clientes"
+[0m02:00:59.738438 [debug] [Thread-1 (]: On model.lab6.clientes: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.clientes"} */
+drop view if exists "main"."clientes"
+[0m02:00:59.749193 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:00:59.837697 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:00:59.866590 [debug] [Thread-1 (]: Writing runtime sql for node "model.lab6.clientes"
+[0m02:00:59.878263 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.clientes"
+[0m02:00:59.884447 [debug] [Thread-1 (]: On model.lab6.clientes: BEGIN
+[0m02:00:59.892822 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:00:59.897038 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.clientes"
+[0m02:00:59.899334 [debug] [Thread-1 (]: On model.lab6.clientes: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.clientes"} */
+
+    
+    create view main."clientes" as
+      -- Configura o modelo para ser materializado como uma "view" no banco de dados
+                                   -- Não é uma view materializada e sim um consulta armazenada ( código sql)
+WITH clientes_base AS (  -- Criação de uma CTE (Common Table Expression) chamada "clientes_base"
+    SELECT *
+    FROM tb_clientes  -- Seleciona todos os campos da tabela "tb_clientes"
+)
+
+SELECT
+    id,  -- Seleciona a coluna "id" do cliente
+    nome,  -- Seleciona a coluna "nome" do cliente
+    email,  -- Seleciona a coluna "email" do cliente
+    status,  -- Seleciona a coluna "status" do cliente
+    data_cadastro  -- Seleciona a coluna "data_cadastro" do cliente
+FROM clientes_base  -- Utiliza a CTE "clientes_base" como a fonte dos dados;
+[0m02:00:59.940245 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:00:59.965878 [debug] [Thread-1 (]: On model.lab6.clientes: COMMIT
+[0m02:00:59.968912 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.clientes"
+[0m02:00:59.971287 [debug] [Thread-1 (]: On model.lab6.clientes: COMMIT
+[0m02:01:00.041788 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:01:00.048105 [debug] [Thread-1 (]: Timing info for model.lab6.clientes (execute): 02:00:59.554849 => 02:01:00.046896
+[0m02:01:00.051108 [debug] [Thread-1 (]: On model.lab6.clientes: Close
+[0m02:01:00.058597 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'eaebee86-ddf1-433d-9fb8-92dc9d003c54', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ffce09290>]}
+[0m02:01:00.066139 [info ] [Thread-1 (]: 1 of 3 OK created sql view model main.clientes ................................. [[32mOK[0m in 0.61s]
+[0m02:01:00.074841 [debug] [Thread-1 (]: Finished running node model.lab6.clientes
+[0m02:01:00.085583 [debug] [Thread-1 (]: Began running node model.lab6.pedidos
+[0m02:01:00.106387 [info ] [Thread-1 (]: 2 of 3 START sql view model main.pedidos ....................................... [RUN]
+[0m02:01:00.135233 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.lab6.clientes, now model.lab6.pedidos)
+[0m02:01:00.145305 [debug] [Thread-1 (]: Began compiling node model.lab6.pedidos
+[0m02:01:00.218909 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab6.pedidos"
+[0m02:01:00.246084 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos (compile): 02:01:00.170015 => 02:01:00.241760
+[0m02:01:00.252919 [debug] [Thread-1 (]: Began executing node model.lab6.pedidos
+[0m02:01:00.294622 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos"
+[0m02:01:00.297705 [debug] [Thread-1 (]: On model.lab6.pedidos: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.pedidos"} */
+drop view if exists "main"."pedidos"
+[0m02:01:00.302723 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:01:00.385828 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:01:00.393065 [debug] [Thread-1 (]: Writing runtime sql for node "model.lab6.pedidos"
+[0m02:01:00.405867 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos"
+[0m02:01:00.413376 [debug] [Thread-1 (]: On model.lab6.pedidos: BEGIN
+[0m02:01:00.427233 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:01:00.443986 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos"
+[0m02:01:00.448788 [debug] [Thread-1 (]: On model.lab6.pedidos: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.pedidos"} */
+
+    
+    create view main."pedidos" as
+      -- Configura o modelo para ser materializado como uma "view" no banco de dados
+
+WITH pedidos_base AS (  -- Criação de uma CTE (Common Table Expression) chamada "pedidos_base"
+    SELECT
+        id_pedido,  -- Seleciona a coluna "id_pedido" da tabela "tb_pedidos"
+        id_cliente,  -- Seleciona a coluna "id_cliente" da tabela "tb_pedidos"
+        data_pedido,  -- Seleciona a coluna "data_pedido" da tabela "tb_pedidos"
+        valor_total  -- Seleciona a coluna "valor_total" da tabela "tb_pedidos"
+    FROM tb_pedidos  -- Fonte dos dados: tabela "tb_pedidos"
+    WHERE valor_total > 200  -- Filtra os pedidos com valor total maior que 200
+)
+
+SELECT
+    id_pedido,  -- Seleciona a coluna "id_pedido" da CTE "pedidos_base"
+    id_cliente,  -- Seleciona a coluna "id_cliente" da CTE "pedidos_base"
+    data_pedido,  -- Seleciona a coluna "data_pedido" da CTE "pedidos_base"
+    valor_total  -- Seleciona a coluna "valor_total" da CTE "pedidos_base"
+FROM pedidos_base  -- Utiliza a CTE "pedidos_base" como a fonte dos dados;
+[0m02:01:00.483526 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:01:00.511668 [debug] [Thread-1 (]: On model.lab6.pedidos: COMMIT
+[0m02:01:00.524932 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos"
+[0m02:01:00.539151 [debug] [Thread-1 (]: On model.lab6.pedidos: COMMIT
+[0m02:01:00.627593 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:01:00.645357 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos (execute): 02:01:00.259493 => 02:01:00.638486
+[0m02:01:00.652022 [debug] [Thread-1 (]: On model.lab6.pedidos: Close
+[0m02:01:00.664831 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'eaebee86-ddf1-433d-9fb8-92dc9d003c54', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ffcab7750>]}
+[0m02:01:00.671620 [info ] [Thread-1 (]: 2 of 3 OK created sql view model main.pedidos .................................. [[32mOK[0m in 0.53s]
+[0m02:01:00.678768 [debug] [Thread-1 (]: Finished running node model.lab6.pedidos
+[0m02:01:00.695303 [debug] [Thread-1 (]: Began running node model.lab6.pedidos_clientes
+[0m02:01:00.698821 [info ] [Thread-1 (]: 3 of 3 START sql table model main.pedidos_clientes ............................. [RUN]
+[0m02:01:00.712294 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.lab6.pedidos, now model.lab6.pedidos_clientes)
+[0m02:01:00.725937 [debug] [Thread-1 (]: Began compiling node model.lab6.pedidos_clientes
+[0m02:01:00.760581 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab6.pedidos_clientes"
+[0m02:01:00.794568 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos_clientes (compile): 02:01:00.745130 => 02:01:00.793558
+[0m02:01:00.810930 [debug] [Thread-1 (]: Began executing node model.lab6.pedidos_clientes
+[0m02:01:00.887648 [debug] [Thread-1 (]: Writing runtime sql for node "model.lab6.pedidos_clientes"
+[0m02:01:00.906618 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos_clientes"
+[0m02:01:00.913307 [debug] [Thread-1 (]: On model.lab6.pedidos_clientes: BEGIN
+[0m02:01:00.922610 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:01:00.935529 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:01:00.939315 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos_clientes"
+[0m02:01:00.943515 [debug] [Thread-1 (]: On model.lab6.pedidos_clientes: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.pedidos_clientes"} */
+
+  
+    
+    
+    create  table main."pedidos_clientes"
+    as
+          -- Configura o modelo para ser materializado como uma "table" no banco de dados, criando uma tabela física com os resultados.
+
+SELECT
+    c.id AS cliente_id,  -- Seleciona o ID do cliente e o renomeia como "cliente_id"
+    c.nome,  -- Seleciona o nome do cliente
+    c.email,  -- Seleciona o email do cliente
+    COUNT(p.id_pedido) AS numero_pedidos,  -- Conta o número de pedidos associados ao cliente e renomeia como "numero_pedidos"
+    SUM(p.valor_total) AS valor_total_pedidos  -- Soma o valor total dos pedidos do cliente e renomeia como "valor_total_pedidos"
+FROM clientes c  -- Fonte dos dados: tabela "clientes" com alias "c"
+LEFT JOIN pedidos p  -- Realiza uma junção à esquerda com a tabela "pedidos" usando alias "p"
+    ON c.id = p.id_cliente  -- Condição de junção: relaciona clientes aos seus pedidos pelo ID do cliente
+GROUP BY c.id, c.nome, c.email  -- Agrupa os resultados por ID, nome e email do cliente
+
+  
+[0m02:01:00.957792 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:01:00.972592 [debug] [Thread-1 (]: On model.lab6.pedidos_clientes: COMMIT
+[0m02:01:00.975476 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos_clientes"
+[0m02:01:00.978529 [debug] [Thread-1 (]: On model.lab6.pedidos_clientes: COMMIT
+[0m02:01:01.038959 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:01:01.044843 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos_clientes (execute): 02:01:00.817981 => 02:01:01.042515
+[0m02:01:01.046942 [debug] [Thread-1 (]: On model.lab6.pedidos_clientes: Close
+[0m02:01:01.051789 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'eaebee86-ddf1-433d-9fb8-92dc9d003c54', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ffcdfb690>]}
+[0m02:01:01.056817 [info ] [Thread-1 (]: 3 of 3 OK created sql table model main.pedidos_clientes ........................ [[32mOK[0m in 0.34s]
+[0m02:01:01.062054 [debug] [Thread-1 (]: Finished running node model.lab6.pedidos_clientes
+[0m02:01:01.074798 [debug] [MainThread]: Using sqlite connection "master"
+[0m02:01:01.078275 [debug] [MainThread]: On master: BEGIN
+[0m02:01:01.080663 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m02:01:01.099795 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m02:01:01.103018 [debug] [MainThread]: On master: COMMIT
+[0m02:01:01.106045 [debug] [MainThread]: Using sqlite connection "master"
+[0m02:01:01.110291 [debug] [MainThread]: On master: COMMIT
+[0m02:01:01.112547 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m02:01:01.115764 [debug] [MainThread]: On master: Close
+[0m02:01:01.127211 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m02:01:01.129843 [debug] [MainThread]: Connection 'model.lab6.pedidos_clientes' was properly closed.
+[0m02:01:01.132221 [info ] [MainThread]: 
+[0m02:01:01.138239 [info ] [MainThread]: Finished running 2 view models, 1 table model in 0 hours 0 minutes and 2.16 seconds (2.16s).
+[0m02:01:01.157705 [debug] [MainThread]: Command end result
+[0m02:01:01.207129 [info ] [MainThread]: 
+[0m02:01:01.217353 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m02:01:01.223847 [info ] [MainThread]: 
+[0m02:01:01.227802 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m02:01:01.254030 [debug] [MainThread]: Command `dbt run` succeeded at 02:01:01.253509 after 3.15 seconds
+[0m02:01:01.267306 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ffd49c810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2000f26410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f200105d150>]}
+[0m02:01:01.270598 [debug] [MainThread]: Flushing usage events
+[0m02:23:05.313948 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f072986b4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f07294dba10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f07294e7990>]}
+
+
+============================== 02:23:05.320636 | a85e67d2-aac2-4d66-af6c-45ecbc79f560 ==============================
+[0m02:23:05.320636 [info ] [MainThread]: Running with dbt=1.5.11
+[0m02:23:05.323542 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/dsa/lab6/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m02:23:05.457053 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a85e67d2-aac2-4d66-af6c-45ecbc79f560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0729500d50>]}
+[0m02:23:05.494618 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a85e67d2-aac2-4d66-af6c-45ecbc79f560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f07294ee290>]}
+[0m02:23:05.496305 [info ] [MainThread]: Registered adapter: sqlite=1.5.0
+[0m02:23:05.520655 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m02:23:05.567100 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m02:23:05.568686 [debug] [MainThread]: Partial parsing: updated file: lab6://models/mart/pedidos_clientes.sql
+[0m02:23:05.603144 [debug] [MainThread]: 1603: static parser failed on mart/pedidos_clientes.sql
+[0m02:23:05.638664 [debug] [MainThread]: 1602: parser fallback to jinja rendering on mart/pedidos_clientes.sql
+[0m02:23:05.659766 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a85e67d2-aac2-4d66-af6c-45ecbc79f560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f07291477d0>]}
+[0m02:23:05.678619 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a85e67d2-aac2-4d66-af6c-45ecbc79f560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f07291477d0>]}
+[0m02:23:05.680011 [info ] [MainThread]: Found 3 models, 0 tests, 0 snapshots, 0 analyses, 311 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m02:23:05.681555 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a85e67d2-aac2-4d66-af6c-45ecbc79f560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f072c3c7210>]}
+[0m02:23:05.687896 [info ] [MainThread]: 
+[0m02:23:05.691093 [debug] [MainThread]: Acquiring new sqlite connection 'master'
+[0m02:23:05.697060 [debug] [ThreadPool]: Acquiring new sqlite connection 'list_lab6.db'
+[0m02:23:05.724664 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db"
+[0m02:23:05.726011 [debug] [ThreadPool]: On list_lab6.db: BEGIN
+[0m02:23:05.727906 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:23:05.741389 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:23:05.743148 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db"
+[0m02:23:05.745781 [debug] [ThreadPool]: On list_lab6.db: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db"} */
+
+        pragma database_list
+    
+[0m02:23:05.747588 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:23:05.751788 [debug] [ThreadPool]: On list_lab6.db: ROLLBACK
+[0m02:23:05.756590 [debug] [ThreadPool]: On list_lab6.db: Close
+[0m02:23:05.763187 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab6.db, now list_lab6.db_main)
+[0m02:23:05.786913 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m02:23:05.788695 [debug] [ThreadPool]: On list_lab6.db_main: BEGIN
+[0m02:23:05.790906 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m02:23:05.796344 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:23:05.798910 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m02:23:05.800214 [debug] [ThreadPool]: On list_lab6.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db_main"} */
+
+        pragma database_list
+    
+[0m02:23:05.802189 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:23:05.806726 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m02:23:05.808442 [debug] [ThreadPool]: On list_lab6.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db_main"} */
+
+            SELECT
+                'lab6.db' as database
+                ,name
+                ,'main' AS schema
+                ,type as data_type
+            FROM
+                main.sqlite_master
+            WHERE
+                name NOT LIKE 'sqlite_%'
+        
+[0m02:23:05.813907 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:23:05.818553 [debug] [ThreadPool]: On list_lab6.db_main: ROLLBACK
+[0m02:23:05.819572 [debug] [ThreadPool]: On list_lab6.db_main: Close
+[0m02:23:05.825161 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a85e67d2-aac2-4d66-af6c-45ecbc79f560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f07294ee810>]}
+[0m02:23:05.826257 [debug] [MainThread]: Using sqlite connection "master"
+[0m02:23:05.827615 [debug] [MainThread]: On master: BEGIN
+[0m02:23:05.829222 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m02:23:05.832701 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m02:23:05.833703 [debug] [MainThread]: On master: COMMIT
+[0m02:23:05.835169 [debug] [MainThread]: Using sqlite connection "master"
+[0m02:23:05.836834 [debug] [MainThread]: On master: COMMIT
+[0m02:23:05.839565 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m02:23:05.842751 [debug] [MainThread]: On master: Close
+[0m02:23:05.846411 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m02:23:05.849776 [info ] [MainThread]: 
+[0m02:23:05.862965 [debug] [Thread-1 (]: Began running node model.lab6.clientes
+[0m02:23:05.865684 [info ] [Thread-1 (]: 1 of 3 START sql view model main.clientes ...................................... [RUN]
+[0m02:23:05.871414 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_lab6.db_main, now model.lab6.clientes)
+[0m02:23:05.874789 [debug] [Thread-1 (]: Began compiling node model.lab6.clientes
+[0m02:23:05.902446 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab6.clientes"
+[0m02:23:05.909457 [debug] [Thread-1 (]: Timing info for model.lab6.clientes (compile): 02:23:05.878304 => 02:23:05.908916
+[0m02:23:05.911913 [debug] [Thread-1 (]: Began executing node model.lab6.clientes
+[0m02:23:05.948947 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.clientes"
+[0m02:23:05.950326 [debug] [Thread-1 (]: On model.lab6.clientes: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.clientes"} */
+drop view if exists "main"."clientes"
+[0m02:23:05.954213 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:23:05.990884 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:23:05.998714 [debug] [Thread-1 (]: Writing runtime sql for node "model.lab6.clientes"
+[0m02:23:06.001546 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.clientes"
+[0m02:23:06.002748 [debug] [Thread-1 (]: On model.lab6.clientes: BEGIN
+[0m02:23:06.004003 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:23:06.005127 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.clientes"
+[0m02:23:06.006521 [debug] [Thread-1 (]: On model.lab6.clientes: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.clientes"} */
+
+    
+    create view main."clientes" as
+      -- Configura o modelo para ser materializado como uma "view" no banco de dados
+                                   -- Não é uma view materializada e sim um consulta armazenada ( código sql)
+WITH clientes_base AS (  -- Criação de uma CTE (Common Table Expression) chamada "clientes_base"
+    SELECT *
+    FROM tb_clientes  -- Seleciona todos os campos da tabela "tb_clientes"
+)
+
+SELECT
+    id,  -- Seleciona a coluna "id" do cliente
+    nome,  -- Seleciona a coluna "nome" do cliente
+    email,  -- Seleciona a coluna "email" do cliente
+    status,  -- Seleciona a coluna "status" do cliente
+    data_cadastro  -- Seleciona a coluna "data_cadastro" do cliente
+FROM clientes_base  -- Utiliza a CTE "clientes_base" como a fonte dos dados;
+[0m02:23:06.010904 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:23:06.020417 [debug] [Thread-1 (]: On model.lab6.clientes: COMMIT
+[0m02:23:06.021368 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.clientes"
+[0m02:23:06.022833 [debug] [Thread-1 (]: On model.lab6.clientes: COMMIT
+[0m02:23:06.042582 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:23:06.045007 [debug] [Thread-1 (]: Timing info for model.lab6.clientes (execute): 02:23:05.913629 => 02:23:06.044621
+[0m02:23:06.046071 [debug] [Thread-1 (]: On model.lab6.clientes: Close
+[0m02:23:06.048753 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a85e67d2-aac2-4d66-af6c-45ecbc79f560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f072985ff10>]}
+[0m02:23:06.050184 [info ] [Thread-1 (]: 1 of 3 OK created sql view model main.clientes ................................. [[32mOK[0m in 0.18s]
+[0m02:23:06.052631 [debug] [Thread-1 (]: Finished running node model.lab6.clientes
+[0m02:23:06.054038 [debug] [Thread-1 (]: Began running node model.lab6.pedidos
+[0m02:23:06.056025 [info ] [Thread-1 (]: 2 of 3 START sql view model main.pedidos ....................................... [RUN]
+[0m02:23:06.060468 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.lab6.clientes, now model.lab6.pedidos)
+[0m02:23:06.061986 [debug] [Thread-1 (]: Began compiling node model.lab6.pedidos
+[0m02:23:06.071403 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab6.pedidos"
+[0m02:23:06.074844 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos (compile): 02:23:06.063004 => 02:23:06.074123
+[0m02:23:06.077328 [debug] [Thread-1 (]: Began executing node model.lab6.pedidos
+[0m02:23:06.086174 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos"
+[0m02:23:06.089918 [debug] [Thread-1 (]: On model.lab6.pedidos: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.pedidos"} */
+drop view if exists "main"."pedidos"
+[0m02:23:06.093085 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:23:06.128314 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:23:06.132105 [debug] [Thread-1 (]: Writing runtime sql for node "model.lab6.pedidos"
+[0m02:23:06.135810 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos"
+[0m02:23:06.137130 [debug] [Thread-1 (]: On model.lab6.pedidos: BEGIN
+[0m02:23:06.138428 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:23:06.139919 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos"
+[0m02:23:06.141245 [debug] [Thread-1 (]: On model.lab6.pedidos: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.pedidos"} */
+
+    
+    create view main."pedidos" as
+      -- Configura o modelo para ser materializado como uma "view" no banco de dados
+
+WITH pedidos_base AS (  -- Criação de uma CTE (Common Table Expression) chamada "pedidos_base"
+    SELECT
+        id_pedido,  -- Seleciona a coluna "id_pedido" da tabela "tb_pedidos"
+        id_cliente,  -- Seleciona a coluna "id_cliente" da tabela "tb_pedidos"
+        data_pedido,  -- Seleciona a coluna "data_pedido" da tabela "tb_pedidos"
+        valor_total  -- Seleciona a coluna "valor_total" da tabela "tb_pedidos"
+    FROM tb_pedidos  -- Fonte dos dados: tabela "tb_pedidos"
+    WHERE valor_total > 200  -- Filtra os pedidos com valor total maior que 200
+)
+
+SELECT
+    id_pedido,  -- Seleciona a coluna "id_pedido" da CTE "pedidos_base"
+    id_cliente,  -- Seleciona a coluna "id_cliente" da CTE "pedidos_base"
+    data_pedido,  -- Seleciona a coluna "data_pedido" da CTE "pedidos_base"
+    valor_total  -- Seleciona a coluna "valor_total" da CTE "pedidos_base"
+FROM pedidos_base  -- Utiliza a CTE "pedidos_base" como a fonte dos dados;
+[0m02:23:06.147098 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:23:06.150751 [debug] [Thread-1 (]: On model.lab6.pedidos: COMMIT
+[0m02:23:06.151756 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos"
+[0m02:23:06.153474 [debug] [Thread-1 (]: On model.lab6.pedidos: COMMIT
+[0m02:23:06.185395 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:23:06.188543 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos (execute): 02:23:06.079345 => 02:23:06.187950
+[0m02:23:06.189786 [debug] [Thread-1 (]: On model.lab6.pedidos: Close
+[0m02:23:06.192701 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a85e67d2-aac2-4d66-af6c-45ecbc79f560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f07291bd550>]}
+[0m02:23:06.194173 [info ] [Thread-1 (]: 2 of 3 OK created sql view model main.pedidos .................................. [[32mOK[0m in 0.13s]
+[0m02:23:06.197148 [debug] [Thread-1 (]: Finished running node model.lab6.pedidos
+[0m02:23:06.200112 [debug] [Thread-1 (]: Began running node model.lab6.pedidos_clientes
+[0m02:23:06.205599 [info ] [Thread-1 (]: 3 of 3 START sql incremental model main.pedidos_clientes ....................... [RUN]
+[0m02:23:06.208666 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.lab6.pedidos, now model.lab6.pedidos_clientes)
+[0m02:23:06.210479 [debug] [Thread-1 (]: Began compiling node model.lab6.pedidos_clientes
+[0m02:23:06.234117 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab6.pedidos_clientes"
+[0m02:23:06.246822 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos_clientes (compile): 02:23:06.216680 => 02:23:06.246054
+[0m02:23:06.249244 [debug] [Thread-1 (]: Began executing node model.lab6.pedidos_clientes
+[0m02:23:06.320848 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos_clientes"
+[0m02:23:06.322349 [debug] [Thread-1 (]: On model.lab6.pedidos_clientes: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.pedidos_clientes"} */
+
+    
+  
+    
+    
+    create temporary table temp."pedidos_clientes__dbt_tmp"
+    as
+          
+-- Configura o modelo para ser materializado de forma "incremental".
+-- A chave única (unique_key) definida é 'data', o que significa que o DBT usará essa coluna para identificar e atualizar os registros.
+-- No modo incremental, apenas os registros novos ou modificados serão processados e inseridos na tabela, em vez de reconstruir a tabela inteira.
+
+WITH ultima_data AS (
+    SELECT MAX(data) AS max_data
+    FROM main."pedidos_clientes"  
+    -- Esta CTE (Common Table Expression) seleciona a data mais recente ('MAX(data)') da tabela que está sendo materializada atualmente.
+    -- 'main."pedidos_clientes"' se refere à tabela que está sendo incrementada.
+)
+
+SELECT
+    DATE(data_pedido) AS data,  -- Converte a data do pedido para o formato de data (sem hora) e a renomeia como 'data'.
+    SUM(valor_total) AS total_vendas  -- Soma o valor total das vendas para cada data e o renomeia como 'total_vendas'.
+FROM main."pedidos"  
+-- Refere-se à tabela 'pedidos' dentro do projeto DBT. A função 'ref' permite referenciar outros modelos no DBT.
+
+  
+    -- Este bloco condicional será executado apenas se o modelo estiver sendo materializado de forma incremental.
+    WHERE data_pedido > (SELECT max_data FROM ultima_data)  
+    -- Filtra para incluir apenas registros onde 'data_pedido' é maior que a última data já processada, garantindo que apenas os novos dados sejam considerados.
+
+
+GROUP BY 1  -- Agrupa os resultados pela primeira coluna selecionada, que é 'data'.
+
+  
+  
+[0m02:23:06.324103 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:23:06.328451 [debug] [Thread-1 (]: On model.lab6.pedidos_clientes: Close
+[0m02:23:06.330461 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos_clientes (execute): 02:23:06.253120 => 02:23:06.329879
+[0m02:23:06.344482 [debug] [Thread-1 (]: Database Error in model pedidos_clientes (models/mart/pedidos_clientes.sql)
+  misuse of aggregate: MAX()
+[0m02:23:06.345864 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a85e67d2-aac2-4d66-af6c-45ecbc79f560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f072ad15290>]}
+[0m02:23:06.347817 [error] [Thread-1 (]: 3 of 3 ERROR creating sql incremental model main.pedidos_clientes .............. [[31mERROR[0m in 0.14s]
+[0m02:23:06.350793 [debug] [Thread-1 (]: Finished running node model.lab6.pedidos_clientes
+[0m02:23:06.358061 [debug] [MainThread]: Using sqlite connection "master"
+[0m02:23:06.361401 [debug] [MainThread]: On master: BEGIN
+[0m02:23:06.363562 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m02:23:06.373562 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m02:23:06.377693 [debug] [MainThread]: On master: COMMIT
+[0m02:23:06.379691 [debug] [MainThread]: Using sqlite connection "master"
+[0m02:23:06.381130 [debug] [MainThread]: On master: COMMIT
+[0m02:23:06.382703 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m02:23:06.385234 [debug] [MainThread]: On master: Close
+[0m02:23:06.388024 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m02:23:06.389062 [debug] [MainThread]: Connection 'model.lab6.pedidos_clientes' was properly closed.
+[0m02:23:06.390814 [info ] [MainThread]: 
+[0m02:23:06.392738 [info ] [MainThread]: Finished running 2 view models, 1 incremental model in 0 hours 0 minutes and 0.70 seconds (0.70s).
+[0m02:23:06.398478 [debug] [MainThread]: Command end result
+[0m02:23:06.432143 [info ] [MainThread]: 
+[0m02:23:06.435702 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m02:23:06.439434 [info ] [MainThread]: 
+[0m02:23:06.444024 [error] [MainThread]: [33mDatabase Error in model pedidos_clientes (models/mart/pedidos_clientes.sql)[0m
+[0m02:23:06.450066 [error] [MainThread]:   misuse of aggregate: MAX()
+[0m02:23:06.459169 [info ] [MainThread]: 
+[0m02:23:06.464816 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 TOTAL=3
+[0m02:23:06.470318 [debug] [MainThread]: Command `dbt run` failed at 02:23:06.469885 after 1.17 seconds
+[0m02:23:06.477892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0729998950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f07294e6ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f072924d910>]}
+[0m02:23:06.480795 [debug] [MainThread]: Flushing usage events
+[0m02:29:46.547738 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41659ccad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4165bbc810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41673ba3d0>]}
+
+
+============================== 02:29:46.563735 | 2b1d510e-238a-4a46-a558-e87901114dd8 ==============================
+[0m02:29:46.563735 [info ] [MainThread]: Running with dbt=1.5.11
+[0m02:29:46.567237 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/root/.dbt', 'log_path': '/dsa/lab6/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m02:29:46.777966 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2b1d510e-238a-4a46-a558-e87901114dd8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4165b28510>]}
+[0m02:29:46.857939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2b1d510e-238a-4a46-a558-e87901114dd8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f416532f6d0>]}
+[0m02:29:46.863261 [info ] [MainThread]: Registered adapter: sqlite=1.5.0
+[0m02:29:46.922267 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m02:29:47.095395 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m02:29:47.101700 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m02:29:47.130097 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2b1d510e-238a-4a46-a558-e87901114dd8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4165b390d0>]}
+[0m02:29:47.155619 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2b1d510e-238a-4a46-a558-e87901114dd8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41653d0690>]}
+[0m02:29:47.158880 [info ] [MainThread]: Found 3 models, 0 tests, 0 snapshots, 0 analyses, 311 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m02:29:47.162066 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2b1d510e-238a-4a46-a558-e87901114dd8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4168377790>]}
+[0m02:29:47.169775 [info ] [MainThread]: 
+[0m02:29:47.175000 [debug] [MainThread]: Acquiring new sqlite connection 'master'
+[0m02:29:47.180109 [debug] [ThreadPool]: Acquiring new sqlite connection 'list_lab6.db'
+[0m02:29:47.284877 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db"
+[0m02:29:47.288199 [debug] [ThreadPool]: On list_lab6.db: BEGIN
+[0m02:29:47.295694 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:29:47.314155 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:29:47.318074 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db"
+[0m02:29:47.326210 [debug] [ThreadPool]: On list_lab6.db: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db"} */
+
+        pragma database_list
+    
+[0m02:29:47.334620 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:29:47.356271 [debug] [ThreadPool]: On list_lab6.db: ROLLBACK
+[0m02:29:47.360882 [debug] [ThreadPool]: On list_lab6.db: Close
+[0m02:29:47.387437 [debug] [ThreadPool]: Acquiring new sqlite connection 'list_lab6.db_main'
+[0m02:29:47.434182 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m02:29:47.441576 [debug] [ThreadPool]: On list_lab6.db_main: BEGIN
+[0m02:29:47.447748 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:29:47.457735 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:29:47.462543 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m02:29:47.465981 [debug] [ThreadPool]: On list_lab6.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db_main"} */
+
+        pragma database_list
+    
+[0m02:29:47.477313 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:29:47.486981 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m02:29:47.489958 [debug] [ThreadPool]: On list_lab6.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db_main"} */
+
+            SELECT
+                'lab6.db' as database
+                ,name
+                ,'main' AS schema
+                ,type as data_type
+            FROM
+                main.sqlite_master
+            WHERE
+                name NOT LIKE 'sqlite_%'
+        
+[0m02:29:47.498740 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:29:47.506858 [debug] [ThreadPool]: On list_lab6.db_main: ROLLBACK
+[0m02:29:47.509363 [debug] [ThreadPool]: On list_lab6.db_main: Close
+[0m02:29:47.521486 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2b1d510e-238a-4a46-a558-e87901114dd8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4166607b50>]}
+[0m02:29:47.523340 [debug] [MainThread]: Using sqlite connection "master"
+[0m02:29:47.528195 [debug] [MainThread]: On master: BEGIN
+[0m02:29:47.531058 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m02:29:47.539131 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m02:29:47.540553 [debug] [MainThread]: On master: COMMIT
+[0m02:29:47.544359 [debug] [MainThread]: Using sqlite connection "master"
+[0m02:29:47.549152 [debug] [MainThread]: On master: COMMIT
+[0m02:29:47.553729 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m02:29:47.555764 [debug] [MainThread]: On master: Close
+[0m02:29:47.566181 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m02:29:47.572034 [info ] [MainThread]: 
+[0m02:29:47.597097 [debug] [Thread-1 (]: Began running node model.lab6.clientes
+[0m02:29:47.600757 [info ] [Thread-1 (]: 1 of 3 START sql view model main.clientes ...................................... [RUN]
+[0m02:29:47.612009 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_lab6.db_main, now model.lab6.clientes)
+[0m02:29:47.615436 [debug] [Thread-1 (]: Began compiling node model.lab6.clientes
+[0m02:29:47.645921 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab6.clientes"
+[0m02:29:47.663862 [debug] [Thread-1 (]: Timing info for model.lab6.clientes (compile): 02:29:47.619237 => 02:29:47.662033
+[0m02:29:47.669095 [debug] [Thread-1 (]: Began executing node model.lab6.clientes
+[0m02:29:47.763863 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.clientes"
+[0m02:29:47.765464 [debug] [Thread-1 (]: On model.lab6.clientes: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.clientes"} */
+drop view if exists "main"."clientes"
+[0m02:29:47.767078 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:29:47.858947 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:29:47.895872 [debug] [Thread-1 (]: Writing runtime sql for node "model.lab6.clientes"
+[0m02:29:47.906110 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.clientes"
+[0m02:29:47.911836 [debug] [Thread-1 (]: On model.lab6.clientes: BEGIN
+[0m02:29:47.925186 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:29:47.936438 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.clientes"
+[0m02:29:47.940931 [debug] [Thread-1 (]: On model.lab6.clientes: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.clientes"} */
+
+    
+    create view main."clientes" as
+      -- Configura o modelo para ser materializado como uma "view" no banco de dados
+                                   -- Não é uma view materializada e sim um consulta armazenada ( código sql)
+WITH clientes_base AS (  -- Criação de uma CTE (Common Table Expression) chamada "clientes_base"
+    SELECT *
+    FROM tb_clientes  -- Seleciona todos os campos da tabela "tb_clientes"
+)
+
+SELECT
+    id,  -- Seleciona a coluna "id" do cliente
+    nome,  -- Seleciona a coluna "nome" do cliente
+    email,  -- Seleciona a coluna "email" do cliente
+    status,  -- Seleciona a coluna "status" do cliente
+    data_cadastro  -- Seleciona a coluna "data_cadastro" do cliente
+FROM clientes_base  -- Utiliza a CTE "clientes_base" como a fonte dos dados;
+[0m02:29:47.954588 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:29:47.994391 [debug] [Thread-1 (]: On model.lab6.clientes: COMMIT
+[0m02:29:48.000259 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.clientes"
+[0m02:29:48.012831 [debug] [Thread-1 (]: On model.lab6.clientes: COMMIT
+[0m02:29:48.087815 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:29:48.096075 [debug] [Thread-1 (]: Timing info for model.lab6.clientes (execute): 02:29:47.676589 => 02:29:48.093745
+[0m02:29:48.102990 [debug] [Thread-1 (]: On model.lab6.clientes: Close
+[0m02:29:48.109968 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2b1d510e-238a-4a46-a558-e87901114dd8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41659b9810>]}
+[0m02:29:48.113956 [info ] [Thread-1 (]: 1 of 3 OK created sql view model main.clientes ................................. [[32mOK[0m in 0.50s]
+[0m02:29:48.123102 [debug] [Thread-1 (]: Finished running node model.lab6.clientes
+[0m02:29:48.127623 [debug] [Thread-1 (]: Began running node model.lab6.pedidos
+[0m02:29:48.139876 [info ] [Thread-1 (]: 2 of 3 START sql view model main.pedidos ....................................... [RUN]
+[0m02:29:48.147798 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.lab6.clientes, now model.lab6.pedidos)
+[0m02:29:48.160719 [debug] [Thread-1 (]: Began compiling node model.lab6.pedidos
+[0m02:29:48.186528 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab6.pedidos"
+[0m02:29:48.205493 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos (compile): 02:29:48.167931 => 02:29:48.201557
+[0m02:29:48.214958 [debug] [Thread-1 (]: Began executing node model.lab6.pedidos
+[0m02:29:48.238720 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos"
+[0m02:29:48.242458 [debug] [Thread-1 (]: On model.lab6.pedidos: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.pedidos"} */
+drop view if exists "main"."pedidos"
+[0m02:29:48.245974 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:29:48.307985 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:29:48.321153 [debug] [Thread-1 (]: Writing runtime sql for node "model.lab6.pedidos"
+[0m02:29:48.330910 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos"
+[0m02:29:48.335604 [debug] [Thread-1 (]: On model.lab6.pedidos: BEGIN
+[0m02:29:48.339707 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:29:48.341498 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos"
+[0m02:29:48.346071 [debug] [Thread-1 (]: On model.lab6.pedidos: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.pedidos"} */
+
+    
+    create view main."pedidos" as
+      -- Configura o modelo para ser materializado como uma "view" no banco de dados
+
+WITH pedidos_base AS (  -- Criação de uma CTE (Common Table Expression) chamada "pedidos_base"
+    SELECT
+        id_pedido,  -- Seleciona a coluna "id_pedido" da tabela "tb_pedidos"
+        id_cliente,  -- Seleciona a coluna "id_cliente" da tabela "tb_pedidos"
+        data_pedido,  -- Seleciona a coluna "data_pedido" da tabela "tb_pedidos"
+        valor_total  -- Seleciona a coluna "valor_total" da tabela "tb_pedidos"
+    FROM tb_pedidos  -- Fonte dos dados: tabela "tb_pedidos"
+    WHERE valor_total > 200  -- Filtra os pedidos com valor total maior que 200
+)
+
+SELECT
+    id_pedido,  -- Seleciona a coluna "id_pedido" da CTE "pedidos_base"
+    id_cliente,  -- Seleciona a coluna "id_cliente" da CTE "pedidos_base"
+    data_pedido,  -- Seleciona a coluna "data_pedido" da CTE "pedidos_base"
+    valor_total  -- Seleciona a coluna "valor_total" da CTE "pedidos_base"
+FROM pedidos_base  -- Utiliza a CTE "pedidos_base" como a fonte dos dados;
+[0m02:29:48.358608 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:29:48.376853 [debug] [Thread-1 (]: On model.lab6.pedidos: COMMIT
+[0m02:29:48.378286 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos"
+[0m02:29:48.380151 [debug] [Thread-1 (]: On model.lab6.pedidos: COMMIT
+[0m02:29:48.426047 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:29:48.432831 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos (execute): 02:29:48.217515 => 02:29:48.431945
+[0m02:29:48.437824 [debug] [Thread-1 (]: On model.lab6.pedidos: Close
+[0m02:29:48.447224 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2b1d510e-238a-4a46-a558-e87901114dd8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41659aea90>]}
+[0m02:29:48.451917 [info ] [Thread-1 (]: 2 of 3 OK created sql view model main.pedidos .................................. [[32mOK[0m in 0.30s]
+[0m02:29:48.464239 [debug] [Thread-1 (]: Finished running node model.lab6.pedidos
+[0m02:29:48.470984 [debug] [Thread-1 (]: Began running node model.lab6.pedidos_clientes
+[0m02:29:48.478582 [info ] [Thread-1 (]: 3 of 3 START sql incremental model main.pedidos_clientes ....................... [RUN]
+[0m02:29:48.487390 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.lab6.pedidos, now model.lab6.pedidos_clientes)
+[0m02:29:48.491736 [debug] [Thread-1 (]: Began compiling node model.lab6.pedidos_clientes
+[0m02:29:48.543769 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab6.pedidos_clientes"
+[0m02:29:48.578786 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos_clientes (compile): 02:29:48.493292 => 02:29:48.560058
+[0m02:29:48.583487 [debug] [Thread-1 (]: Began executing node model.lab6.pedidos_clientes
+[0m02:29:48.725163 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos_clientes"
+[0m02:29:48.731593 [debug] [Thread-1 (]: On model.lab6.pedidos_clientes: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.pedidos_clientes"} */
+drop table if exists "main"."pedidos_clientes__dbt_backup"
+[0m02:29:48.738016 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:29:48.749372 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:29:48.764174 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos_clientes"
+[0m02:29:48.768155 [debug] [Thread-1 (]: On model.lab6.pedidos_clientes: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.pedidos_clientes"} */
+drop table if exists "main"."pedidos_clientes"
+[0m02:29:48.859893 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:29:48.902989 [debug] [Thread-1 (]: Writing runtime sql for node "model.lab6.pedidos_clientes"
+[0m02:29:48.922822 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos_clientes"
+[0m02:29:48.927235 [debug] [Thread-1 (]: On model.lab6.pedidos_clientes: BEGIN
+[0m02:29:48.932242 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:29:48.935503 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos_clientes"
+[0m02:29:48.945363 [debug] [Thread-1 (]: On model.lab6.pedidos_clientes: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.pedidos_clientes"} */
+
+      
+  
+    
+    
+    create  table main."pedidos_clientes"
+    as
+          
+-- Configura o modelo para ser materializado de forma "incremental".
+-- A chave única (unique_key) definida é 'data', o que significa que o DBT usará essa coluna para identificar e atualizar os registros.
+-- No modo incremental, apenas os registros novos ou modificados serão processados e inseridos na tabela, em vez de reconstruir a tabela inteira.
+
+WITH ultima_data AS (
+    SELECT MAX(data) AS max_data
+    FROM main."pedidos_clientes"  
+    -- Esta CTE (Common Table Expression) seleciona a data mais recente ('MAX(data)') da tabela que está sendo materializada atualmente.
+    -- 'main."pedidos_clientes"' se refere à tabela que está sendo incrementada.
+)
+
+SELECT
+    DATE(data_pedido) AS data,  -- Converte a data do pedido para o formato de data (sem hora) e a renomeia como 'data'.
+    SUM(valor_total) AS total_vendas  -- Soma o valor total das vendas para cada data e o renomeia como 'total_vendas'.
+FROM main."pedidos"  
+-- Refere-se à tabela 'pedidos' dentro do projeto DBT. A função 'ref' permite referenciar outros modelos no DBT.
+
+
+
+GROUP BY 1  -- Agrupa os resultados pela primeira coluna selecionada, que é 'data'.
+
+  
+  
+[0m02:29:48.960066 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:29:48.997776 [debug] [Thread-1 (]: On model.lab6.pedidos_clientes: COMMIT
+[0m02:29:49.001217 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos_clientes"
+[0m02:29:49.005721 [debug] [Thread-1 (]: On model.lab6.pedidos_clientes: COMMIT
+[0m02:29:49.057977 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:29:49.069574 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos_clientes (execute): 02:29:48.592630 => 02:29:49.066211
+[0m02:29:49.075330 [debug] [Thread-1 (]: On model.lab6.pedidos_clientes: Close
+[0m02:29:49.086102 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2b1d510e-238a-4a46-a558-e87901114dd8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4165153410>]}
+[0m02:29:49.088488 [info ] [Thread-1 (]: 3 of 3 OK created sql incremental model main.pedidos_clientes .................. [[32mOK[0m in 0.60s]
+[0m02:29:49.095217 [debug] [Thread-1 (]: Finished running node model.lab6.pedidos_clientes
+[0m02:29:49.112396 [debug] [MainThread]: Using sqlite connection "master"
+[0m02:29:49.116053 [debug] [MainThread]: On master: BEGIN
+[0m02:29:49.130570 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m02:29:49.139518 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m02:29:49.158889 [debug] [MainThread]: On master: COMMIT
+[0m02:29:49.164962 [debug] [MainThread]: Using sqlite connection "master"
+[0m02:29:49.168521 [debug] [MainThread]: On master: COMMIT
+[0m02:29:49.173421 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m02:29:49.179341 [debug] [MainThread]: On master: Close
+[0m02:29:49.188557 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m02:29:49.190279 [debug] [MainThread]: Connection 'list_lab6.db' was properly closed.
+[0m02:29:49.191911 [debug] [MainThread]: Connection 'model.lab6.pedidos_clientes' was properly closed.
+[0m02:29:49.195727 [info ] [MainThread]: 
+[0m02:29:49.200965 [info ] [MainThread]: Finished running 2 view models, 1 incremental model in 0 hours 0 minutes and 2.02 seconds (2.02s).
+[0m02:29:49.219165 [debug] [MainThread]: Command end result
+[0m02:29:49.278411 [info ] [MainThread]: 
+[0m02:29:49.286841 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m02:29:49.294884 [info ] [MainThread]: 
+[0m02:29:49.300511 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m02:29:49.310110 [debug] [MainThread]: Command `dbt run` succeeded at 02:29:49.309497 after 2.80 seconds
+[0m02:29:49.321764 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41673ba3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4165b388d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41695a4fd0>]}
+[0m02:29:49.328856 [debug] [MainThread]: Flushing usage events
+[0m02:32:18.955802 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1a8a269dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1a8a5ce050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1a8a5cdb10>]}
+
+
+============================== 02:32:18.960044 | 87904c57-fc31-4a3a-bf5c-b00bc83f5aa7 ==============================
+[0m02:32:18.960044 [info ] [MainThread]: Running with dbt=1.5.11
+[0m02:32:18.962106 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/dsa/lab6/logs', 'version_check': 'True', 'profiles_dir': '/root/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m02:32:19.062362 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '87904c57-fc31-4a3a-bf5c-b00bc83f5aa7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1a8a9e8190>]}
+[0m02:32:19.092612 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '87904c57-fc31-4a3a-bf5c-b00bc83f5aa7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1a8a9e8190>]}
+[0m02:32:19.094247 [info ] [MainThread]: Registered adapter: sqlite=1.5.0
+[0m02:32:19.117656 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m02:32:19.182709 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m02:32:19.183885 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m02:32:19.193141 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '87904c57-fc31-4a3a-bf5c-b00bc83f5aa7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1a8a5cdd10>]}
+[0m02:32:19.207592 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '87904c57-fc31-4a3a-bf5c-b00bc83f5aa7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1a89df4cd0>]}
+[0m02:32:19.209326 [info ] [MainThread]: Found 3 models, 0 tests, 0 snapshots, 0 analyses, 311 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m02:32:19.212113 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '87904c57-fc31-4a3a-bf5c-b00bc83f5aa7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1a8cda32d0>]}
+[0m02:32:19.216827 [info ] [MainThread]: 
+[0m02:32:19.219641 [debug] [MainThread]: Acquiring new sqlite connection 'master'
+[0m02:32:19.226287 [debug] [ThreadPool]: Acquiring new sqlite connection 'list_lab6.db'
+[0m02:32:19.263696 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db"
+[0m02:32:19.265236 [debug] [ThreadPool]: On list_lab6.db: BEGIN
+[0m02:32:19.266388 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:32:19.274531 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:32:19.281395 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db"
+[0m02:32:19.285656 [debug] [ThreadPool]: On list_lab6.db: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db"} */
+
+        pragma database_list
+    
+[0m02:32:19.288686 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:32:19.295831 [debug] [ThreadPool]: On list_lab6.db: ROLLBACK
+[0m02:32:19.297036 [debug] [ThreadPool]: On list_lab6.db: Close
+[0m02:32:19.303331 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab6.db, now list_lab6.db_main)
+[0m02:32:19.324565 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m02:32:19.325900 [debug] [ThreadPool]: On list_lab6.db_main: BEGIN
+[0m02:32:19.327169 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m02:32:19.330935 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:32:19.331855 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m02:32:19.334208 [debug] [ThreadPool]: On list_lab6.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db_main"} */
+
+        pragma database_list
+    
+[0m02:32:19.335551 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:32:19.339984 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m02:32:19.341176 [debug] [ThreadPool]: On list_lab6.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db_main"} */
+
+            SELECT
+                'lab6.db' as database
+                ,name
+                ,'main' AS schema
+                ,type as data_type
+            FROM
+                main.sqlite_master
+            WHERE
+                name NOT LIKE 'sqlite_%'
+        
+[0m02:32:19.343609 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:32:19.346537 [debug] [ThreadPool]: On list_lab6.db_main: ROLLBACK
+[0m02:32:19.347674 [debug] [ThreadPool]: On list_lab6.db_main: Close
+[0m02:32:19.351950 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '87904c57-fc31-4a3a-bf5c-b00bc83f5aa7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1a8a52ba90>]}
+[0m02:32:19.353137 [debug] [MainThread]: Using sqlite connection "master"
+[0m02:32:19.354398 [debug] [MainThread]: On master: BEGIN
+[0m02:32:19.356102 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m02:32:19.359542 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m02:32:19.360550 [debug] [MainThread]: On master: COMMIT
+[0m02:32:19.362217 [debug] [MainThread]: Using sqlite connection "master"
+[0m02:32:19.364682 [debug] [MainThread]: On master: COMMIT
+[0m02:32:19.367276 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m02:32:19.371197 [debug] [MainThread]: On master: Close
+[0m02:32:19.375317 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m02:32:19.378849 [info ] [MainThread]: 
+[0m02:32:19.397148 [debug] [Thread-1 (]: Began running node model.lab6.clientes
+[0m02:32:19.399421 [info ] [Thread-1 (]: 1 of 3 START sql view model main.clientes ...................................... [RUN]
+[0m02:32:19.403356 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_lab6.db_main, now model.lab6.clientes)
+[0m02:32:19.405241 [debug] [Thread-1 (]: Began compiling node model.lab6.clientes
+[0m02:32:19.431584 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab6.clientes"
+[0m02:32:19.436136 [debug] [Thread-1 (]: Timing info for model.lab6.clientes (compile): 02:32:19.407766 => 02:32:19.435269
+[0m02:32:19.438393 [debug] [Thread-1 (]: Began executing node model.lab6.clientes
+[0m02:32:19.478390 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.clientes"
+[0m02:32:19.479568 [debug] [Thread-1 (]: On model.lab6.clientes: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.clientes"} */
+drop view if exists "main"."clientes"
+[0m02:32:19.481965 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:32:19.511035 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:32:19.518595 [debug] [Thread-1 (]: Writing runtime sql for node "model.lab6.clientes"
+[0m02:32:19.521079 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.clientes"
+[0m02:32:19.522480 [debug] [Thread-1 (]: On model.lab6.clientes: BEGIN
+[0m02:32:19.523768 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:32:19.525000 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.clientes"
+[0m02:32:19.526379 [debug] [Thread-1 (]: On model.lab6.clientes: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.clientes"} */
+
+    
+    create view main."clientes" as
+      -- Configura o modelo para ser materializado como uma "view" no banco de dados
+                                   -- Não é uma view materializada e sim um consulta armazenada ( código sql)
+WITH clientes_base AS (  -- Criação de uma CTE (Common Table Expression) chamada "clientes_base"
+    SELECT *
+    FROM tb_clientes  -- Seleciona todos os campos da tabela "tb_clientes"
+)
+
+SELECT
+    id,  -- Seleciona a coluna "id" do cliente
+    nome,  -- Seleciona a coluna "nome" do cliente
+    email,  -- Seleciona a coluna "email" do cliente
+    status,  -- Seleciona a coluna "status" do cliente
+    data_cadastro  -- Seleciona a coluna "data_cadastro" do cliente
+FROM clientes_base  -- Utiliza a CTE "clientes_base" como a fonte dos dados;
+[0m02:32:19.530949 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:32:19.541138 [debug] [Thread-1 (]: On model.lab6.clientes: COMMIT
+[0m02:32:19.542440 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.clientes"
+[0m02:32:19.544703 [debug] [Thread-1 (]: On model.lab6.clientes: COMMIT
+[0m02:32:19.587156 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:32:19.590274 [debug] [Thread-1 (]: Timing info for model.lab6.clientes (execute): 02:32:19.439705 => 02:32:19.589721
+[0m02:32:19.591562 [debug] [Thread-1 (]: On model.lab6.clientes: Close
+[0m02:32:19.595023 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '87904c57-fc31-4a3a-bf5c-b00bc83f5aa7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1a8a53ee10>]}
+[0m02:32:19.596671 [info ] [Thread-1 (]: 1 of 3 OK created sql view model main.clientes ................................. [[32mOK[0m in 0.19s]
+[0m02:32:19.599593 [debug] [Thread-1 (]: Finished running node model.lab6.clientes
+[0m02:32:19.601918 [debug] [Thread-1 (]: Began running node model.lab6.pedidos
+[0m02:32:19.608225 [info ] [Thread-1 (]: 2 of 3 START sql view model main.pedidos ....................................... [RUN]
+[0m02:32:19.615966 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.lab6.clientes, now model.lab6.pedidos)
+[0m02:32:19.620457 [debug] [Thread-1 (]: Began compiling node model.lab6.pedidos
+[0m02:32:19.630783 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab6.pedidos"
+[0m02:32:19.635133 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos (compile): 02:32:19.622724 => 02:32:19.634389
+[0m02:32:19.641319 [debug] [Thread-1 (]: Began executing node model.lab6.pedidos
+[0m02:32:19.661290 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos"
+[0m02:32:19.663255 [debug] [Thread-1 (]: On model.lab6.pedidos: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.pedidos"} */
+drop view if exists "main"."pedidos"
+[0m02:32:19.666336 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:32:19.706229 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:32:19.711365 [debug] [Thread-1 (]: Writing runtime sql for node "model.lab6.pedidos"
+[0m02:32:19.715474 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos"
+[0m02:32:19.717792 [debug] [Thread-1 (]: On model.lab6.pedidos: BEGIN
+[0m02:32:19.721124 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:32:19.722531 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos"
+[0m02:32:19.724349 [debug] [Thread-1 (]: On model.lab6.pedidos: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.pedidos"} */
+
+    
+    create view main."pedidos" as
+      -- Configura o modelo para ser materializado como uma "view" no banco de dados
+
+WITH pedidos_base AS (  -- Criação de uma CTE (Common Table Expression) chamada "pedidos_base"
+    SELECT
+        id_pedido,  -- Seleciona a coluna "id_pedido" da tabela "tb_pedidos"
+        id_cliente,  -- Seleciona a coluna "id_cliente" da tabela "tb_pedidos"
+        data_pedido,  -- Seleciona a coluna "data_pedido" da tabela "tb_pedidos"
+        valor_total  -- Seleciona a coluna "valor_total" da tabela "tb_pedidos"
+    FROM tb_pedidos  -- Fonte dos dados: tabela "tb_pedidos"
+    WHERE valor_total > 200  -- Filtra os pedidos com valor total maior que 200
+)
+
+SELECT
+    id_pedido,  -- Seleciona a coluna "id_pedido" da CTE "pedidos_base"
+    id_cliente,  -- Seleciona a coluna "id_cliente" da CTE "pedidos_base"
+    data_pedido,  -- Seleciona a coluna "data_pedido" da CTE "pedidos_base"
+    valor_total  -- Seleciona a coluna "valor_total" da CTE "pedidos_base"
+FROM pedidos_base  -- Utiliza a CTE "pedidos_base" como a fonte dos dados;
+[0m02:32:19.731446 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:32:19.735410 [debug] [Thread-1 (]: On model.lab6.pedidos: COMMIT
+[0m02:32:19.736387 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos"
+[0m02:32:19.737924 [debug] [Thread-1 (]: On model.lab6.pedidos: COMMIT
+[0m02:32:19.769482 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:32:19.772707 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos (execute): 02:32:19.647182 => 02:32:19.772168
+[0m02:32:19.773918 [debug] [Thread-1 (]: On model.lab6.pedidos: Close
+[0m02:32:19.776933 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '87904c57-fc31-4a3a-bf5c-b00bc83f5aa7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1a89dcd490>]}
+[0m02:32:19.778300 [info ] [Thread-1 (]: 2 of 3 OK created sql view model main.pedidos .................................. [[32mOK[0m in 0.16s]
+[0m02:32:19.781122 [debug] [Thread-1 (]: Finished running node model.lab6.pedidos
+[0m02:32:19.784196 [debug] [Thread-1 (]: Began running node model.lab6.pedidos_clientes
+[0m02:32:19.786951 [info ] [Thread-1 (]: 3 of 3 START sql incremental model main.pedidos_clientes ....................... [RUN]
+[0m02:32:19.793136 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.lab6.pedidos, now model.lab6.pedidos_clientes)
+[0m02:32:19.797129 [debug] [Thread-1 (]: Began compiling node model.lab6.pedidos_clientes
+[0m02:32:19.831090 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab6.pedidos_clientes"
+[0m02:32:19.837409 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos_clientes (compile): 02:32:19.798546 => 02:32:19.836589
+[0m02:32:19.840437 [debug] [Thread-1 (]: Began executing node model.lab6.pedidos_clientes
+[0m02:32:19.902362 [debug] [Thread-1 (]: Writing runtime sql for node "model.lab6.pedidos_clientes"
+[0m02:32:19.905902 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos_clientes"
+[0m02:32:19.907215 [debug] [Thread-1 (]: On model.lab6.pedidos_clientes: BEGIN
+[0m02:32:19.908551 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:32:19.911192 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:32:19.912028 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos_clientes"
+[0m02:32:19.913921 [debug] [Thread-1 (]: On model.lab6.pedidos_clientes: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "model.lab6.pedidos_clientes"} */
+
+      
+  
+    
+    
+    create  table main."pedidos_clientes"
+    as
+          
+-- Configura o modelo para ser materializado de forma "incremental".
+-- A chave única (unique_key) definida é 'data', o que significa que o DBT usará essa coluna para identificar e atualizar os registros.
+-- No modo incremental, apenas os registros novos ou modificados serão processados e inseridos na tabela, em vez de reconstruir a tabela inteira.
+
+WITH ultima_data AS (
+    SELECT MAX(data) AS max_data
+    FROM main."pedidos_clientes"  
+    -- Esta CTE (Common Table Expression) seleciona a data mais recente ('MAX(data)') da tabela que está sendo materializada atualmente.
+    -- 'main."pedidos_clientes"' se refere à tabela que está sendo incrementada.
+)
+
+SELECT
+    DATE(data_pedido) AS data,  -- Converte a data do pedido para o formato de data (sem hora) e a renomeia como 'data'.
+    SUM(valor_total) AS total_vendas  -- Soma o valor total das vendas para cada data e o renomeia como 'total_vendas'.
+FROM main."pedidos"  
+-- Refere-se à tabela 'pedidos' dentro do projeto DBT. A função 'ref' permite referenciar outros modelos no DBT.
+
+
+
+GROUP BY 1  -- Agrupa os resultados pela primeira coluna selecionada, que é 'data'.
+
+  
+  
+[0m02:32:19.922807 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:32:19.931139 [debug] [Thread-1 (]: On model.lab6.pedidos_clientes: COMMIT
+[0m02:32:19.932096 [debug] [Thread-1 (]: Using sqlite connection "model.lab6.pedidos_clientes"
+[0m02:32:19.933812 [debug] [Thread-1 (]: On model.lab6.pedidos_clientes: COMMIT
+[0m02:32:19.964064 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:32:19.966828 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos_clientes (execute): 02:32:19.842905 => 02:32:19.966475
+[0m02:32:19.967772 [debug] [Thread-1 (]: On model.lab6.pedidos_clientes: Close
+[0m02:32:19.971011 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '87904c57-fc31-4a3a-bf5c-b00bc83f5aa7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1a89dbb0d0>]}
+[0m02:32:19.972380 [info ] [Thread-1 (]: 3 of 3 OK created sql incremental model main.pedidos_clientes .................. [[32mOK[0m in 0.18s]
+[0m02:32:19.974906 [debug] [Thread-1 (]: Finished running node model.lab6.pedidos_clientes
+[0m02:32:19.980267 [debug] [MainThread]: Using sqlite connection "master"
+[0m02:32:19.982311 [debug] [MainThread]: On master: BEGIN
+[0m02:32:19.983660 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m02:32:19.986227 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m02:32:19.987206 [debug] [MainThread]: On master: COMMIT
+[0m02:32:19.989952 [debug] [MainThread]: Using sqlite connection "master"
+[0m02:32:19.991485 [debug] [MainThread]: On master: COMMIT
+[0m02:32:19.995232 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m02:32:19.996868 [debug] [MainThread]: On master: Close
+[0m02:32:19.999073 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m02:32:20.002068 [debug] [MainThread]: Connection 'model.lab6.pedidos_clientes' was properly closed.
+[0m02:32:20.005273 [info ] [MainThread]: 
+[0m02:32:20.010206 [info ] [MainThread]: Finished running 2 view models, 1 incremental model in 0 hours 0 minutes and 0.79 seconds (0.79s).
+[0m02:32:20.014198 [debug] [MainThread]: Command end result
+[0m02:32:20.048211 [info ] [MainThread]: 
+[0m02:32:20.051304 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m02:32:20.053667 [info ] [MainThread]: 
+[0m02:32:20.056066 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m02:32:20.071447 [debug] [MainThread]: Command `dbt run` succeeded at 02:32:20.070859 after 1.13 seconds
+[0m02:32:20.077250 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1a8a263ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1a8a51ca90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1a8a3e0250>]}
+[0m02:32:20.080508 [debug] [MainThread]: Flushing usage events
+[0m02:39:21.198501 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb02b6a490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb02a183d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb02b33450>]}
+
+
+============================== 02:39:21.203931 | 77112d3f-716b-4042-81cd-0fc31a4a34b7 ==============================
+[0m02:39:21.203931 [info ] [MainThread]: Running with dbt=1.5.11
+[0m02:39:21.208567 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/root/.dbt', 'log_path': '/dsa/lab6/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m02:39:21.306676 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '77112d3f-716b-4042-81cd-0fc31a4a34b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb02361f90>]}
+[0m02:39:21.332054 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '77112d3f-716b-4042-81cd-0fc31a4a34b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb029d6fd0>]}
+[0m02:39:21.333506 [info ] [MainThread]: Registered adapter: sqlite=1.5.0
+[0m02:39:21.355990 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m02:39:21.402041 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m02:39:21.403565 [debug] [MainThread]: Partial parsing: added file: lab6://models/schema.yml
+[0m02:39:21.530555 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '77112d3f-716b-4042-81cd-0fc31a4a34b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb0219ca10>]}
+[0m02:39:21.545956 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '77112d3f-716b-4042-81cd-0fc31a4a34b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb029bcf10>]}
+[0m02:39:21.547522 [info ] [MainThread]: Found 3 models, 6 tests, 0 snapshots, 0 analyses, 311 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m02:39:21.549092 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '77112d3f-716b-4042-81cd-0fc31a4a34b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb021813d0>]}
+[0m02:39:21.555335 [info ] [MainThread]: 
+[0m02:39:21.559919 [debug] [MainThread]: Acquiring new sqlite connection 'master'
+[0m02:39:21.564256 [debug] [ThreadPool]: Acquiring new sqlite connection 'list_lab6.db_main'
+[0m02:39:21.602453 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m02:39:21.603537 [debug] [ThreadPool]: On list_lab6.db_main: BEGIN
+[0m02:39:21.606091 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:39:21.610538 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:39:21.611427 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m02:39:21.612732 [debug] [ThreadPool]: On list_lab6.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db_main"} */
+
+        pragma database_list
+    
+[0m02:39:21.614421 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:39:21.619197 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m02:39:21.621020 [debug] [ThreadPool]: On list_lab6.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db_main"} */
+
+            SELECT
+                'lab6.db' as database
+                ,name
+                ,'main' AS schema
+                ,type as data_type
+            FROM
+                main.sqlite_master
+            WHERE
+                name NOT LIKE 'sqlite_%'
+        
+[0m02:39:21.627165 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:39:21.632009 [debug] [ThreadPool]: On list_lab6.db_main: ROLLBACK
+[0m02:39:21.634885 [debug] [ThreadPool]: On list_lab6.db_main: Close
+[0m02:39:21.657136 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '77112d3f-716b-4042-81cd-0fc31a4a34b7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb023aea10>]}
+[0m02:39:21.660036 [debug] [MainThread]: Using sqlite connection "master"
+[0m02:39:21.661394 [debug] [MainThread]: On master: BEGIN
+[0m02:39:21.662398 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m02:39:21.665608 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m02:39:21.667187 [debug] [MainThread]: On master: COMMIT
+[0m02:39:21.669052 [debug] [MainThread]: Using sqlite connection "master"
+[0m02:39:21.671917 [debug] [MainThread]: On master: COMMIT
+[0m02:39:21.674922 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m02:39:21.679491 [debug] [MainThread]: On master: Close
+[0m02:39:21.684730 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m02:39:21.687303 [info ] [MainThread]: 
+[0m02:39:21.706929 [debug] [Thread-1 (]: Began running node test.lab6.not_null_clientes_email.641258f909
+[0m02:39:21.708434 [info ] [Thread-1 (]: 1 of 6 START test not_null_clientes_email ...................................... [RUN]
+[0m02:39:21.715554 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_lab6.db_main, now test.lab6.not_null_clientes_email.641258f909)
+[0m02:39:21.716968 [debug] [Thread-1 (]: Began compiling node test.lab6.not_null_clientes_email.641258f909
+[0m02:39:21.757035 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab6.not_null_clientes_email.641258f909"
+[0m02:39:21.763487 [debug] [Thread-1 (]: Timing info for test.lab6.not_null_clientes_email.641258f909 (compile): 02:39:21.721266 => 02:39:21.761933
+[0m02:39:21.765722 [debug] [Thread-1 (]: Began executing node test.lab6.not_null_clientes_email.641258f909
+[0m02:39:21.792203 [debug] [Thread-1 (]: Writing runtime sql for node "test.lab6.not_null_clientes_email.641258f909"
+[0m02:39:21.812794 [debug] [Thread-1 (]: Using sqlite connection "test.lab6.not_null_clientes_email.641258f909"
+[0m02:39:21.814313 [debug] [Thread-1 (]: On test.lab6.not_null_clientes_email.641258f909: BEGIN
+[0m02:39:21.815552 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:39:21.818226 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:39:21.819071 [debug] [Thread-1 (]: Using sqlite connection "test.lab6.not_null_clientes_email.641258f909"
+[0m02:39:21.820794 [debug] [Thread-1 (]: On test.lab6.not_null_clientes_email.641258f909: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "test.lab6.not_null_clientes_email.641258f909"} */
+select
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      
+    
+    
+
+
+
+select email
+from main."clientes"
+where email is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:39:21.823554 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:39:21.828264 [debug] [Thread-1 (]: Timing info for test.lab6.not_null_clientes_email.641258f909 (execute): 02:39:21.767709 => 02:39:21.827761
+[0m02:39:21.829255 [debug] [Thread-1 (]: On test.lab6.not_null_clientes_email.641258f909: ROLLBACK
+[0m02:39:21.830753 [debug] [Thread-1 (]: On test.lab6.not_null_clientes_email.641258f909: Close
+[0m02:39:21.833390 [info ] [Thread-1 (]: 1 of 6 PASS not_null_clientes_email ............................................ [[32mPASS[0m in 0.12s]
+[0m02:39:21.835600 [debug] [Thread-1 (]: Finished running node test.lab6.not_null_clientes_email.641258f909
+[0m02:39:21.837367 [debug] [Thread-1 (]: Began running node test.lab6.not_null_clientes_id.7a6dddb55d
+[0m02:39:21.839477 [info ] [Thread-1 (]: 2 of 6 START test not_null_clientes_id ......................................... [RUN]
+[0m02:39:21.842554 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab6.not_null_clientes_email.641258f909, now test.lab6.not_null_clientes_id.7a6dddb55d)
+[0m02:39:21.846648 [debug] [Thread-1 (]: Began compiling node test.lab6.not_null_clientes_id.7a6dddb55d
+[0m02:39:21.857058 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab6.not_null_clientes_id.7a6dddb55d"
+[0m02:39:21.863998 [debug] [Thread-1 (]: Timing info for test.lab6.not_null_clientes_id.7a6dddb55d (compile): 02:39:21.849436 => 02:39:21.863009
+[0m02:39:21.867446 [debug] [Thread-1 (]: Began executing node test.lab6.not_null_clientes_id.7a6dddb55d
+[0m02:39:21.881690 [debug] [Thread-1 (]: Writing runtime sql for node "test.lab6.not_null_clientes_id.7a6dddb55d"
+[0m02:39:21.889403 [debug] [Thread-1 (]: Using sqlite connection "test.lab6.not_null_clientes_id.7a6dddb55d"
+[0m02:39:21.891083 [debug] [Thread-1 (]: On test.lab6.not_null_clientes_id.7a6dddb55d: BEGIN
+[0m02:39:21.893080 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:39:21.897158 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:39:21.898455 [debug] [Thread-1 (]: Using sqlite connection "test.lab6.not_null_clientes_id.7a6dddb55d"
+[0m02:39:21.900370 [debug] [Thread-1 (]: On test.lab6.not_null_clientes_id.7a6dddb55d: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "test.lab6.not_null_clientes_id.7a6dddb55d"} */
+select
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from main."clientes"
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:39:21.903933 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:39:21.907725 [debug] [Thread-1 (]: Timing info for test.lab6.not_null_clientes_id.7a6dddb55d (execute): 02:39:21.875040 => 02:39:21.907044
+[0m02:39:21.911333 [debug] [Thread-1 (]: On test.lab6.not_null_clientes_id.7a6dddb55d: ROLLBACK
+[0m02:39:21.913793 [debug] [Thread-1 (]: On test.lab6.not_null_clientes_id.7a6dddb55d: Close
+[0m02:39:21.919159 [info ] [Thread-1 (]: 2 of 6 PASS not_null_clientes_id ............................................... [[32mPASS[0m in 0.08s]
+[0m02:39:21.924824 [debug] [Thread-1 (]: Finished running node test.lab6.not_null_clientes_id.7a6dddb55d
+[0m02:39:21.926746 [debug] [Thread-1 (]: Began running node test.lab6.not_null_pedidos_id_pedido.04c7e8baae
+[0m02:39:21.928959 [info ] [Thread-1 (]: 3 of 6 START test not_null_pedidos_id_pedido ................................... [RUN]
+[0m02:39:21.933334 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab6.not_null_clientes_id.7a6dddb55d, now test.lab6.not_null_pedidos_id_pedido.04c7e8baae)
+[0m02:39:21.936445 [debug] [Thread-1 (]: Began compiling node test.lab6.not_null_pedidos_id_pedido.04c7e8baae
+[0m02:39:21.948798 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab6.not_null_pedidos_id_pedido.04c7e8baae"
+[0m02:39:21.968426 [debug] [Thread-1 (]: Timing info for test.lab6.not_null_pedidos_id_pedido.04c7e8baae (compile): 02:39:21.938845 => 02:39:21.967603
+[0m02:39:21.970916 [debug] [Thread-1 (]: Began executing node test.lab6.not_null_pedidos_id_pedido.04c7e8baae
+[0m02:39:21.985836 [debug] [Thread-1 (]: Writing runtime sql for node "test.lab6.not_null_pedidos_id_pedido.04c7e8baae"
+[0m02:39:21.990941 [debug] [Thread-1 (]: Using sqlite connection "test.lab6.not_null_pedidos_id_pedido.04c7e8baae"
+[0m02:39:21.994065 [debug] [Thread-1 (]: On test.lab6.not_null_pedidos_id_pedido.04c7e8baae: BEGIN
+[0m02:39:21.998355 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:39:22.005847 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:39:22.007927 [debug] [Thread-1 (]: Using sqlite connection "test.lab6.not_null_pedidos_id_pedido.04c7e8baae"
+[0m02:39:22.009708 [debug] [Thread-1 (]: On test.lab6.not_null_pedidos_id_pedido.04c7e8baae: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "test.lab6.not_null_pedidos_id_pedido.04c7e8baae"} */
+select
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      
+    
+    
+
+
+
+select id_pedido
+from main."pedidos"
+where id_pedido is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:39:22.012982 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:39:22.017400 [debug] [Thread-1 (]: Timing info for test.lab6.not_null_pedidos_id_pedido.04c7e8baae (execute): 02:39:21.972835 => 02:39:22.016635
+[0m02:39:22.018953 [debug] [Thread-1 (]: On test.lab6.not_null_pedidos_id_pedido.04c7e8baae: ROLLBACK
+[0m02:39:22.020673 [debug] [Thread-1 (]: On test.lab6.not_null_pedidos_id_pedido.04c7e8baae: Close
+[0m02:39:22.025465 [info ] [Thread-1 (]: 3 of 6 PASS not_null_pedidos_id_pedido ......................................... [[32mPASS[0m in 0.09s]
+[0m02:39:22.030291 [debug] [Thread-1 (]: Finished running node test.lab6.not_null_pedidos_id_pedido.04c7e8baae
+[0m02:39:22.036536 [debug] [Thread-1 (]: Began running node test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592
+[0m02:39:22.037891 [info ] [Thread-1 (]: 4 of 6 START test relationships_pedidos_id_cliente__id__ref_clientes_ .......... [RUN]
+[0m02:39:22.040637 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab6.not_null_pedidos_id_pedido.04c7e8baae, now test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592)
+[0m02:39:22.043469 [debug] [Thread-1 (]: Began compiling node test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592
+[0m02:39:22.061891 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592"
+[0m02:39:22.076673 [debug] [Thread-1 (]: Timing info for test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592 (compile): 02:39:22.044779 => 02:39:22.075990
+[0m02:39:22.081404 [debug] [Thread-1 (]: Began executing node test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592
+[0m02:39:22.088486 [debug] [Thread-1 (]: Writing runtime sql for node "test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592"
+[0m02:39:22.095944 [debug] [Thread-1 (]: Using sqlite connection "test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592"
+[0m02:39:22.097494 [debug] [Thread-1 (]: On test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592: BEGIN
+[0m02:39:22.100529 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:39:22.105889 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:39:22.107406 [debug] [Thread-1 (]: Using sqlite connection "test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592"
+[0m02:39:22.108523 [debug] [Thread-1 (]: On test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592"} */
+select
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      
+    
+    
+
+with child as (
+    select id_cliente as from_field
+    from main."pedidos"
+    where id_cliente is not null
+),
+
+parent as (
+    select id as to_field
+    from main."clientes"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:39:22.113151 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:39:22.117363 [debug] [Thread-1 (]: Timing info for test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592 (execute): 02:39:22.082575 => 02:39:22.116743
+[0m02:39:22.118949 [debug] [Thread-1 (]: On test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592: ROLLBACK
+[0m02:39:22.121567 [debug] [Thread-1 (]: On test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592: Close
+[0m02:39:22.127008 [info ] [Thread-1 (]: 4 of 6 PASS relationships_pedidos_id_cliente__id__ref_clientes_ ................ [[32mPASS[0m in 0.09s]
+[0m02:39:22.129978 [debug] [Thread-1 (]: Finished running node test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592
+[0m02:39:22.132368 [debug] [Thread-1 (]: Began running node test.lab6.unique_clientes_id.7c3b8da85d
+[0m02:39:22.136237 [info ] [Thread-1 (]: 5 of 6 START test unique_clientes_id ........................................... [RUN]
+[0m02:39:22.142053 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592, now test.lab6.unique_clientes_id.7c3b8da85d)
+[0m02:39:22.147060 [debug] [Thread-1 (]: Began compiling node test.lab6.unique_clientes_id.7c3b8da85d
+[0m02:39:22.163720 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab6.unique_clientes_id.7c3b8da85d"
+[0m02:39:22.168971 [debug] [Thread-1 (]: Timing info for test.lab6.unique_clientes_id.7c3b8da85d (compile): 02:39:22.149249 => 02:39:22.168200
+[0m02:39:22.171875 [debug] [Thread-1 (]: Began executing node test.lab6.unique_clientes_id.7c3b8da85d
+[0m02:39:22.181602 [debug] [Thread-1 (]: Writing runtime sql for node "test.lab6.unique_clientes_id.7c3b8da85d"
+[0m02:39:22.188876 [debug] [Thread-1 (]: Using sqlite connection "test.lab6.unique_clientes_id.7c3b8da85d"
+[0m02:39:22.193667 [debug] [Thread-1 (]: On test.lab6.unique_clientes_id.7c3b8da85d: BEGIN
+[0m02:39:22.195266 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:39:22.201893 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:39:22.205082 [debug] [Thread-1 (]: Using sqlite connection "test.lab6.unique_clientes_id.7c3b8da85d"
+[0m02:39:22.208864 [debug] [Thread-1 (]: On test.lab6.unique_clientes_id.7c3b8da85d: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "test.lab6.unique_clientes_id.7c3b8da85d"} */
+select
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from main."clientes"
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m02:39:22.215476 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:39:22.222703 [debug] [Thread-1 (]: Timing info for test.lab6.unique_clientes_id.7c3b8da85d (execute): 02:39:22.174695 => 02:39:22.220695
+[0m02:39:22.225365 [debug] [Thread-1 (]: On test.lab6.unique_clientes_id.7c3b8da85d: ROLLBACK
+[0m02:39:22.228509 [debug] [Thread-1 (]: On test.lab6.unique_clientes_id.7c3b8da85d: Close
+[0m02:39:22.234679 [info ] [Thread-1 (]: 5 of 6 PASS unique_clientes_id ................................................. [[32mPASS[0m in 0.09s]
+[0m02:39:22.237926 [debug] [Thread-1 (]: Finished running node test.lab6.unique_clientes_id.7c3b8da85d
+[0m02:39:22.242566 [debug] [Thread-1 (]: Began running node test.lab6.unique_pedidos_id_pedido.6681a6f141
+[0m02:39:22.245396 [info ] [Thread-1 (]: 6 of 6 START test unique_pedidos_id_pedido ..................................... [RUN]
+[0m02:39:22.254755 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab6.unique_clientes_id.7c3b8da85d, now test.lab6.unique_pedidos_id_pedido.6681a6f141)
+[0m02:39:22.258749 [debug] [Thread-1 (]: Began compiling node test.lab6.unique_pedidos_id_pedido.6681a6f141
+[0m02:39:22.278724 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab6.unique_pedidos_id_pedido.6681a6f141"
+[0m02:39:22.285862 [debug] [Thread-1 (]: Timing info for test.lab6.unique_pedidos_id_pedido.6681a6f141 (compile): 02:39:22.263580 => 02:39:22.284623
+[0m02:39:22.288241 [debug] [Thread-1 (]: Began executing node test.lab6.unique_pedidos_id_pedido.6681a6f141
+[0m02:39:22.295494 [debug] [Thread-1 (]: Writing runtime sql for node "test.lab6.unique_pedidos_id_pedido.6681a6f141"
+[0m02:39:22.304469 [debug] [Thread-1 (]: Using sqlite connection "test.lab6.unique_pedidos_id_pedido.6681a6f141"
+[0m02:39:22.306358 [debug] [Thread-1 (]: On test.lab6.unique_pedidos_id_pedido.6681a6f141: BEGIN
+[0m02:39:22.308521 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:39:22.313093 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:39:22.314229 [debug] [Thread-1 (]: Using sqlite connection "test.lab6.unique_pedidos_id_pedido.6681a6f141"
+[0m02:39:22.315957 [debug] [Thread-1 (]: On test.lab6.unique_pedidos_id_pedido.6681a6f141: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "node_id": "test.lab6.unique_pedidos_id_pedido.6681a6f141"} */
+select
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      
+    
+    
+
+select
+    id_pedido as unique_field,
+    count(*) as n_records
+
+from main."pedidos"
+where id_pedido is not null
+group by id_pedido
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m02:39:22.320375 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m02:39:22.326085 [debug] [Thread-1 (]: Timing info for test.lab6.unique_pedidos_id_pedido.6681a6f141 (execute): 02:39:22.289866 => 02:39:22.325482
+[0m02:39:22.327423 [debug] [Thread-1 (]: On test.lab6.unique_pedidos_id_pedido.6681a6f141: ROLLBACK
+[0m02:39:22.329334 [debug] [Thread-1 (]: On test.lab6.unique_pedidos_id_pedido.6681a6f141: Close
+[0m02:39:22.332242 [info ] [Thread-1 (]: 6 of 6 PASS unique_pedidos_id_pedido ........................................... [[32mPASS[0m in 0.08s]
+[0m02:39:22.334185 [debug] [Thread-1 (]: Finished running node test.lab6.unique_pedidos_id_pedido.6681a6f141
+[0m02:39:22.339459 [debug] [MainThread]: Using sqlite connection "master"
+[0m02:39:22.341091 [debug] [MainThread]: On master: BEGIN
+[0m02:39:22.343212 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m02:39:22.346015 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m02:39:22.347224 [debug] [MainThread]: On master: COMMIT
+[0m02:39:22.348414 [debug] [MainThread]: Using sqlite connection "master"
+[0m02:39:22.349509 [debug] [MainThread]: On master: COMMIT
+[0m02:39:22.350748 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m02:39:22.354025 [debug] [MainThread]: On master: Close
+[0m02:39:22.358778 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m02:39:22.359862 [debug] [MainThread]: Connection 'test.lab6.unique_pedidos_id_pedido.6681a6f141' was properly closed.
+[0m02:39:22.361722 [info ] [MainThread]: 
+[0m02:39:22.363941 [info ] [MainThread]: Finished running 6 tests in 0 hours 0 minutes and 0.80 seconds (0.80s).
+[0m02:39:22.370651 [debug] [MainThread]: Command end result
+[0m02:39:22.396843 [info ] [MainThread]: 
+[0m02:39:22.399777 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m02:39:22.402369 [info ] [MainThread]: 
+[0m02:39:22.404065 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 TOTAL=6
+[0m02:39:22.407600 [debug] [MainThread]: Command `dbt test` succeeded at 02:39:22.407194 after 1.23 seconds
+[0m02:39:22.409518 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb02a183d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb065ec310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbb065425d0>]}
+[0m02:39:22.415468 [debug] [MainThread]: Flushing usage events
+[0m02:39:56.567076 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc7b4c2d1d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc7b464a550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc7b464b5d0>]}
+
+
+============================== 02:39:56.576788 | 566da991-5100-47e6-8512-ef712eda1c2b ==============================
+[0m02:39:56.576788 [info ] [MainThread]: Running with dbt=1.5.11
+[0m02:39:56.583555 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/dsa/lab6/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m02:39:56.726246 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '566da991-5100-47e6-8512-ef712eda1c2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc7b4e43950>]}
+[0m02:39:56.783546 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '566da991-5100-47e6-8512-ef712eda1c2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc7b4e677d0>]}
+[0m02:39:56.789532 [info ] [MainThread]: Registered adapter: sqlite=1.5.0
+[0m02:39:56.840381 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m02:39:56.938998 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m02:39:56.940399 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m02:39:56.956839 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '566da991-5100-47e6-8512-ef712eda1c2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc7b4427150>]}
+[0m02:39:56.966054 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '566da991-5100-47e6-8512-ef712eda1c2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc7b440f650>]}
+[0m02:39:56.969217 [info ] [MainThread]: Found 3 models, 6 tests, 0 snapshots, 0 analyses, 311 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m02:39:56.976030 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '566da991-5100-47e6-8512-ef712eda1c2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc7b76a7390>]}
+[0m02:39:56.984126 [info ] [MainThread]: 
+[0m02:39:56.990192 [debug] [MainThread]: Acquiring new sqlite connection 'master'
+[0m02:39:56.996264 [debug] [ThreadPool]: Acquiring new sqlite connection 'list_lab6.db_main'
+[0m02:39:57.081643 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m02:39:57.082893 [debug] [ThreadPool]: On list_lab6.db_main: BEGIN
+[0m02:39:57.084572 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:39:57.091559 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:39:57.093539 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m02:39:57.095055 [debug] [ThreadPool]: On list_lab6.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db_main"} */
+
+        pragma database_list
+    
+[0m02:39:57.098024 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:39:57.106701 [debug] [ThreadPool]: Using sqlite connection "list_lab6.db_main"
+[0m02:39:57.108352 [debug] [ThreadPool]: On list_lab6.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "list_lab6.db_main"} */
+
+            SELECT
+                'lab6.db' as database
+                ,name
+                ,'main' AS schema
+                ,type as data_type
+            FROM
+                main.sqlite_master
+            WHERE
+                name NOT LIKE 'sqlite_%'
+        
+[0m02:39:57.113080 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:39:57.126006 [debug] [ThreadPool]: On list_lab6.db_main: ROLLBACK
+[0m02:39:57.127948 [debug] [ThreadPool]: On list_lab6.db_main: Close
+[0m02:39:57.137146 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '566da991-5100-47e6-8512-ef712eda1c2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc7b5997650>]}
+[0m02:39:57.142834 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m02:39:57.153416 [info ] [MainThread]: 
+[0m02:39:57.171389 [debug] [Thread-1 (]: Began running node model.lab6.clientes
+[0m02:39:57.173101 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_lab6.db_main, now model.lab6.clientes)
+[0m02:39:57.178922 [debug] [Thread-1 (]: Began compiling node model.lab6.clientes
+[0m02:39:57.205346 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab6.clientes"
+[0m02:39:57.213112 [debug] [Thread-1 (]: Timing info for model.lab6.clientes (compile): 02:39:57.187370 => 02:39:57.212203
+[0m02:39:57.224071 [debug] [Thread-1 (]: Began executing node model.lab6.clientes
+[0m02:39:57.240692 [debug] [Thread-1 (]: Timing info for model.lab6.clientes (execute): 02:39:57.237907 => 02:39:57.238007
+[0m02:39:57.244883 [debug] [Thread-1 (]: Finished running node model.lab6.clientes
+[0m02:39:57.246688 [debug] [Thread-1 (]: Began running node model.lab6.pedidos
+[0m02:39:57.250840 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.lab6.clientes, now model.lab6.pedidos)
+[0m02:39:57.252232 [debug] [Thread-1 (]: Began compiling node model.lab6.pedidos
+[0m02:39:57.268110 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab6.pedidos"
+[0m02:39:57.271179 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos (compile): 02:39:57.253484 => 02:39:57.269721
+[0m02:39:57.273717 [debug] [Thread-1 (]: Began executing node model.lab6.pedidos
+[0m02:39:57.279561 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos (execute): 02:39:57.277738 => 02:39:57.277787
+[0m02:39:57.282867 [debug] [Thread-1 (]: Finished running node model.lab6.pedidos
+[0m02:39:57.284383 [debug] [Thread-1 (]: Began running node test.lab6.not_null_clientes_email.641258f909
+[0m02:39:57.286857 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.lab6.pedidos, now test.lab6.not_null_clientes_email.641258f909)
+[0m02:39:57.291108 [debug] [Thread-1 (]: Began compiling node test.lab6.not_null_clientes_email.641258f909
+[0m02:39:57.325423 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab6.not_null_clientes_email.641258f909"
+[0m02:39:57.339923 [debug] [Thread-1 (]: Timing info for test.lab6.not_null_clientes_email.641258f909 (compile): 02:39:57.293029 => 02:39:57.337639
+[0m02:39:57.342141 [debug] [Thread-1 (]: Began executing node test.lab6.not_null_clientes_email.641258f909
+[0m02:39:57.345084 [debug] [Thread-1 (]: Timing info for test.lab6.not_null_clientes_email.641258f909 (execute): 02:39:57.344505 => 02:39:57.344541
+[0m02:39:57.348800 [debug] [Thread-1 (]: Finished running node test.lab6.not_null_clientes_email.641258f909
+[0m02:39:57.350382 [debug] [Thread-1 (]: Began running node test.lab6.not_null_clientes_id.7a6dddb55d
+[0m02:39:57.352492 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab6.not_null_clientes_email.641258f909, now test.lab6.not_null_clientes_id.7a6dddb55d)
+[0m02:39:57.354379 [debug] [Thread-1 (]: Began compiling node test.lab6.not_null_clientes_id.7a6dddb55d
+[0m02:39:57.371483 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab6.not_null_clientes_id.7a6dddb55d"
+[0m02:39:57.380762 [debug] [Thread-1 (]: Timing info for test.lab6.not_null_clientes_id.7a6dddb55d (compile): 02:39:57.357229 => 02:39:57.380061
+[0m02:39:57.383731 [debug] [Thread-1 (]: Began executing node test.lab6.not_null_clientes_id.7a6dddb55d
+[0m02:39:57.387689 [debug] [Thread-1 (]: Timing info for test.lab6.not_null_clientes_id.7a6dddb55d (execute): 02:39:57.386898 => 02:39:57.386934
+[0m02:39:57.397662 [debug] [Thread-1 (]: Finished running node test.lab6.not_null_clientes_id.7a6dddb55d
+[0m02:39:57.400975 [debug] [Thread-1 (]: Began running node test.lab6.unique_clientes_id.7c3b8da85d
+[0m02:39:57.406075 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab6.not_null_clientes_id.7a6dddb55d, now test.lab6.unique_clientes_id.7c3b8da85d)
+[0m02:39:57.413431 [debug] [Thread-1 (]: Began compiling node test.lab6.unique_clientes_id.7c3b8da85d
+[0m02:39:57.441648 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab6.unique_clientes_id.7c3b8da85d"
+[0m02:39:57.446255 [debug] [Thread-1 (]: Timing info for test.lab6.unique_clientes_id.7c3b8da85d (compile): 02:39:57.417437 => 02:39:57.445497
+[0m02:39:57.448268 [debug] [Thread-1 (]: Began executing node test.lab6.unique_clientes_id.7c3b8da85d
+[0m02:39:57.452524 [debug] [Thread-1 (]: Timing info for test.lab6.unique_clientes_id.7c3b8da85d (execute): 02:39:57.451381 => 02:39:57.451479
+[0m02:39:57.456692 [debug] [Thread-1 (]: Finished running node test.lab6.unique_clientes_id.7c3b8da85d
+[0m02:39:57.459376 [debug] [Thread-1 (]: Began running node model.lab6.pedidos_clientes
+[0m02:39:57.462130 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab6.unique_clientes_id.7c3b8da85d, now model.lab6.pedidos_clientes)
+[0m02:39:57.464589 [debug] [Thread-1 (]: Began compiling node model.lab6.pedidos_clientes
+[0m02:39:57.504188 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab6.pedidos_clientes"
+[0m02:39:57.512010 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos_clientes (compile): 02:39:57.470682 => 02:39:57.511143
+[0m02:39:57.514498 [debug] [Thread-1 (]: Began executing node model.lab6.pedidos_clientes
+[0m02:39:57.522278 [debug] [Thread-1 (]: Timing info for model.lab6.pedidos_clientes (execute): 02:39:57.520031 => 02:39:57.520071
+[0m02:39:57.527988 [debug] [Thread-1 (]: Finished running node model.lab6.pedidos_clientes
+[0m02:39:57.532253 [debug] [Thread-1 (]: Began running node test.lab6.not_null_pedidos_id_pedido.04c7e8baae
+[0m02:39:57.535670 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.lab6.pedidos_clientes, now test.lab6.not_null_pedidos_id_pedido.04c7e8baae)
+[0m02:39:57.537516 [debug] [Thread-1 (]: Began compiling node test.lab6.not_null_pedidos_id_pedido.04c7e8baae
+[0m02:39:57.555658 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab6.not_null_pedidos_id_pedido.04c7e8baae"
+[0m02:39:57.562828 [debug] [Thread-1 (]: Timing info for test.lab6.not_null_pedidos_id_pedido.04c7e8baae (compile): 02:39:57.540988 => 02:39:57.562074
+[0m02:39:57.564229 [debug] [Thread-1 (]: Began executing node test.lab6.not_null_pedidos_id_pedido.04c7e8baae
+[0m02:39:57.568659 [debug] [Thread-1 (]: Timing info for test.lab6.not_null_pedidos_id_pedido.04c7e8baae (execute): 02:39:57.565937 => 02:39:57.566051
+[0m02:39:57.575952 [debug] [Thread-1 (]: Finished running node test.lab6.not_null_pedidos_id_pedido.04c7e8baae
+[0m02:39:57.578107 [debug] [Thread-1 (]: Began running node test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592
+[0m02:39:57.584396 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab6.not_null_pedidos_id_pedido.04c7e8baae, now test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592)
+[0m02:39:57.586174 [debug] [Thread-1 (]: Began compiling node test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592
+[0m02:39:57.614951 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592"
+[0m02:39:57.620122 [debug] [Thread-1 (]: Timing info for test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592 (compile): 02:39:57.587894 => 02:39:57.618624
+[0m02:39:57.626379 [debug] [Thread-1 (]: Began executing node test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592
+[0m02:39:57.628632 [debug] [Thread-1 (]: Timing info for test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592 (execute): 02:39:57.627934 => 02:39:57.627974
+[0m02:39:57.638879 [debug] [Thread-1 (]: Finished running node test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592
+[0m02:39:57.643897 [debug] [Thread-1 (]: Began running node test.lab6.unique_pedidos_id_pedido.6681a6f141
+[0m02:39:57.648471 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab6.relationships_pedidos_id_cliente__id__ref_clientes_.5de0d96592, now test.lab6.unique_pedidos_id_pedido.6681a6f141)
+[0m02:39:57.653100 [debug] [Thread-1 (]: Began compiling node test.lab6.unique_pedidos_id_pedido.6681a6f141
+[0m02:39:57.672492 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab6.unique_pedidos_id_pedido.6681a6f141"
+[0m02:39:57.681492 [debug] [Thread-1 (]: Timing info for test.lab6.unique_pedidos_id_pedido.6681a6f141 (compile): 02:39:57.658879 => 02:39:57.680685
+[0m02:39:57.686378 [debug] [Thread-1 (]: Began executing node test.lab6.unique_pedidos_id_pedido.6681a6f141
+[0m02:39:57.691863 [debug] [Thread-1 (]: Timing info for test.lab6.unique_pedidos_id_pedido.6681a6f141 (execute): 02:39:57.691102 => 02:39:57.691132
+[0m02:39:57.699526 [debug] [Thread-1 (]: Finished running node test.lab6.unique_pedidos_id_pedido.6681a6f141
+[0m02:39:57.708132 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m02:39:57.709549 [debug] [MainThread]: Connection 'test.lab6.unique_pedidos_id_pedido.6681a6f141' was properly closed.
+[0m02:39:57.719670 [debug] [MainThread]: Command end result
+[0m02:39:57.790090 [debug] [MainThread]: Acquiring new sqlite connection 'generate_catalog'
+[0m02:39:57.792333 [info ] [MainThread]: Building catalog
+[0m02:39:57.801021 [debug] [ThreadPool]: Acquiring new sqlite connection 'lab6.db.information_schema'
+[0m02:39:57.810775 [debug] [ThreadPool]: Using sqlite connection "lab6.db.information_schema"
+[0m02:39:57.815769 [debug] [ThreadPool]: On lab6.db.information_schema: BEGIN
+[0m02:39:57.823199 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:39:57.835043 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:39:57.838663 [debug] [ThreadPool]: Using sqlite connection "lab6.db.information_schema"
+[0m02:39:57.841941 [debug] [ThreadPool]: On lab6.db.information_schema: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "lab6.db.information_schema"} */
+
+        pragma database_list
+    
+[0m02:39:57.849730 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:39:57.855476 [debug] [ThreadPool]: Using sqlite connection "lab6.db.information_schema"
+[0m02:39:57.857610 [debug] [ThreadPool]: On lab6.db.information_schema: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "lab6.db.information_schema"} */
+
+            SELECT
+                'lab6.db' as database
+                ,name
+                ,'main' AS schema
+                ,type as data_type
+            FROM
+                main.sqlite_master
+            WHERE
+                name NOT LIKE 'sqlite_%'
+        
+[0m02:39:57.863940 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:39:57.868950 [debug] [ThreadPool]: Using sqlite connection "lab6.db.information_schema"
+[0m02:39:57.871457 [debug] [ThreadPool]: On lab6.db.information_schema: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "lab6.db.information_schema"} */
+pragma main.table_info(tb_clientes)
+[0m02:39:57.880624 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:39:57.897899 [debug] [ThreadPool]: Using sqlite connection "lab6.db.information_schema"
+[0m02:39:57.903748 [debug] [ThreadPool]: On lab6.db.information_schema: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "lab6.db.information_schema"} */
+pragma main.table_info(tb_pedidos)
+[0m02:39:57.905495 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:39:57.915265 [debug] [ThreadPool]: Using sqlite connection "lab6.db.information_schema"
+[0m02:39:57.924101 [debug] [ThreadPool]: On lab6.db.information_schema: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "lab6.db.information_schema"} */
+pragma main.table_info(clientes)
+[0m02:39:57.928942 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:39:57.933253 [debug] [ThreadPool]: Using sqlite connection "lab6.db.information_schema"
+[0m02:39:57.936258 [debug] [ThreadPool]: On lab6.db.information_schema: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "lab6.db.information_schema"} */
+pragma main.table_info(pedidos)
+[0m02:39:57.938673 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:39:57.947742 [debug] [ThreadPool]: Using sqlite connection "lab6.db.information_schema"
+[0m02:39:57.950629 [debug] [ThreadPool]: On lab6.db.information_schema: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab6", "target_name": "dev", "connection_name": "lab6.db.information_schema"} */
+pragma main.table_info(pedidos_clientes)
+[0m02:39:57.957198 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m02:39:57.996166 [debug] [ThreadPool]: On lab6.db.information_schema: ROLLBACK
+[0m02:39:58.002076 [debug] [ThreadPool]: On lab6.db.information_schema: Close
+[0m02:39:58.059821 [info ] [MainThread]: Catalog written to /dsa/lab6/target/catalog.json
+[0m02:39:58.072963 [debug] [MainThread]: Command `dbt docs generate` succeeded at 02:39:58.072557 after 1.52 seconds
+[0m02:39:58.078866 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m02:39:58.083615 [debug] [MainThread]: Connection 'lab6.db.information_schema' was properly closed.
+[0m02:39:58.087778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc7b88e25d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc7b898c310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc7b76a75d0>]}
+[0m02:39:58.092214 [debug] [MainThread]: Flushing usage events
+[0m02:40:26.707792 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f50ef056410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f50f0215ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f50eee31050>]}
+
+
+============================== 02:40:26.723011 | 541297db-886d-4703-a15f-7cd190f34602 ==============================
+[0m02:40:26.723011 [info ] [MainThread]: Running with dbt=1.5.11
+[0m02:40:26.727214 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': '/dsa/lab6/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m02:40:27.023466 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '541297db-886d-4703-a15f-7cd190f34602', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f50ef031d90>]}
+[0m02:40:27.133233 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '541297db-886d-4703-a15f-7cd190f34602', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f50f0303610>]}
