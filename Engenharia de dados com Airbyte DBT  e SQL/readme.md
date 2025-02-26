@@ -1,10 +1,9 @@
 <b><H1>Engenharia de Dados</H1></b>
 
-<b><H2>Modelagem, Implementação e Governança de Data Warehouses </H2></b> 
-  
-Infraestrutura Como Código com Terraform, AWS, Azure e Databricks
+<b><H2>Engenharia de Dados com Airbyte, DBT e SQL</H2></b> 
+
 1 Introdução
-Bem-Vindo(a) ao Curso Infraestrutura Como Código com Terraform, AWS, Azure e Databricks
+Bem-Vindo(a) ao Curso Engenharia de Dados com Airbyte, DBT e SQL
 Dica Para Iniciar Seu Aprendizado
 Navegando pela Data Science Academy
 Perguntas e Respostas
@@ -12,382 +11,330 @@ Apresentação da DSA
 Apresentação dos Instrutores
 Suporte e Canais de Comunicação
 Termos e Condições de Uso
+Link
 Conteúdo Programático
+Trilha de Aprendizagem
+link
 Abordagem ao Curso
 Avaliação e Certificado de Conclusão
 Pré-Requisitos Para Este Curso
 Requisitos de Hardware e Software
-O Que é IaC (Infraestrutura Como Código)?
-O Que é o Terraform?
-Plataforma Databricks
-Amazon Web Services (AWS)
-Microsoft Azure
-Google Cloud Platform
+Benefícios da Engenharia de Dados Para as Organizações
+A Importância do ETL na Era dos Dados
 E-book Guia de Estudo e Aprendizagem da Data Science Academy
 Dicas Para Acelerar Seu Aprendizado
 Bibliografia, Referências e Links Úteis
 
-2 Preparando o Ambiente de Trabalho
+2 Tarefas de Extração, Transformação e Carga em Engenharia de Dados - Parte 1
 Introdução
-Iniciando a Jornada com IaC e Terraform
-Ferramentas Usadas Neste Curso
-Preparando o Ambiente de Trabalho no MacOS
-Preparando o Ambiente de Trabalho no Linux
-Preparando o Ambiente de Trabalho no Windows - Parte 1/2
-Preparando o Ambiente de Trabalho no Windows - Parte 2/2
+Iniciando Sua Jornada de Aprendizagem
+Conceito de ETL (Extração, Transformação e Carga)
+Processo de Extração de Dados
+Processo de Transformação de Dados
+Processo de Carga de Dados
+ETL Como Parte do Processo de Engenharia de Dados
+Diferença Entre ETL e ELT
+Principais Características de ETL x ELT
+Ferramentas Para ETL
+Ferramentas Para ELT
+O Que é Modern Data Stack?
+Então ETL e ELT Fazem Parte do Processo de Integração de Dados no Modern Data Stack?
+Desafios Comuns em Projetos de ETL
 Bibliografia, Referências e Links Úteis
 
-3 Introdução ao Docker
+3 Tarefas de Extração, Transformação e Carga em Engenharia de Dados - Parte 2
 Introdução
-Visão Geral
-Hello World
-Criando Um Container com Serviço Web
-Criando Um Container com Serviço de Banco de Dados
-Criando Sua Própria Imagem
-Usando Docker Compose
-Arquivos do Capítulo
+Ciclo de Vida de Projetos de ETL e ELT - Parte 1/10
+Ciclo de Vida de Projetos de ETL e ELT - Parte 2/10
+Ciclo de Vida de Projetos de ETL e ELT - Parte 3/10
+Ciclo de Vida de Projetos de ETL e ELT - Parte 4/10
+Ciclo de Vida de Projetos de ETL e ELT - Parte 5/10
+Ciclo de Vida de Projetos de ETL e ELT - Parte 6/10
+Ciclo de Vida de Projetos de ETL e ELT - Parte 7/10
+Ciclo de Vida de Projetos de ETL e ELT - Parte 8/10
+Ciclo de Vida de Projetos de ETL e ELT - Parte 9/10
+Ciclo de Vida de Projetos de ETL e ELT - Parte 10/10
+Estratégias de Transformação - Tratamento de Dados Faltantes
+Estratégias de Transformação - Tratamento de Dados Duplicados
+Validação e Qualidade dos Dados
+Versionamento de Pipelines de Dados
 Bibliografia, Referências e Links Úteis
 
-4 DevOps e IaC (Infraestrutura Como Código) na Prática
+4 Preparação do Ambiente de Trabalho com Airbyte
 Introdução
-Compreendendo o Conceito de DevOps e IaC
-O Que Exatamente Faz Parte da Infraestrutura?
-Quando e Por Que Usamos IaC?
-O Que Não é IaC?
-Princípios da IaC
-Como Representar Infraestrutura Como Código?
-Padrões Usados em IaC
-Lab 1 - IaC Stack - Automatizando a Infraestrutura de Instâncias EC2 na Nuvem AWS com Terraform
+Modern Data Stack com Airbyte - Airbyte Cloud x Airbyte Local
+Instalação e Configuração do Airbyte - Vamos Começar Visitando Nossa Amiga!
+Ambiente Virtual com Docker
+Preparação do Ambiente de Trabalho com Docker no MacOS
+Preparação do Ambiente de Trabalho com Docker no Linux
+Preparação do Ambiente de Trabalho com Docker no Windows - Parte 1/2
+Preparação do Ambiente de Trabalho com Docker no Windows - Parte 2/2
+Deploy do Airbyte - Parte 1/2
+Deploy do Airbyte - Parte 2/2
+Explorando a Interface do Airbyte
+Troubleshooting Para Usuários Windows
+Bibliografia, Referências e Links Úteis
+
+5 Extração de Dados com Airbyte - Parte 1
+Introdução
+Lab 1 - Movimentação de Dados Entre Bancos de Dados com Airbyte
 Lab 1 - Visão Geral
-Lab 1 - Criando Conta na AWS
-Lab 1 - Camada Gratuita da AWS
-Lab 1 - Primeiros Passos com a AWS - Parte 1/3
-Lab 1 - Primeiros Passos com a AWS - Parte 2/3
-Lab 1 - Primeiros Passos com a AWS - Parte 3/3
-Lab 1 - Configurando a Autenticação Para a AWS
-Lab 1 - Preparando a Máquina Cliente com Terraform - Visão Geral
-Lab 1 - Preparando a Máquina Cliente com Terraform - Criando Imagem e Container
-Lab 1 - Preparando a Máquina Cliente com Terraform - Imagem Docker Customizada
-Lab 1 - Configurando as Credenciais de Acesso Para a AWS
-Lab 1 - Automatizando a Criação de Recursos AWS com Terraform - Parte 1/3
-Lab 1 - Automatizando a Criação de Recursos AWS com Terraform - Parte 2/3
-Lab 1 - Automatizando a Criação de Recursos AWS com Terraform - Parte 3/3
+Lab 1 - Estrutura do Lab
+Lab 1 - Construindo o Banco de Dados da Fonte
+Lab 1 - Construindo o Banco de Dados de Destino
+Lab 1 - Criando Schema e Tabela na Fonte de Dados
+Lab 1 - Automatizando a Carga de Dados na Fonte
+Lab 1 - Criando o Source no Airbyte
+Lab 1 - Criando o Destination no Airbyte
+Lab 1 - Criando a Conexão no Airbyte
+Lab 1 - Troubleshooting - Detectando e Resolvendo Problemas ao Criar Conexão no Airbyte
+Lab 1 - Filtrando o Stream de Dados
+Lab 1 - Movendo os Dados com Airbyte
+Lab 1 - Conferindo Dados e Metadados no Destino
+Lab 1 - Visualizando o Job History
 Lab 1 - Conclusão
-Testes Unitários e Integrados
-Integração Contínua e Entrega Contínua (CI/CD)
-Como Entregar as Mudanças em Produção?
-Versionamento com GitOps
-Segurança e Compliance
-Arquivos do Capítulo
+Arquivos Usados Neste Capítulo
 Bibliografia, Referências e Links Úteis
 
-5 Terraform Fundamentos Parte 1
+6 Extração de Dados com Airbyte - Parte 2
 Introdução
-HashiCorp Configuration Language (HCL)
-Lab 2 - IaC Stack - Automatizando a Infraestrutura na Nuvem AWS com Variáveis no Terraform
+O Que é Change Data Capture (CDC)?
+Funcionamento do Change Data Capture (CDC)
+Benefícios do Change Data Capture (CDC)
+Lab 2 - Construindo Pipeline EL(T) com Change Data Capture (CDC)
 Lab 2 - Visão Geral
-Lab 2 - Terraform Registry
-Lab 2 - Terraform Provider
-Lab 2 - Terraform Resources
-Lab 2 - Core Terraform Workflow
-Lab 2 - Dependency Lock File
-Lab 2 - Preparando a Máquina Cliente com Terraform
-Lab 2 - Usando Variáveis de Entrada - Parte 1/2
-Lab 2 - Usando Variáveis de Entrada - Parte 2/2
-Lab 2 - Terraform Init
-Lab 2 - Terraform Plan
-Lab 2 - Terraform Apply
-Lab 2 - Verificando a Infraestrutura
-Lab 2 - Exercício - Arquivo de Definição de Variáveis
-Arquivos do Capítulo
+Lab 2 - Arquitetura da Solução
+Lab 2 - Como Fazer o Scan no Banco de Dados em Tempo Real Para Detectar as Mudanças?
+Lab 2 - Organizando o Trabalho
+Lab 2 - Criando a Fonte de Dados - Parte 1/3
+Lab 2 - Criando a Fonte de Dados - Parte 2/3
+Lab 2 - Criando a Fonte de Dados - Parte 3/3
+Lab 2 - Criando a Tabela e Carregando os Dados
+Lab 2 - Logical Decoding
+Lab 2 - Write-Ahead Logging (WAL)
+Lab 2 - Publicação de Mudanças nas Tabelas do Banco de Dados
+Lab 2 - Definindo Como Gravar o Resultado do CDC
+Lab 2 - Configurando o CDC no Airbyte - Parte 1/5
+Lab 2 - Configurando o CDC no Airbyte - Parte 2/5
+Lab 2 - Configurando o CDC no Airbyte - Parte 3/5
+Lab 2 - Configurando o CDC no Airbyte - Parte 4/5
+Lab 2 - Configurando o CDC no Airbyte - Parte 5/5
+Lab 2 - Executando o Lab e Provocando Mudanças na Fonte de Dados - Parte 1/2
+Lab 2 - Executando o Lab e Provocando Mudanças na Fonte de Dados - Parte 2/2
+Lab 2 - Conclusão
+Arquivos Usados Neste Capítulo
 Bibliografia, Referências e Links Úteis
 
-6 Terraform Fundamentos Parte 2
+7 Carga de Dados com Airbyte
 Introdução
-Visão Geral
-Lab 2 - Definição de Variáveis
-Lab 2 - Solução do Exercício de IaC - Parte 1/3
-Lab 2 - Solução do Exercício de IaC - Parte 2/3
-Lab 2 - Solução do Exercício de IaC - Parte 3/3
-Lab 2 - Usando Variáveis Para Criar Recursos em Diferentes Subnets
-Lab 2 - Arquivo de Definição de Variáveis
-Lab 2 - Arquivo de Valores de Variáveis
-Lab 2 - Arquivo Principal do Terraform - Parte 1/2
-Lab 2 - Arquivo Principal do Terraform - Parte 2/2
-Lab 2 - Criando Recursos em Diferentes Subnets na Mesma VPC
-Lab 2 - O Que São Módulos no Terraform?
-Lab 2 - Organizando o Código em Módulos
-Lab 2 - Configurando Módulos, Variáveis de Entrada e Variáveis de Saída - Parte 1/2
-Lab 2 - Configurando Módulos, Variáveis de Entrada e Variáveis de Saída - Parte 2/2
-Lab 2 - Terraform Output Para Visualizar Variáveis de Saída IaC
-Lab 2 - Deploy de Múltiplos Recursos Através de Módulos Terraform - Parte 1/3
-Lab 2 - Deploy de Múltiplos Recursos Através de Módulos Terraform - Parte 2/3
-Lab 2 - Deploy de Múltiplos Recursos Através de Módulos Terraform - Parte 3/3
-Lab 2 - Conclusão e Próximos Passos
-Lab 2 - Arquivo tf.state
-Lab 2 - Estados do Terraform
-Lab 2 - Terraform Functions
-Lab 2 - Terraform Resource Graph
-Lab 2 - Terraform State Remote Storage
-Arquivos do Capítulo
+Configuração de Conectores de Destino
+Transformações Básicas no Airbyte
+Monitoramento de Performance e Latência
+Gestão de Metadados
+Backup e Recuperação
+Escalabilidade e Performance
+Integração com Sistemas de Mensagens (Kafka, RabbitMQ)
+Airbyte no Ambientes em Nuvem
+Configurações Avançadas e Personalização
+Lab 3 - Processo de Carga de Dados em Banco de Dados Relacional com Airbyte
+Lab 3 - Visão Geral
+Lab 3 - Implementação Parte 1/10
+Lab 3 - Implementação Parte 2/10
+Lab 3 - Implementação Parte 3/10
+Lab 3 - Implementação Parte 4/10
+Lab 3 - Implementação Parte 5/10
+Lab 3 - Implementação Parte 6/10
+Lab 3 - Implementação Parte 7/10
+Lab 3 - Implementação Parte 8/10
+Lab 3 - Implementação Parte 9/10
+Lab 3 - Implementação Parte 10/10
+Arquivos Usados Neste Capítulo
 Bibliografia, Referências e Links Úteis
 
-7 Terraform Fundamentos Parte 3
+8 SQL Avançado Para Transformações de Dados
 Introdução
-Todo Tipo de Infraestrutura Pode Ser Representado com IaC?
-O Que São Terraform Provisioners?
-Lab 3 - IaC Stack - Usando Terraform Provisioners e Outras Tarefas de Automação
-Lab 3 - Terraform Local Provisioner
-Lab 3 - Terraform File Provisioner
-Lab 3 - Terraform Remote Provisioner
-Lab 3 - Terraform Provisioner Creation-Time e Destroy-Time
-Lab 3 - Preparando a Imagem Docker com Mapeamento de Volume - Parte 1/2
-Lab 3 - Preparando a Imagem Docker com Mapeamento de Volume - Parte 2/2
-Lab 3 - Implementando Provisioner Local - Parte 1/2
-Lab 3 - Implementando Provisioner Local - Parte 2/2
-Lab 3 - Como Acessar Remotamente a Instância EC2?
-Lab 3 - Provisioner Remoto Para Automatizar a Criação de Web Server na AWS - Criação de Chaves
-Lab 3 - Provisioner Remoto Para Automatizar a Criação de Web Server na AWS - Criação do Provisioner
-Lab 3 - Provisioner Remoto Para Automatizar a Criação de Web Server na AWS - Conexão via SSH
-Lab 3 - Automatizando a Criação da Infraestrutura e Automatizando Como Ela Será Usada
-Lab 3 - ALERTA DE APRENDIZADO VALIOSO - Resolvendo Problemas no Terraform
-Lab 3 - Executando o Provisioner Remoto
-Lab 3 - Automatizando a Criação de Grupos de Segurança - Parte 1/2
-Lab 3 - Automatizando a Criação de Grupos de Segurança - Parte 2/2
-Lab 3 - Executando Script Bash Para Automatizar a Criação da Infraestrutura com IaC - Parte 1/3
-Lab 3 - Executando Script Bash Para Automatizar a Criação da Infraestrutura com IaC - Parte 2/3
-Lab 3 - Executando Script Bash Para Automatizar a Criação da Infraestrutura com IaC - Parte 3/3
-Lab 3 - Automatizando a Infraestrutura Sem o Uso de Provisioners - Parte 1/2
-Lab 3 - Automatizando a Infraestrutura Sem o Uso de Provisioners - Parte 2/2
-Lab 3 - Conclusão e Próximos Passos
-Lab 3 - Exercício - Loops e Condicionais no Terraform
-Arquivos do Capítulo
-Bibliografia, Referências e Links Úteis
-
-8 Automatizando o Deploy de Infraestrutura na AWS com Terraform - Parte 1
-Introdução
-Solução do Exercício do Lab 3 - Parte 1/2
-Solução do Exercício do Lab 3 - Parte 2/2
-Lab 4 - Deploy de Infraestrutura e API Para Aplicação de Data Science na AWS com Terraform
-Lab 4 - Definição do Objetivo e Arquitetura da Solução
+Otimização de Consultas e Técnicas de Indexação
+Funções de Janela e Análise
+Uso de Subconsultas e CTEs
+Trabalhando com Dados Semi-Estruturados (JSON, XML)
+Estratégias de Join e Merge
+SQL Para Machine Mearning e Análise Estatística
+Técnicas de Modelagem e Normalização
+Segurança e Boas Práticas em SQL
+Lab 4 - Plano de Execução e Otimização de Consultas
 Lab 4 - Visão Geral
-Lab 4 - Compreendendo a Estrutura do Projeto
-Lab 4 - Construindo o Modelo de Machine Learning
-Lab 4 - Treinando e Salvando o Modelo de Machine Learning
-Lab 4 - Criando a API Para o Modelo - Parte 1/2
-Lab 4 - Criando a API Para o Modelo - Parte 2/2
-Lab 4 - Criando a Aplicação Web
-Lab 4 - Fazendo o Deploy Local Para Testar o Modelo
-Lab 4 - Preparando o Container Docker
-Lab 4 - Criando o Script IaC Para Automação na Nuvem AWS - Parte 1/5
-Lab 4 - Criando o Script IaC Para Automação na Nuvem AWS - Parte 2/5
-Lab 4 - Criando o Script IaC Para Automação na Nuvem AWS - Parte 3/5
-O Que é e Como Executar Servidor WSGI?
-Lab 4 - Criando o Script IaC Para Automação na Nuvem AWS - Parte 4/5
-Lab 4 - Criando o Script IaC Para Automação na Nuvem AWS - Parte 5/5
-Lab 4 - Executando o Deploy Automatizado com IaC na AWS
-Lab 4 - Acessando a Aplicação com Machine Learning via API
-Lab 4 - Conclusão
-Arquivos do Capítulo
+Lab 4 - Implementação Parte 1/10
+Lab 4 - Implementação Parte 2/10
+Lab 4 - Implementação Parte 3/10
+Lab 4 - Implementação Parte 4/10
+Lab 4 - Implementação Parte 5/10
+Lab 4 - Implementação Parte 6/10
+Lab 4 - Implementação Parte 7/10
+Lab 4 - Implementação Parte 8/10
+Lab 4 - Implementação Parte 9/10
+Lab 4 - Implementação Parte 10/10
+Arquivos Usados Neste Capítulo
 Bibliografia, Referências e Links Úteis
 
-9 Automatizando o Deploy de Infraestrutura na AWS com Terraform - Parte 2
+9 Analytics Engineering com SQL
 Introdução
-Lab 5 - IaC com Terraform Para Deploy de Aplicação Web em Container Docker no AWS ECS
+Criação de Dados
+Transformações de Dados
+Armazenamento e Dados em Movimento
+Quality Assurance
+Agile Data Engineering com DBT e SQL - Parte 1/2
+Agile Data Engineering com DBT e SQL - Parte 2/2
+Transição do ETL Para o ELT
+Lab 5 - Modelagem de Dados Para Engenharia de Dados em Sistemas de IA
 Lab 5 - Visão Geral
-Lab 5 - Estrutura Geral do Lab
-Lab 5 - Descrição e Diagrama de Funcionamento do Amazon ECS (Elastic Container Service)
-Lab 5 - Descrição e Diagrama de Funcionamento do AWS Fargate
-Lab 5 - Definindo Container com a Aplicação Para o Deploy
-Lab 5 - Criação de Cluster Amazon ECS - Parte 1/2
-Lab 5 - Criação de Cluster Amazon ECS - Parte 2/2
-Lab 5 - Monitoramento de Serviços com o CloudWatch
-Lab 5 - Provisionando o Cluster do Amazon Elastic Container Service
-Lab 5 - Provisionando Grupo de Logs do CloudWatch
-Lab 5 - Provisionando Tarefa do ECS Para a Imagem Docker
-Lab 5 - Provisionando Serviço do ECS
-Lab 5 - Conhecendo o Application Load Balancer (ALB)
-Lab 5 - Como Funciona o Application Load Balancer?
-Lab 5 - Provisionando o Application Load Balancer (ALB)
-Lab 5 - Provisionando o Target Group
-Lab 5 - Provisionando o Listener
-Lab 5 - Encerrando a Primeira Parte do Provisionamento Para a App Web
-Arquivos do Capítulo
+Lab 5 - Implementação Parte 1/10
+Lab 5 - Implementação Parte 2/10
+Lab 5 - Implementação Parte 3/10
+Lab 5 - Implementação Parte 4/10
+Lab 5 - Implementação Parte 5/10
+Lab 5 - Implementação Parte 6/10
+Lab 5 - Implementação Parte 7/10
+Lab 5 - Implementação Parte 8/10
+Lab 5 - Implementação Parte 9/10
+Lab 5 - Implementação Parte 10/10
+Arquivos Usados Neste Capítulo
 Bibliografia, Referências e Links Úteis
 
-10 Automatizando o Deploy de Infraestrutura na AWS com Terraform - Parte 3
-Continuação do Capítulo Anterior
-Lab 5 - Organização dos Arquivos de Configuração
-Lab 5 - O Que é Uma VPC (Virtual Private Cloud)?
-Lab 5 - Arquivos de Configuração da VPC (Virtual Private Cloud) - Parte 1/2
-Lab 5 - Arquivos de Configuração da VPC (Virtual Private Cloud) - Parte 2/2
-Lab 5 - Definindo Grupos de Segurança do Container e do ALB - Parte 1/2
-Lab 5 - Definindo Grupos de Segurança do Container e do ALB - Parte 2/2
-Lab 5 - Definindo ALB DNS Output
-Lab 5 - Definindo o Arquivo de Declaração de Variáveis
-Lab 5 - Definindo o Arquivo de Valores de Variáveis
-Lab 5 - Preparando a Máquina Cliente
-Lab 5 - Definindo as Variáveis de Ambiente do Container
-Lab 5 - Definindo o ARN do Arquivo de Variáveis de Ambiente
-Lab 5 - Definindo Função IAM Para Segurança no ECS (Elastic Container Service)
-Lab 5 - ATENÇÃO - ALERTA DE APRENDIZADO VALIOSO PARA O DIA A DIA
-Lab 5 - Download dos Módulos com Terraform Init
-Lab 5 - Deploy de Aplicação do Cluster Docker no AWS ECS com Terraform
-Lab 5 - Testando a Solução e Acessando a Aplicação na Web com ALB
-Lab 5 - Revisando os Recursos de Infraestrutura Criados na AWS - Parte 1/2
-Lab 5 - Revisando os Recursos de Infraestrutura Criados na AWS - Parte 2/2
-Lab 5 - Encerrando os Recursos
-Lab 5 - Conclusão
-Arquivos do Capítulo
-Bibliografia, Referências e Links Úteis
-
-11 Automatizando o Deploy de Infraestrutura na AWS com Terraform - Parte 4
+10 Fundamentos do DBT (Data Build Tool)
 Introdução
-Projeto 1 - Automatizando Infraestrutura de Processamento de Dados com AWS EMR e Apache Flink
-Projeto 1 - Visão Geral
-Projeto 1 - AVISO ANTES DE COMEÇAR
-Projeto 1 - Conhecendo o AWS EMR (Elastic MapReduce)
-Projeto 1 - Conhecendo o Apache Flink
-Projeto 1 - Criação do Cluster EMR Manualmente - Parte 1/3
-Projeto 1 - Criação do Cluster EMR Manualmente - Parte 2/3
-Projeto 1 - Criação do Cluster EMR Manualmente - Parte 3/3
-Projeto 1 - Provisionamento do Cluster EMR com Terraform - Parte 1/3
-Projeto 1 - Provisionamento do Cluster EMR com Terraform - Parte 2/3
-Projeto 1 - Provisionamento do Cluster EMR com Terraform - Parte 3/3
-Projeto 1 - Configuração de Segurança Para o Cluster EMR
-Projeto 1 - AWS EMR Service Role
-Projeto 1 - AWS EC2 Profile Role
-Projeto 1 - IAM Instance Profile
-Projeto 1 - Provisionamento dos Grupos de Segurança
-Arquivos do Capítulo
+Modern Data Stack com DBT
+Arquitetura e Componentes do DBT
+Instalação e Configuração Inicial
+Criação de Modelos de Dados
+Versionamento com DBT
+DBT Cloud vs DBT Core
+Ciclo de Vida de Projetos DBT
+Testes e Validações
+Documentação e Metadados
+Estratégias de Deploy e CI/CD
+Workflow de Transformação de Dados com DBT
+Camadas da Arquitetura do Modelo e Camada de Staging
+Lab 6 - Deploy e Re-Deploy do Primeiro Modelo com DBT
+Lab 6 - Visão Geral
+Lab 6 - Implementação Parte 1/10
+Lab 6 - Implementação Parte 2/10
+Lab 6 - Implementação Parte 3/10
+Lab 6 - Implementação Parte 4/10
+Lab 6 - Implementação Parte 5/10
+Lab 6 - Implementação Parte 6/10
+Lab 6 - Implementação Parte 7/10
+Lab 6 - Implementação Parte 8/10
+Lab 6 - Implementação Parte 9/10
+Lab 6 - Implementação Parte 10/10
+Arquivos Usados Neste Capítulo
 Bibliografia, Referências e Links Úteis
 
-12 Automatizando o Deploy de Infraestrutura na AWS com Terraform - Parte 5
+11 Transformações de Dados com DBT - Entregando Consistência
 Introdução
-Projeto 1 - Organização dos Arquivos do Projeto
-Projeto 1 - Definindo as Zonas de Disponibilidade
-Projeto 1 - Definindo VPC e Subnets
-Projeto 1 - Definindo Chaves de Acesso Para Conexão via SSH
-Projeto 1 - Arquivo de Variáveis
-Projeto 1 - Arquivo Principal de Configuração - Parte 1/2
-Projeto 1 - Arquivo Principal de Configuração - Parte 2/2
-Projeto 1 - Criando Container Docker Como Máquina Cliente
-Projeto 1 - Deploy da Infraestrutura Como Código - Parte 1/2
-Projeto 1 - Deploy da Infraestrutura Como Código - Parte 2/2
-Projeto 1 - Verificando o Cluster Criado na AWS
-Projeto 1 - Acessando o Cluster EMR via SSH
-Projeto 1 - Acessando o Cluster EMR via Navegador
-Projeto 1 - Executando Job de Processamento de Dados com Apache Flink no Cluster EMR - Parte 1/5
-Projeto 1 - Executando Job de Processamento de Dados com Apache Flink no Cluster EMR - Parte 2/5
-Projeto 1 - Executando Job de Processamento de Dados com Apache Flink no Cluster EMR - Parte 3/5
-Projeto 1 - Executando Job de Processamento de Dados com Apache Flink no Cluster EMR - Parte 4/5
-Projeto 1 - Executando Job de Processamento de Dados com Apache Flink no Cluster EMR - Parte 5/5
-Projeto 1 - Conclusão
-Arquivos do Capítulo
+O Que é Transformação de Dados?
+Escrevendo Transformações SQL no DBT
+Uso de Módulos e Funções
+Estratégias Para Otimização de Consultas
+Incremental Models vs Full Refresh Models
+Gestão de Dependências Entre Modelos
+Testes e Assertions no DBT
+Uso de Snapshots Para Histórico de Dados
+Estratégias Para Lidar com Grandes Volumes de Dados
+Configurações Avançadas Para Transformações
+Lab 7 - Criação de Macros e Refatoramento com DBT
+Lab 7 - Visão Geral
+Lab 7 - Implementação Parte 1/10
+Lab 7 - Implementação Parte 2/10
+Lab 7 - Implementação Parte 3/10
+Lab 7 - Implementação Parte 4/10
+Lab 7 - Implementação Parte 5/10
+Lab 7 - Implementação Parte 6/10
+Lab 7 - Implementação Parte 7/10
+Lab 7 - Implementação Parte 8/10
+Lab 7 - Implementação Parte 9/10
+Lab 7 - Implementação Parte 10/10
+Arquivos Usados Neste Capítulo
 Bibliografia, Referências e Links Úteis
 
-13 Automatizando o Deploy de Infraestrutura na AWS com Terraform - Parte 6
+12 Transformações de Dados com DBT - Entregando Confiabilidade
 Introdução
-Projeto 2 - Deploy do Stack de Treinamento Distribuído de Machine Learning com Kubeflow no Amazon EKS
-Projeto 2 - Definição do Objetivo
-Projeto 2 - Arquitetura da Solução
-Projeto 2 - Visão Geral
-Projeto 2 - Conhecendo o Amazon EKS
-Projeto 2 - Kubernetes e Gerenciamento
-Projeto 2 - Preparando o Ambiente de Trabalho
-Projeto 2 - Instalando o Kubectl
-Projeto 2 - Instalando o Terraform
-Projeto 2 - Instalando o Helm
-Projeto 2 - Módulo do Cluster EKS
-Projeto 2 - Módulo do Cluster EKS Managed Group
-Projeto 2 - Módulo do Shared File System
-Projeto 2 - Build e Upload da Docker Image Para Amazon EC2 Registry
-Projeto 2 - Armazenamento dos Dados
-Projeto 2 - Helm Charts Para Treinamento do Modelo de Machine Learning
-Projeto 2 - Monitorando o Treinamento
-Projeto 2 - Testando o Modelo Treinado
-Projeto 2 - Usando Terraform Para "Destruir" o Stack de Treinamento
-Conclusão e Próximos Passos
-Scripts e Datasets do Capítulo
+Uso de Pacotes no DBT
+Personalização e Extensibilidade
+Integração com Ferramentas de Versionamento (Git)
+Trabalhando com Diferentes Dialetos SQL
+Análise de Linhagem de Dados
+Segurança e Privacidade de Dados
+Uso de Hooks e Triggers
+Estratégias de Particionamento
+Integração com Plataformas em Nuvem (BigQuery, Snowflake)
+Monitoramento e Alertas
+Lab 8 - Automação de Testes de Modelos do DBT
+Lab 8 - Visão Geral
+Lab 8 - Implementação Parte 1/10
+Lab 8 - Implementação Parte 2/10
+Lab 8 - Implementação Parte 3/10
+Lab 8 - Implementação Parte 4/10
+Lab 8 - Implementação Parte 5/10
+Lab 8 - Implementação Parte 6/10
+Lab 8 - Implementação Parte 7/10
+Lab 8 - Implementação Parte 8/10
+Lab 8 - Implementação Parte 9/10
+Lab 8 - Implementação Parte 10/10
+Arquivos Usados Neste Capítulo
 Bibliografia, Referências e Links Úteis
 
-14 Automatizando o Deploy de Infraestrutura no Azure com Terraform
+13 Transformações de Dados com DBT - Entregando Qualidade e Automação
 Introdução
-Cloud Computing com Microsoft Azure
-Explorando os Serviços do Microsoft Azure
-Projeto 3 - Deploy do Stack de Pipeline de Dados no Azure com Terraform
-Projeto 3 - Definição do Objetivo
-Projeto 3 - Arquitetura da Solução
-Projeto 3 - Visão Geral da Solução
-Projeto 3 - Terraform Provider Para o Microsoft Azure
-Projeto 3 - Módulo de Autenticação no Azure
-Projeto 3 - Módulo do Resource Group
-Projeto 3 - Configurando o Terraform State Manegement
-Projeto 3 - Módulo da Rede Virtual no Azure
-Projeto 3 - Módulo do Grupo de Segurança no Azure
-Projeto 3 - Módulo da Instância no Azure
-Projeto 3 - Criação e Deploy do App Service do Pipeline de Dados
-Projeto 3 - Módulo do Banco de Dados no Azure
-Projeto 3 - Módulo do Application Gateway no Azure
-Projeto 3 - Troubleshooting e Resolução de Problemas
-Projeto 3 - Execução e Debug do Terraform
-Projeto 3 - Testando a Solução
-Conclusão e Próximos Passos
-Scripts e Datasets do Capítulo
+Estratégias de Refatoração
+Análise de Desempenho e Otimização
+Uso de Variáveis e Configurações Dinâmicas
+Técnicas de Depuração e Troubleshooting
+Estratégias Para Migração de Dados
+Automação e Orquestração com DBT
+Escalabilidade e Alta Disponibilidade
+Gestão de Recursos e Custos
+Melhores Práticas e Padrões
+Lab 9 - Automação, Hooks, Grafo de Linhagem e Geração de Relatórios no DBT
+Lab 9 - Visão Geral
+Lab 9 - Implementação Parte 1/10
+Lab 9 - Implementação Parte 2/10
+Lab 9 - Implementação Parte 3/10
+Lab 9 - Implementação Parte 4/10
+Lab 9 - Implementação Parte 5/10
+Lab 9 - Implementação Parte 6/10
+Lab 9 - Implementação Parte 7/10
+Lab 9 - Implementação Parte 8/10
+Lab 9 - Implementação Parte 9/10
+Lab 9 - Implementação Parte 10/10
+Arquivos Usados Neste Capítulo
 Bibliografia, Referências e Links Úteis
 
-15 Automatizando o Deploy Multi-Cloud com Terraform
+14 Projeto Final de Integração Entre Airbyte, DBT e SQL
 Introdução
-O Que é Deploy Multi-Cloud?
-Quando Precisamos de Deploy Multi-Cloud?
-Projeto 4 - AWS e Azure Multi-Cloud Deploy com Terraform
-Projeto 4 - Definindo o Objetivo
-Projeto 4 - Arquitetura da Solução
-Projeto 4 - Visão Geral
-Projeto 4 - Iniciando o Projeto Terraform
-Projeto 4 - Criando o Módulo Para Instância AWS
-Projeto 4 - Criando o Módulo Para Instância Azure
-Projeto 4 - Criando o Módulo Multi-Cloud
-Projeto 4 - Deploy do Módulo Multi-Cloud com Terraform
-Projeto 4 - Execução e Debug do Terraform
-Projeto 4 - Testando a Solução
-Conclusão e Próximos Passos
-Scripts e Datasets do Capítulo
+Planejamento e Definição do Projeto
+Integração Entre Airbyte, DBT e SQL
+Estratégias de Extração, Carga e Transformação
+Otimização e Automação do Pipeline Completo
+Implementação do Projeto - Parte 1/5
+Implementação do Projeto - Parte 2/5
+Implementação do Projeto - Parte 3/5
+Implementação do Projeto - Parte 4/5
+Implementação do Projeto - Parte 5/5
+Monitoramento e Alertas Integrados
+Validação e Garantia de Qualidade de Dados
+Estratégias de Backup e Recuperação
+Documentação e Metadados do Projeto
+Apresentação e Análise dos Resultados
+Lições Aprendidas e Dicas Para o Mercado de Trabalho
+Arquivos Usados Neste Capítulo
 Bibliografia, Referências e Links Úteis
 
-16 Automatizando o Deploy de Infraestrutura com Databricks e Terraform
-Introdução
-Cloud Computing com a Plataforma Databricks
-Quando Databricks Deve Ser Uma Opção?
-Criando Conta de Acesso Para Databricks e AWS
-Projeto 5 - Databricks Cluster Deploy Para Processamento Distribuído de Aplicação de IA com Terraform
-Projeto 5 - Definindo o Objetivo
-Projeto 5 - Arquitetura da Solução
-Projeto 5 - Visão Geral da Solução
-Projeto 5 - Módulo Deploy Cluster
-Projeto 5 - Módulo Cluster ACL
-Projeto 5 - Módulo Cluster Policy
-Projeto 5 - Módulo Cluster Policy ACL
-Projeto 5 - Módulo Instance Pool
-Projeto 5 - Módulo Instance Pool ACL
-Projeto 5 - Módulo Deploy Job
-Projeto 5 - Módulo Deploy Job ACL
-Projeto 5 - Módulo Instance Profile
-Projeto 5 - Módulo Deploy Jupyter Notebook com Aplicação de IA em Python
-Projeto 5 - Módulo Jupyter Notebook ACL
-Projeto 5 - Módulo Deploy Everything
-Projeto 5 - Troubleshooting e Resolução de Problemas
-Projeto 5 - Execução e Debug do Terraform
-Conclusão e Próximos Passos
-Scripts e Datasets do Capítulo
-Bibliografia, Referências e Links Úteis
-
-17 Avaliação e Certificado de Conclusão
+15 Avaliação e Certificado de Conclusão
 Leia Antes de Realizar a Avaliação Final!
 Avaliação Final em Inglês (Opcional)
 certificate
 Avaliação Final em Português
 certificate
-anteriorpróximo
-![image](https://github.com/user-attachments/assets/ef9368c5-acdc-4325-b029-bf7517b41a9d)
+![image](https://github.com/user-attachments/assets/0135a009-5c91-412c-a812-4c3bd3c9abac)
+
 
