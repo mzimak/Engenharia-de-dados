@@ -1,0 +1,1577 @@
+[0m21:32:50.776504 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f50391fdd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5038a0c1d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5038ebf0d0>]}
+
+
+============================== 21:32:50.784164 | 5c05d00e-2dff-40c3-ac0f-45d8e1722077 ==============================
+[0m21:32:50.784164 [info ] [MainThread]: Running with dbt=1.5.11
+[0m21:32:50.789247 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/dsa/lab8/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m21:32:50.791562 [info ] [MainThread]: dbt version: 1.5.11
+[0m21:32:50.793542 [info ] [MainThread]: python version: 3.11.10
+[0m21:32:50.798191 [info ] [MainThread]: python path: /usr/local/bin/python3.11
+[0m21:32:50.804344 [info ] [MainThread]: os info: Linux-6.10.0-linuxkit-x86_64-with-glibc2.36
+[0m21:32:50.807830 [info ] [MainThread]: Using profiles.yml file at /root/.dbt/profiles.yml
+[0m21:32:50.811830 [info ] [MainThread]: Using dbt_project.yml file at /dsa/lab8/dbt_project.yml
+[0m21:32:50.818939 [info ] [MainThread]: Configuration:
+[0m21:32:50.931635 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:32:50.983254 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:32:50.985134 [info ] [MainThread]: Required dependencies:
+[0m21:32:50.989763 [debug] [MainThread]: Executing "git --help"
+[0m21:32:51.124859 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:32:51.126242 [debug] [MainThread]: STDERR: "b''"
+[0m21:32:51.127610 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:32:51.129931 [info ] [MainThread]: Connection:
+[0m21:32:51.132729 [info ] [MainThread]:   database: lab8-dev.db
+[0m21:32:51.136514 [info ] [MainThread]:   schema: main
+[0m21:32:51.141859 [info ] [MainThread]:   schemas_and_paths: {'main': '/dsa/lab8/dados-dev/lab8-dev.db'}
+[0m21:32:51.144320 [info ] [MainThread]:   schema_directory: /dsa/lab8/dados-dev
+[0m21:32:51.165246 [info ] [MainThread]: Registered adapter: sqlite=1.5.0
+[0m21:32:51.171201 [debug] [MainThread]: Acquiring new sqlite connection 'debug'
+[0m21:32:51.174079 [debug] [MainThread]: Using sqlite connection "debug"
+[0m21:32:51.189510 [debug] [MainThread]: On debug: select 1 as id
+[0m21:32:51.197959 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:32:51.204739 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m21:32:51.209757 [debug] [MainThread]: On debug: Close
+[0m21:32:51.220814 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m21:32:51.223737 [info ] [MainThread]: [32mAll checks passed![0m
+[0m21:32:51.232744 [debug] [MainThread]: Command `dbt debug` succeeded at 21:32:51.231764 after 0.47 seconds
+[0m21:32:51.239460 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m21:32:51.243642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f503cb1a0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f503c945250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f503a59a050>]}
+[0m21:32:51.253633 [debug] [MainThread]: Flushing usage events
+[0m21:46:35.783537 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f732220b0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7321f20dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f73223e3610>]}
+
+
+============================== 21:46:35.787955 | a0dfe563-88e4-4b43-b466-ae2393c31bed ==============================
+[0m21:46:35.787955 [info ] [MainThread]: Running with dbt=1.5.11
+[0m21:46:35.789968 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/dsa/lab8/logs', 'profiles_dir': '/root/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m21:46:35.883989 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a0dfe563-88e4-4b43-b466-ae2393c31bed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7321bf5810>]}
+[0m21:46:35.913738 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a0dfe563-88e4-4b43-b466-ae2393c31bed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7321905290>]}
+[0m21:46:35.915444 [info ] [MainThread]: Registered adapter: sqlite=1.5.0
+[0m21:46:35.952480 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m21:46:35.955742 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m21:46:35.958050 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'a0dfe563-88e4-4b43-b466-ae2393c31bed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f732227d050>]}
+[0m21:46:37.016058 [debug] [MainThread]: 1699: static parser successfully parsed clientes.sql
+[0m21:46:37.035244 [debug] [MainThread]: 1699: static parser successfully parsed pedidos.sql
+[0m21:46:37.041135 [debug] [MainThread]: 1699: static parser successfully parsed produtos.sql
+[0m21:46:37.104200 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.lab8.example
+[0m21:46:37.119277 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a0dfe563-88e4-4b43-b466-ae2393c31bed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7321931e90>]}
+[0m21:46:37.174027 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a0dfe563-88e4-4b43-b466-ae2393c31bed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7321837550>]}
+[0m21:46:37.176825 [info ] [MainThread]: Found 3 models, 0 tests, 0 snapshots, 0 analyses, 311 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m21:46:37.184535 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a0dfe563-88e4-4b43-b466-ae2393c31bed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7323517190>]}
+[0m21:46:37.192134 [info ] [MainThread]: 
+[0m21:46:37.196488 [debug] [MainThread]: Acquiring new sqlite connection 'master'
+[0m21:46:37.202611 [debug] [ThreadPool]: Acquiring new sqlite connection 'list_lab8-dev.db'
+[0m21:46:37.232477 [debug] [ThreadPool]: Using sqlite connection "list_lab8-dev.db"
+[0m21:46:37.233596 [debug] [ThreadPool]: On list_lab8-dev.db: BEGIN
+[0m21:46:37.234716 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:46:37.237927 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m21:46:37.238724 [debug] [ThreadPool]: Using sqlite connection "list_lab8-dev.db"
+[0m21:46:37.247880 [debug] [ThreadPool]: On list_lab8-dev.db: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "connection_name": "list_lab8-dev.db"} */
+
+        pragma database_list
+    
+[0m21:46:37.251032 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m21:46:37.254991 [debug] [ThreadPool]: On list_lab8-dev.db: ROLLBACK
+[0m21:46:37.256195 [debug] [ThreadPool]: On list_lab8-dev.db: Close
+[0m21:46:37.261669 [debug] [ThreadPool]: Acquiring new sqlite connection 'list_lab8-dev.db_main'
+[0m21:46:37.286582 [debug] [ThreadPool]: Using sqlite connection "list_lab8-dev.db_main"
+[0m21:46:37.288434 [debug] [ThreadPool]: On list_lab8-dev.db_main: BEGIN
+[0m21:46:37.291107 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:46:37.297429 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m21:46:37.298607 [debug] [ThreadPool]: Using sqlite connection "list_lab8-dev.db_main"
+[0m21:46:37.301054 [debug] [ThreadPool]: On list_lab8-dev.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "connection_name": "list_lab8-dev.db_main"} */
+
+        pragma database_list
+    
+[0m21:46:37.303168 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m21:46:37.308039 [debug] [ThreadPool]: Using sqlite connection "list_lab8-dev.db_main"
+[0m21:46:37.309547 [debug] [ThreadPool]: On list_lab8-dev.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "connection_name": "list_lab8-dev.db_main"} */
+
+            SELECT
+                'lab8-dev.db' as database
+                ,name
+                ,'main' AS schema
+                ,type as data_type
+            FROM
+                main.sqlite_master
+            WHERE
+                name NOT LIKE 'sqlite_%'
+        
+[0m21:46:37.314022 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m21:46:37.318052 [debug] [ThreadPool]: On list_lab8-dev.db_main: ROLLBACK
+[0m21:46:37.319213 [debug] [ThreadPool]: On list_lab8-dev.db_main: Close
+[0m21:46:37.324831 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a0dfe563-88e4-4b43-b466-ae2393c31bed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f73223e3a10>]}
+[0m21:46:37.326272 [debug] [MainThread]: Using sqlite connection "master"
+[0m21:46:37.327660 [debug] [MainThread]: On master: BEGIN
+[0m21:46:37.329487 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:46:37.332815 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m21:46:37.334266 [debug] [MainThread]: On master: COMMIT
+[0m21:46:37.336160 [debug] [MainThread]: Using sqlite connection "master"
+[0m21:46:37.338292 [debug] [MainThread]: On master: COMMIT
+[0m21:46:37.339944 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m21:46:37.341439 [debug] [MainThread]: On master: Close
+[0m21:46:37.344715 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:46:37.346183 [info ] [MainThread]: 
+[0m21:46:37.420157 [debug] [Thread-1 (]: Began running node model.lab8.clientes
+[0m21:46:37.421400 [info ] [Thread-1 (]: 1 of 3 START sql view model main.clientes ...................................... [RUN]
+[0m21:46:37.423953 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_lab8-dev.db_main, now model.lab8.clientes)
+[0m21:46:37.425250 [debug] [Thread-1 (]: Began compiling node model.lab8.clientes
+[0m21:46:37.442587 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab8.clientes"
+[0m21:46:37.452487 [debug] [Thread-1 (]: Timing info for model.lab8.clientes (compile): 21:46:37.426488 => 21:46:37.451579
+[0m21:46:37.454152 [debug] [Thread-1 (]: Began executing node model.lab8.clientes
+[0m21:46:37.481834 [debug] [Thread-1 (]: Writing runtime sql for node "model.lab8.clientes"
+[0m21:46:37.497216 [debug] [Thread-1 (]: Using sqlite connection "model.lab8.clientes"
+[0m21:46:37.498599 [debug] [Thread-1 (]: On model.lab8.clientes: BEGIN
+[0m21:46:37.499773 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:46:37.502271 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m21:46:37.503192 [debug] [Thread-1 (]: Using sqlite connection "model.lab8.clientes"
+[0m21:46:37.504567 [debug] [Thread-1 (]: On model.lab8.clientes: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "model.lab8.clientes"} */
+
+    
+    create view main."clientes" as
+    -- Configura o modelo de clientes para ser materializado como uma "view" no banco de dados
+
+  
+
+WITH clientes_base AS (  
+    SELECT *
+    FROM tb_clientes  
+)
+
+SELECT
+    cliente_id,  
+    nome, 
+    email,  
+    cidade
+FROM clientes_base;
+[0m21:46:37.509264 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m21:46:37.520455 [debug] [Thread-1 (]: On model.lab8.clientes: COMMIT
+[0m21:46:37.521666 [debug] [Thread-1 (]: Using sqlite connection "model.lab8.clientes"
+[0m21:46:37.523068 [debug] [Thread-1 (]: On model.lab8.clientes: COMMIT
+[0m21:46:37.552822 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m21:46:37.556781 [debug] [Thread-1 (]: Timing info for model.lab8.clientes (execute): 21:46:37.455601 => 21:46:37.556239
+[0m21:46:37.559377 [debug] [Thread-1 (]: On model.lab8.clientes: Close
+[0m21:46:37.564048 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a0dfe563-88e4-4b43-b466-ae2393c31bed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f73218fd150>]}
+[0m21:46:37.566205 [info ] [Thread-1 (]: 1 of 3 OK created sql view model main.clientes ................................. [[32mOK[0m in 0.14s]
+[0m21:46:37.569981 [debug] [Thread-1 (]: Finished running node model.lab8.clientes
+[0m21:46:37.573597 [debug] [Thread-1 (]: Began running node model.lab8.pedidos
+[0m21:46:37.577278 [info ] [Thread-1 (]: 2 of 3 START sql table model main.pedidos ...................................... [RUN]
+[0m21:46:37.583444 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.lab8.clientes, now model.lab8.pedidos)
+[0m21:46:37.588671 [debug] [Thread-1 (]: Began compiling node model.lab8.pedidos
+[0m21:46:37.600964 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab8.pedidos"
+[0m21:46:37.617554 [debug] [Thread-1 (]: Timing info for model.lab8.pedidos (compile): 21:46:37.590432 => 21:46:37.611673
+[0m21:46:37.621829 [debug] [Thread-1 (]: Began executing node model.lab8.pedidos
+[0m21:46:37.656837 [debug] [Thread-1 (]: Writing runtime sql for node "model.lab8.pedidos"
+[0m21:46:37.666717 [debug] [Thread-1 (]: Using sqlite connection "model.lab8.pedidos"
+[0m21:46:37.669704 [debug] [Thread-1 (]: On model.lab8.pedidos: BEGIN
+[0m21:46:37.671783 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:46:37.676737 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m21:46:37.678075 [debug] [Thread-1 (]: Using sqlite connection "model.lab8.pedidos"
+[0m21:46:37.679996 [debug] [Thread-1 (]: On model.lab8.pedidos: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "model.lab8.pedidos"} */
+
+  
+    
+    
+    create  table main."pedidos"
+    as
+        -- Configura o modelo de pedidos para ser materializado como uma "table" no banco de dados
+
+  
+
+WITH pedidos_base AS (  
+    SELECT *
+    FROM tb_pedidos
+)
+
+SELECT
+    pedido_id,  
+    cliente_id, 
+    produto_id,  
+    quantidade,
+    data_pedido
+FROM pedidos_base
+
+  
+[0m21:46:37.690237 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m21:46:37.695237 [debug] [Thread-1 (]: On model.lab8.pedidos: COMMIT
+[0m21:46:37.698380 [debug] [Thread-1 (]: Using sqlite connection "model.lab8.pedidos"
+[0m21:46:37.702033 [debug] [Thread-1 (]: On model.lab8.pedidos: COMMIT
+[0m21:46:37.734524 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m21:46:37.738677 [debug] [Thread-1 (]: Timing info for model.lab8.pedidos (execute): 21:46:37.624416 => 21:46:37.738017
+[0m21:46:37.739747 [debug] [Thread-1 (]: On model.lab8.pedidos: Close
+[0m21:46:37.742842 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a0dfe563-88e4-4b43-b466-ae2393c31bed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7321976b90>]}
+[0m21:46:37.744298 [info ] [Thread-1 (]: 2 of 3 OK created sql table model main.pedidos ................................. [[32mOK[0m in 0.16s]
+[0m21:46:37.747787 [debug] [Thread-1 (]: Finished running node model.lab8.pedidos
+[0m21:46:37.750059 [debug] [Thread-1 (]: Began running node model.lab8.produtos
+[0m21:46:37.756459 [info ] [Thread-1 (]: 3 of 3 START sql view model main.produtos ...................................... [RUN]
+[0m21:46:37.761458 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.lab8.pedidos, now model.lab8.produtos)
+[0m21:46:37.764749 [debug] [Thread-1 (]: Began compiling node model.lab8.produtos
+[0m21:46:37.776489 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab8.produtos"
+[0m21:46:37.786482 [debug] [Thread-1 (]: Timing info for model.lab8.produtos (compile): 21:46:37.768461 => 21:46:37.784957
+[0m21:46:37.791921 [debug] [Thread-1 (]: Began executing node model.lab8.produtos
+[0m21:46:37.806400 [debug] [Thread-1 (]: Writing runtime sql for node "model.lab8.produtos"
+[0m21:46:37.821922 [debug] [Thread-1 (]: Using sqlite connection "model.lab8.produtos"
+[0m21:46:37.825273 [debug] [Thread-1 (]: On model.lab8.produtos: BEGIN
+[0m21:46:37.828522 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:46:37.835145 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m21:46:37.836747 [debug] [Thread-1 (]: Using sqlite connection "model.lab8.produtos"
+[0m21:46:37.840207 [debug] [Thread-1 (]: On model.lab8.produtos: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "model.lab8.produtos"} */
+
+    
+    create view main."produtos" as
+    -- Configura o modelo de produtos para ser materializado como uma "view" no banco de dados
+
+  
+
+WITH produtos_base AS (  
+    SELECT *
+    FROM tb_produtos  
+)
+
+SELECT
+    produto_id,  
+    nome, 
+    preco
+FROM produtos_base;
+[0m21:46:37.849288 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m21:46:37.853387 [debug] [Thread-1 (]: On model.lab8.produtos: COMMIT
+[0m21:46:37.854535 [debug] [Thread-1 (]: Using sqlite connection "model.lab8.produtos"
+[0m21:46:37.856321 [debug] [Thread-1 (]: On model.lab8.produtos: COMMIT
+[0m21:46:37.876394 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m21:46:37.879776 [debug] [Thread-1 (]: Timing info for model.lab8.produtos (execute): 21:46:37.798422 => 21:46:37.879164
+[0m21:46:37.881233 [debug] [Thread-1 (]: On model.lab8.produtos: Close
+[0m21:46:37.884853 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a0dfe563-88e4-4b43-b466-ae2393c31bed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7321889290>]}
+[0m21:46:37.886537 [info ] [Thread-1 (]: 3 of 3 OK created sql view model main.produtos ................................. [[32mOK[0m in 0.12s]
+[0m21:46:37.889850 [debug] [Thread-1 (]: Finished running node model.lab8.produtos
+[0m21:46:37.897575 [debug] [MainThread]: Using sqlite connection "master"
+[0m21:46:37.906577 [debug] [MainThread]: On master: BEGIN
+[0m21:46:37.914566 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:46:37.929688 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m21:46:37.931239 [debug] [MainThread]: On master: COMMIT
+[0m21:46:37.934015 [debug] [MainThread]: Using sqlite connection "master"
+[0m21:46:37.940543 [debug] [MainThread]: On master: COMMIT
+[0m21:46:37.944910 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m21:46:37.956127 [debug] [MainThread]: On master: Close
+[0m21:46:37.959561 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:46:37.960529 [debug] [MainThread]: Connection 'list_lab8-dev.db' was properly closed.
+[0m21:46:37.961412 [debug] [MainThread]: Connection 'model.lab8.produtos' was properly closed.
+[0m21:46:37.962443 [info ] [MainThread]: 
+[0m21:46:37.965596 [info ] [MainThread]: Finished running 2 view models, 1 table model in 0 hours 0 minutes and 0.77 seconds (0.77s).
+[0m21:46:37.973271 [debug] [MainThread]: Command end result
+[0m21:46:37.992400 [info ] [MainThread]: 
+[0m21:46:37.995466 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:46:37.998666 [info ] [MainThread]: 
+[0m21:46:38.003043 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m21:46:38.008554 [debug] [MainThread]: Command `dbt run` succeeded at 21:46:38.008125 after 2.24 seconds
+[0m21:46:38.012706 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7325dd0350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7325d26750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7325d26690>]}
+[0m21:46:38.015100 [debug] [MainThread]: Flushing usage events
+[0m23:13:18.772036 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f955c9ffd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f955adffe10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f955af9fed0>]}
+
+
+============================== 23:13:18.778622 | ee65f1b0-4254-42ee-ab1d-fdbb1f52259d ==============================
+[0m23:13:18.778622 [info ] [MainThread]: Running with dbt=1.5.11
+[0m23:13:18.781577 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/root/.dbt', 'log_path': '/dsa/lab8/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m23:13:18.883216 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ee65f1b0-4254-42ee-ab1d-fdbb1f52259d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f955b25a010>]}
+[0m23:13:18.912646 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ee65f1b0-4254-42ee-ab1d-fdbb1f52259d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f955afbb950>]}
+[0m23:13:18.914472 [info ] [MainThread]: Registered adapter: sqlite=1.5.0
+[0m23:13:18.954741 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m23:13:18.976637 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m23:13:18.980027 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'ee65f1b0-4254-42ee-ab1d-fdbb1f52259d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f955a823410>]}
+[0m23:13:19.990299 [debug] [MainThread]: 1699: static parser successfully parsed clientes.sql
+[0m23:13:20.015145 [debug] [MainThread]: 1699: static parser successfully parsed pedidos.sql
+[0m23:13:20.022805 [debug] [MainThread]: 1699: static parser successfully parsed produtos.sql
+[0m23:13:20.420898 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ee65f1b0-4254-42ee-ab1d-fdbb1f52259d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f955aae4ad0>]}
+[0m23:13:20.476341 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ee65f1b0-4254-42ee-ab1d-fdbb1f52259d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f955a80b910>]}
+[0m23:13:20.482862 [info ] [MainThread]: Found 3 models, 16 tests, 0 snapshots, 0 analyses, 312 macros, 1 operation, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m23:13:20.489030 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ee65f1b0-4254-42ee-ab1d-fdbb1f52259d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f955da97a90>]}
+[0m23:13:20.506805 [info ] [MainThread]: 
+[0m23:13:20.511603 [debug] [MainThread]: Acquiring new sqlite connection 'master'
+[0m23:13:20.528296 [debug] [ThreadPool]: Acquiring new sqlite connection 'list_lab8-dev.db'
+[0m23:13:20.568312 [debug] [ThreadPool]: Using sqlite connection "list_lab8-dev.db"
+[0m23:13:20.569907 [debug] [ThreadPool]: On list_lab8-dev.db: BEGIN
+[0m23:13:20.575510 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:13:20.583358 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m23:13:20.585325 [debug] [ThreadPool]: Using sqlite connection "list_lab8-dev.db"
+[0m23:13:20.588760 [debug] [ThreadPool]: On list_lab8-dev.db: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "connection_name": "list_lab8-dev.db"} */
+
+        pragma database_list
+    
+[0m23:13:20.591799 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m23:13:20.607460 [debug] [ThreadPool]: On list_lab8-dev.db: ROLLBACK
+[0m23:13:20.616184 [debug] [ThreadPool]: On list_lab8-dev.db: Close
+[0m23:13:20.632280 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lab8-dev.db, now list_lab8-dev.db_main)
+[0m23:13:20.666360 [debug] [ThreadPool]: Using sqlite connection "list_lab8-dev.db_main"
+[0m23:13:20.668166 [debug] [ThreadPool]: On list_lab8-dev.db_main: BEGIN
+[0m23:13:20.670517 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:13:20.675724 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m23:13:20.678558 [debug] [ThreadPool]: Using sqlite connection "list_lab8-dev.db_main"
+[0m23:13:20.681743 [debug] [ThreadPool]: On list_lab8-dev.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "connection_name": "list_lab8-dev.db_main"} */
+
+        pragma database_list
+    
+[0m23:13:20.684332 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m23:13:20.693886 [debug] [ThreadPool]: Using sqlite connection "list_lab8-dev.db_main"
+[0m23:13:20.696147 [debug] [ThreadPool]: On list_lab8-dev.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "connection_name": "list_lab8-dev.db_main"} */
+
+            SELECT
+                'lab8-dev.db' as database
+                ,name
+                ,'main' AS schema
+                ,type as data_type
+            FROM
+                main.sqlite_master
+            WHERE
+                name NOT LIKE 'sqlite_%'
+        
+[0m23:13:20.702068 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m23:13:20.707539 [debug] [ThreadPool]: On list_lab8-dev.db_main: ROLLBACK
+[0m23:13:20.710904 [debug] [ThreadPool]: On list_lab8-dev.db_main: Close
+[0m23:13:20.721380 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ee65f1b0-4254-42ee-ab1d-fdbb1f52259d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f955aad9c90>]}
+[0m23:13:20.722897 [debug] [MainThread]: Using sqlite connection "master"
+[0m23:13:20.724945 [debug] [MainThread]: On master: BEGIN
+[0m23:13:20.726965 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:13:20.733015 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m23:13:20.734704 [debug] [MainThread]: On master: COMMIT
+[0m23:13:20.737266 [debug] [MainThread]: Using sqlite connection "master"
+[0m23:13:20.739092 [debug] [MainThread]: On master: COMMIT
+[0m23:13:20.740807 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m23:13:20.743029 [debug] [MainThread]: On master: Close
+[0m23:13:20.754975 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:13:20.757051 [info ] [MainThread]: 
+[0m23:13:20.787937 [debug] [Thread-1 (]: Began running node model.lab8.clientes
+[0m23:13:20.789618 [info ] [Thread-1 (]: 1 of 3 START sql view model main.clientes ...................................... [RUN]
+[0m23:13:20.792413 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_lab8-dev.db_main, now model.lab8.clientes)
+[0m23:13:20.803603 [debug] [Thread-1 (]: Began compiling node model.lab8.clientes
+[0m23:13:20.830046 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab8.clientes"
+[0m23:13:20.837186 [debug] [Thread-1 (]: Timing info for model.lab8.clientes (compile): 23:13:20.809282 => 23:13:20.835460
+[0m23:13:20.843210 [debug] [Thread-1 (]: Began executing node model.lab8.clientes
+[0m23:13:20.890391 [debug] [Thread-1 (]: Using sqlite connection "model.lab8.clientes"
+[0m23:13:20.892785 [debug] [Thread-1 (]: On model.lab8.clientes: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "model.lab8.clientes"} */
+drop view if exists "main"."clientes"
+[0m23:13:20.895072 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:13:20.941703 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:20.954311 [debug] [Thread-1 (]: Writing runtime sql for node "model.lab8.clientes"
+[0m23:13:20.958210 [debug] [Thread-1 (]: Using sqlite connection "model.lab8.clientes"
+[0m23:13:20.962473 [debug] [Thread-1 (]: On model.lab8.clientes: BEGIN
+[0m23:13:20.967122 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:20.969509 [debug] [Thread-1 (]: Using sqlite connection "model.lab8.clientes"
+[0m23:13:20.974331 [debug] [Thread-1 (]: On model.lab8.clientes: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "model.lab8.clientes"} */
+
+    
+    create view main."clientes" as
+    -- Configura o modelo de clientes para ser materializado como uma "view" no banco de dados
+
+  
+
+WITH clientes_base AS (  
+    SELECT *
+    FROM tb_clientes  
+)
+
+SELECT
+    cliente_id,  
+    nome, 
+    email,  
+    cidade
+FROM clientes_base;
+[0m23:13:20.984468 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:21.010916 [debug] [Thread-1 (]: On model.lab8.clientes: COMMIT
+[0m23:13:21.013297 [debug] [Thread-1 (]: Using sqlite connection "model.lab8.clientes"
+[0m23:13:21.015295 [debug] [Thread-1 (]: On model.lab8.clientes: COMMIT
+[0m23:13:21.058047 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:21.061633 [debug] [Thread-1 (]: Timing info for model.lab8.clientes (execute): 23:13:20.847978 => 23:13:21.061064
+[0m23:13:21.062942 [debug] [Thread-1 (]: On model.lab8.clientes: Close
+[0m23:13:21.067916 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee65f1b0-4254-42ee-ab1d-fdbb1f52259d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f955aa37990>]}
+[0m23:13:21.071938 [info ] [Thread-1 (]: 1 of 3 OK created sql view model main.clientes ................................. [[32mOK[0m in 0.28s]
+[0m23:13:21.076308 [debug] [Thread-1 (]: Finished running node model.lab8.clientes
+[0m23:13:21.080897 [debug] [Thread-1 (]: Began running node model.lab8.pedidos
+[0m23:13:21.089292 [info ] [Thread-1 (]: 2 of 3 START sql table model main.pedidos ...................................... [RUN]
+[0m23:13:21.098005 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.lab8.clientes, now model.lab8.pedidos)
+[0m23:13:21.102906 [debug] [Thread-1 (]: Began compiling node model.lab8.pedidos
+[0m23:13:21.124963 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab8.pedidos"
+[0m23:13:21.143741 [debug] [Thread-1 (]: Timing info for model.lab8.pedidos (compile): 23:13:21.105191 => 23:13:21.142527
+[0m23:13:21.147712 [debug] [Thread-1 (]: Began executing node model.lab8.pedidos
+[0m23:13:21.177096 [debug] [Thread-1 (]: Using sqlite connection "model.lab8.pedidos"
+[0m23:13:21.180219 [debug] [Thread-1 (]: On model.lab8.pedidos: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "model.lab8.pedidos"} */
+drop table if exists "main"."pedidos"
+[0m23:13:21.182356 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:13:21.231613 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:21.258101 [debug] [Thread-1 (]: Writing runtime sql for node "model.lab8.pedidos"
+[0m23:13:21.263320 [debug] [Thread-1 (]: Using sqlite connection "model.lab8.pedidos"
+[0m23:13:21.265777 [debug] [Thread-1 (]: On model.lab8.pedidos: BEGIN
+[0m23:13:21.268027 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:21.272203 [debug] [Thread-1 (]: Using sqlite connection "model.lab8.pedidos"
+[0m23:13:21.274306 [debug] [Thread-1 (]: On model.lab8.pedidos: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "model.lab8.pedidos"} */
+
+  
+    
+    
+    create  table main."pedidos"
+    as
+        -- Configura o modelo de pedidos para ser materializado como uma "table" no banco de dados
+
+  
+
+WITH pedidos_base AS (  
+    SELECT *
+    FROM tb_pedidos
+)
+
+SELECT
+    pedido_id,  
+    cliente_id, 
+    produto_id,  
+    quantidade,
+    data_pedido
+FROM pedidos_base
+
+  
+[0m23:13:21.285684 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:21.291233 [debug] [Thread-1 (]: On model.lab8.pedidos: COMMIT
+[0m23:13:21.294227 [debug] [Thread-1 (]: Using sqlite connection "model.lab8.pedidos"
+[0m23:13:21.296432 [debug] [Thread-1 (]: On model.lab8.pedidos: COMMIT
+[0m23:13:21.342020 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:21.346115 [debug] [Thread-1 (]: Timing info for model.lab8.pedidos (execute): 23:13:21.149302 => 23:13:21.345404
+[0m23:13:21.347767 [debug] [Thread-1 (]: On model.lab8.pedidos: Close
+[0m23:13:21.351287 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee65f1b0-4254-42ee-ab1d-fdbb1f52259d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f955a83df90>]}
+[0m23:13:21.353565 [info ] [Thread-1 (]: 2 of 3 OK created sql table model main.pedidos ................................. [[32mOK[0m in 0.25s]
+[0m23:13:21.358316 [debug] [Thread-1 (]: Finished running node model.lab8.pedidos
+[0m23:13:21.360697 [debug] [Thread-1 (]: Began running node model.lab8.produtos
+[0m23:13:21.363609 [info ] [Thread-1 (]: 3 of 3 START sql view model main.produtos ...................................... [RUN]
+[0m23:13:21.368732 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.lab8.pedidos, now model.lab8.produtos)
+[0m23:13:21.370577 [debug] [Thread-1 (]: Began compiling node model.lab8.produtos
+[0m23:13:21.379447 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab8.produtos"
+[0m23:13:21.384370 [debug] [Thread-1 (]: Timing info for model.lab8.produtos (compile): 23:13:21.373104 => 23:13:21.383570
+[0m23:13:21.387281 [debug] [Thread-1 (]: Began executing node model.lab8.produtos
+[0m23:13:21.405440 [debug] [Thread-1 (]: Using sqlite connection "model.lab8.produtos"
+[0m23:13:21.407331 [debug] [Thread-1 (]: On model.lab8.produtos: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "model.lab8.produtos"} */
+drop view if exists "main"."produtos"
+[0m23:13:21.408990 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:13:21.456804 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:21.460226 [debug] [Thread-1 (]: Writing runtime sql for node "model.lab8.produtos"
+[0m23:13:21.463018 [debug] [Thread-1 (]: Using sqlite connection "model.lab8.produtos"
+[0m23:13:21.464184 [debug] [Thread-1 (]: On model.lab8.produtos: BEGIN
+[0m23:13:21.465668 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:21.466917 [debug] [Thread-1 (]: Using sqlite connection "model.lab8.produtos"
+[0m23:13:21.468182 [debug] [Thread-1 (]: On model.lab8.produtos: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "model.lab8.produtos"} */
+
+    
+    create view main."produtos" as
+    -- Configura o modelo de produtos para ser materializado como uma "view" no banco de dados
+
+  
+
+WITH produtos_base AS (  
+    SELECT *
+    FROM tb_produtos  
+)
+
+SELECT
+    produto_id,  
+    nome, 
+    preco
+FROM produtos_base;
+[0m23:13:21.473031 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:21.476571 [debug] [Thread-1 (]: On model.lab8.produtos: COMMIT
+[0m23:13:21.477527 [debug] [Thread-1 (]: Using sqlite connection "model.lab8.produtos"
+[0m23:13:21.478851 [debug] [Thread-1 (]: On model.lab8.produtos: COMMIT
+[0m23:13:21.497281 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:21.500271 [debug] [Thread-1 (]: Timing info for model.lab8.produtos (execute): 23:13:21.389157 => 23:13:21.499944
+[0m23:13:21.501252 [debug] [Thread-1 (]: On model.lab8.produtos: Close
+[0m23:13:21.504066 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ee65f1b0-4254-42ee-ab1d-fdbb1f52259d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f955a79cb50>]}
+[0m23:13:21.505584 [info ] [Thread-1 (]: 3 of 3 OK created sql view model main.produtos ................................. [[32mOK[0m in 0.14s]
+[0m23:13:21.507752 [debug] [Thread-1 (]: Finished running node model.lab8.produtos
+[0m23:13:21.513504 [debug] [MainThread]: Using sqlite connection "master"
+[0m23:13:21.519162 [debug] [MainThread]: On master: BEGIN
+[0m23:13:21.521263 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:13:21.527191 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m23:13:21.528248 [debug] [MainThread]: On master: COMMIT
+[0m23:13:21.529969 [debug] [MainThread]: Using sqlite connection "master"
+[0m23:13:21.531171 [debug] [MainThread]: On master: COMMIT
+[0m23:13:21.534588 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m23:13:21.536490 [info ] [MainThread]: 
+[0m23:13:21.538548 [info ] [MainThread]: Running 1 on-run-end hook
+[0m23:13:21.546412 [debug] [MainThread]: Writing injected SQL for node "operation.lab8.lab8-on-run-end-0"
+[0m23:13:21.579478 [info ] [MainThread]: 1 of 1 START hook: lab8.on-run-end.0 ........................................... [RUN]
+[0m23:13:21.593476 [debug] [MainThread]: Using sqlite connection "master"
+[0m23:13:21.598053 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "connection_name": "master"} */
+VACUUM;
+[0m23:13:21.674069 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m23:13:21.677955 [info ] [MainThread]: 1 of 1 OK hook: lab8.on-run-end.0 .............................................. [[32mOK[0m in 0.09s]
+[0m23:13:21.680459 [info ] [MainThread]: 
+[0m23:13:21.684154 [debug] [MainThread]: On master: Close
+[0m23:13:21.694535 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:13:21.696127 [debug] [MainThread]: Connection 'model.lab8.produtos' was properly closed.
+[0m23:13:21.698578 [info ] [MainThread]: 
+[0m23:13:21.704006 [info ] [MainThread]: Finished running 2 view models, 1 table model, 1 hook in 0 hours 0 minutes and 1.19 seconds (1.19s).
+[0m23:13:21.714596 [debug] [MainThread]: Command end result
+[0m23:13:21.753589 [info ] [MainThread]: 
+[0m23:13:21.760415 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:13:21.766322 [info ] [MainThread]: 
+[0m23:13:21.774635 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m23:13:21.781909 [debug] [MainThread]: Command `dbt run` succeeded at 23:13:21.781421 after 3.03 seconds
+[0m23:13:21.784574 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f955b3e7450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f955ed90350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f955ece66d0>]}
+[0m23:13:21.787768 [debug] [MainThread]: Flushing usage events
+[0m23:13:47.318003 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa83205cdd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa82e499c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa82e278910>]}
+
+
+============================== 23:13:47.323119 | b757f65d-1241-4bf1-9ba6-55c10a12a42e ==============================
+[0m23:13:47.323119 [info ] [MainThread]: Running with dbt=1.5.11
+[0m23:13:47.325721 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/dsa/lab8/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m23:13:47.465455 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b757f65d-1241-4bf1-9ba6-55c10a12a42e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa82e4aaf90>]}
+[0m23:13:47.497280 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b757f65d-1241-4bf1-9ba6-55c10a12a42e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa82e4aaf90>]}
+[0m23:13:47.500302 [info ] [MainThread]: Registered adapter: sqlite=1.5.0
+[0m23:13:47.537947 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m23:13:47.598845 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:13:47.599810 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:13:47.611043 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b757f65d-1241-4bf1-9ba6-55c10a12a42e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa82e485810>]}
+[0m23:13:47.627516 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b757f65d-1241-4bf1-9ba6-55c10a12a42e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa82db2ff50>]}
+[0m23:13:47.628744 [info ] [MainThread]: Found 3 models, 16 tests, 0 snapshots, 0 analyses, 312 macros, 1 operation, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m23:13:47.630614 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b757f65d-1241-4bf1-9ba6-55c10a12a42e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa830cd7590>]}
+[0m23:13:47.638444 [info ] [MainThread]: 
+[0m23:13:47.642399 [debug] [MainThread]: Acquiring new sqlite connection 'master'
+[0m23:13:47.647972 [debug] [ThreadPool]: Acquiring new sqlite connection 'list_lab8-dev.db_main'
+[0m23:13:47.684452 [debug] [ThreadPool]: Using sqlite connection "list_lab8-dev.db_main"
+[0m23:13:47.687389 [debug] [ThreadPool]: On list_lab8-dev.db_main: BEGIN
+[0m23:13:47.689330 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:13:47.696184 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m23:13:47.697051 [debug] [ThreadPool]: Using sqlite connection "list_lab8-dev.db_main"
+[0m23:13:47.698583 [debug] [ThreadPool]: On list_lab8-dev.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "connection_name": "list_lab8-dev.db_main"} */
+
+        pragma database_list
+    
+[0m23:13:47.699955 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m23:13:47.704187 [debug] [ThreadPool]: Using sqlite connection "list_lab8-dev.db_main"
+[0m23:13:47.705445 [debug] [ThreadPool]: On list_lab8-dev.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "connection_name": "list_lab8-dev.db_main"} */
+
+            SELECT
+                'lab8-dev.db' as database
+                ,name
+                ,'main' AS schema
+                ,type as data_type
+            FROM
+                main.sqlite_master
+            WHERE
+                name NOT LIKE 'sqlite_%'
+        
+[0m23:13:47.709062 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m23:13:47.712319 [debug] [ThreadPool]: On list_lab8-dev.db_main: ROLLBACK
+[0m23:13:47.713293 [debug] [ThreadPool]: On list_lab8-dev.db_main: Close
+[0m23:13:47.717664 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b757f65d-1241-4bf1-9ba6-55c10a12a42e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa82fd9e250>]}
+[0m23:13:47.718689 [debug] [MainThread]: Using sqlite connection "master"
+[0m23:13:47.720116 [debug] [MainThread]: On master: BEGIN
+[0m23:13:47.721470 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:13:47.723807 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m23:13:47.725130 [debug] [MainThread]: On master: COMMIT
+[0m23:13:47.726575 [debug] [MainThread]: Using sqlite connection "master"
+[0m23:13:47.727925 [debug] [MainThread]: On master: COMMIT
+[0m23:13:47.729287 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m23:13:47.730646 [debug] [MainThread]: On master: Close
+[0m23:13:47.733384 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:13:47.734911 [info ] [MainThread]: 
+[0m23:13:47.746168 [debug] [Thread-1 (]: Began running node test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017
+[0m23:13:47.748632 [info ] [Thread-1 (]: 1 of 16 START test accepted_range_pedidos_quantidade__1000__0 .................. [RUN]
+[0m23:13:47.753450 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_lab8-dev.db_main, now test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017)
+[0m23:13:47.756931 [debug] [Thread-1 (]: Began compiling node test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017
+[0m23:13:47.797612 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017"
+[0m23:13:47.807241 [debug] [Thread-1 (]: Timing info for test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017 (compile): 23:13:47.758394 => 23:13:47.806317
+[0m23:13:47.809978 [debug] [Thread-1 (]: Began executing node test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017
+[0m23:13:47.853553 [debug] [Thread-1 (]: Writing runtime sql for node "test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017"
+[0m23:13:47.858494 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017"
+[0m23:13:47.860087 [debug] [Thread-1 (]: On test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017: BEGIN
+[0m23:13:47.862071 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:13:47.865711 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:47.866939 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017"
+[0m23:13:47.868774 [debug] [Thread-1 (]: On test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017"} */
+select
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      
+
+-- Cria uma CTE (Common Table Expression) chamada 'validation' para armazenar os valores que não passam no teste de faixa
+WITH validation AS (
+    SELECT
+        quantidade AS value             -- Seleciona os valores da coluna especificada
+    FROM main."pedidos"                           -- Seleciona a partir do modelo/tabela especificado
+    WHERE quantidade < 0  -- Condição: seleciona valores menores que o valor mínimo
+       OR quantidade > 1000  -- Condição: seleciona valores maiores que o valor máximo
+)
+
+-- Contabiliza os registros que falharam no teste (que estão fora do intervalo)
+SELECT COUNT(*) AS failures  -- Conta o número de falhas (valores fora do intervalo) na CTE 'validation'
+FROM validation              -- Realiza a contagem dos registros inválidos
+
+HAVING COUNT(*) > 0  -- O teste falha se houver pelo menos uma linha fora do intervalo
+
+
+      
+    ) dbt_internal_test
+[0m23:13:47.872788 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:47.877665 [debug] [Thread-1 (]: Timing info for test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017 (execute): 23:13:47.811802 => 23:13:47.877151
+[0m23:13:47.878851 [debug] [Thread-1 (]: On test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017: ROLLBACK
+[0m23:13:47.880447 [debug] [Thread-1 (]: On test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017: Close
+[0m23:13:47.883499 [info ] [Thread-1 (]: 1 of 16 PASS accepted_range_pedidos_quantidade__1000__0 ........................ [[32mPASS[0m in 0.13s]
+[0m23:13:47.885843 [debug] [Thread-1 (]: Finished running node test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017
+[0m23:13:47.888229 [debug] [Thread-1 (]: Began running node test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f
+[0m23:13:47.889948 [info ] [Thread-1 (]: 2 of 16 START test accepted_range_produtos_preco__5000__10 ..................... [RUN]
+[0m23:13:47.893439 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017, now test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f)
+[0m23:13:47.896576 [debug] [Thread-1 (]: Began compiling node test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f
+[0m23:13:47.914166 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f"
+[0m23:13:47.922065 [debug] [Thread-1 (]: Timing info for test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f (compile): 23:13:47.902130 => 23:13:47.920340
+[0m23:13:47.926156 [debug] [Thread-1 (]: Began executing node test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f
+[0m23:13:47.936769 [debug] [Thread-1 (]: Writing runtime sql for node "test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f"
+[0m23:13:47.941249 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f"
+[0m23:13:47.942816 [debug] [Thread-1 (]: On test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f: BEGIN
+[0m23:13:47.956316 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:13:47.963418 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:47.965491 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f"
+[0m23:13:47.967307 [debug] [Thread-1 (]: On test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f"} */
+select
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      
+
+-- Cria uma CTE (Common Table Expression) chamada 'validation' para armazenar os valores que não passam no teste de faixa
+WITH validation AS (
+    SELECT
+        preco AS value             -- Seleciona os valores da coluna especificada
+    FROM main."produtos"                           -- Seleciona a partir do modelo/tabela especificado
+    WHERE preco < 10  -- Condição: seleciona valores menores que o valor mínimo
+       OR preco > 5000  -- Condição: seleciona valores maiores que o valor máximo
+)
+
+-- Contabiliza os registros que falharam no teste (que estão fora do intervalo)
+SELECT COUNT(*) AS failures  -- Conta o número de falhas (valores fora do intervalo) na CTE 'validation'
+FROM validation              -- Realiza a contagem dos registros inválidos
+
+HAVING COUNT(*) > 0  -- O teste falha se houver pelo menos uma linha fora do intervalo
+
+
+      
+    ) dbt_internal_test
+[0m23:13:47.971482 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:47.976670 [debug] [Thread-1 (]: Timing info for test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f (execute): 23:13:47.929349 => 23:13:47.975686
+[0m23:13:47.979571 [debug] [Thread-1 (]: On test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f: ROLLBACK
+[0m23:13:47.983317 [debug] [Thread-1 (]: On test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f: Close
+[0m23:13:47.988507 [info ] [Thread-1 (]: 2 of 16 PASS accepted_range_produtos_preco__5000__10 ........................... [[32mPASS[0m in 0.10s]
+[0m23:13:47.991218 [debug] [Thread-1 (]: Finished running node test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f
+[0m23:13:47.993748 [debug] [Thread-1 (]: Began running node test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8
+[0m23:13:47.995841 [info ] [Thread-1 (]: 3 of 16 START test accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre  [RUN]
+[0m23:13:48.001556 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f, now test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8)
+[0m23:13:48.008619 [debug] [Thread-1 (]: Began compiling node test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8
+[0m23:13:48.047417 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8"
+[0m23:13:48.067773 [debug] [Thread-1 (]: Timing info for test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8 (compile): 23:13:48.010718 => 23:13:48.066903
+[0m23:13:48.073656 [debug] [Thread-1 (]: Began executing node test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8
+[0m23:13:48.082193 [debug] [Thread-1 (]: Writing runtime sql for node "test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8"
+[0m23:13:48.089127 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8"
+[0m23:13:48.091836 [debug] [Thread-1 (]: On test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8: BEGIN
+[0m23:13:48.093831 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:13:48.098210 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:48.100132 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8"
+[0m23:13:48.102637 [debug] [Thread-1 (]: On test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8"} */
+select
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        cidade as value_field,
+        count(*) as n_records
+
+    from main."clientes"
+    group by cidade
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Fortaleza','Rio de Janeiro','Porto Alegre'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m23:13:48.109430 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:48.113197 [debug] [Thread-1 (]: Timing info for test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8 (execute): 23:13:48.076187 => 23:13:48.112648
+[0m23:13:48.114323 [debug] [Thread-1 (]: On test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8: ROLLBACK
+[0m23:13:48.116429 [debug] [Thread-1 (]: On test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8: Close
+[0m23:13:48.119958 [info ] [Thread-1 (]: 3 of 16 PASS accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre  [[32mPASS[0m in 0.12s]
+[0m23:13:48.122723 [debug] [Thread-1 (]: Finished running node test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8
+[0m23:13:48.126070 [debug] [Thread-1 (]: Began running node test.lab8.not_null_clientes_cliente_id.b7ba10d4a1
+[0m23:13:48.132403 [info ] [Thread-1 (]: 4 of 16 START test not_null_clientes_cliente_id ................................ [RUN]
+[0m23:13:48.137200 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8, now test.lab8.not_null_clientes_cliente_id.b7ba10d4a1)
+[0m23:13:48.141619 [debug] [Thread-1 (]: Began compiling node test.lab8.not_null_clientes_cliente_id.b7ba10d4a1
+[0m23:13:48.171742 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.not_null_clientes_cliente_id.b7ba10d4a1"
+[0m23:13:48.188945 [debug] [Thread-1 (]: Timing info for test.lab8.not_null_clientes_cliente_id.b7ba10d4a1 (compile): 23:13:48.144598 => 23:13:48.187338
+[0m23:13:48.190802 [debug] [Thread-1 (]: Began executing node test.lab8.not_null_clientes_cliente_id.b7ba10d4a1
+[0m23:13:48.195383 [debug] [Thread-1 (]: Writing runtime sql for node "test.lab8.not_null_clientes_cliente_id.b7ba10d4a1"
+[0m23:13:48.199689 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.not_null_clientes_cliente_id.b7ba10d4a1"
+[0m23:13:48.202740 [debug] [Thread-1 (]: On test.lab8.not_null_clientes_cliente_id.b7ba10d4a1: BEGIN
+[0m23:13:48.204157 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:13:48.207189 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:48.208186 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.not_null_clientes_cliente_id.b7ba10d4a1"
+[0m23:13:48.209668 [debug] [Thread-1 (]: On test.lab8.not_null_clientes_cliente_id.b7ba10d4a1: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "test.lab8.not_null_clientes_cliente_id.b7ba10d4a1"} */
+select
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      
+    
+    
+
+
+
+select cliente_id
+from main."clientes"
+where cliente_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:13:48.211844 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:48.217650 [debug] [Thread-1 (]: Timing info for test.lab8.not_null_clientes_cliente_id.b7ba10d4a1 (execute): 23:13:48.191936 => 23:13:48.217241
+[0m23:13:48.218517 [debug] [Thread-1 (]: On test.lab8.not_null_clientes_cliente_id.b7ba10d4a1: ROLLBACK
+[0m23:13:48.219993 [debug] [Thread-1 (]: On test.lab8.not_null_clientes_cliente_id.b7ba10d4a1: Close
+[0m23:13:48.222881 [info ] [Thread-1 (]: 4 of 16 PASS not_null_clientes_cliente_id ...................................... [[32mPASS[0m in 0.09s]
+[0m23:13:48.224837 [debug] [Thread-1 (]: Finished running node test.lab8.not_null_clientes_cliente_id.b7ba10d4a1
+[0m23:13:48.226780 [debug] [Thread-1 (]: Began running node test.lab8.not_null_pedidos_pedido_id.5a7d3526b0
+[0m23:13:48.229302 [info ] [Thread-1 (]: 5 of 16 START test not_null_pedidos_pedido_id .................................. [RUN]
+[0m23:13:48.234587 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.not_null_clientes_cliente_id.b7ba10d4a1, now test.lab8.not_null_pedidos_pedido_id.5a7d3526b0)
+[0m23:13:48.236587 [debug] [Thread-1 (]: Began compiling node test.lab8.not_null_pedidos_pedido_id.5a7d3526b0
+[0m23:13:48.248625 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.not_null_pedidos_pedido_id.5a7d3526b0"
+[0m23:13:48.252063 [debug] [Thread-1 (]: Timing info for test.lab8.not_null_pedidos_pedido_id.5a7d3526b0 (compile): 23:13:48.237790 => 23:13:48.251331
+[0m23:13:48.253215 [debug] [Thread-1 (]: Began executing node test.lab8.not_null_pedidos_pedido_id.5a7d3526b0
+[0m23:13:48.265674 [debug] [Thread-1 (]: Writing runtime sql for node "test.lab8.not_null_pedidos_pedido_id.5a7d3526b0"
+[0m23:13:48.271517 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.not_null_pedidos_pedido_id.5a7d3526b0"
+[0m23:13:48.273085 [debug] [Thread-1 (]: On test.lab8.not_null_pedidos_pedido_id.5a7d3526b0: BEGIN
+[0m23:13:48.274464 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:13:48.285721 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:48.289243 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.not_null_pedidos_pedido_id.5a7d3526b0"
+[0m23:13:48.291602 [debug] [Thread-1 (]: On test.lab8.not_null_pedidos_pedido_id.5a7d3526b0: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "test.lab8.not_null_pedidos_pedido_id.5a7d3526b0"} */
+select
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      
+    
+    
+
+
+
+select pedido_id
+from main."pedidos"
+where pedido_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:13:48.298713 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:48.303341 [debug] [Thread-1 (]: Timing info for test.lab8.not_null_pedidos_pedido_id.5a7d3526b0 (execute): 23:13:48.254787 => 23:13:48.302849
+[0m23:13:48.304711 [debug] [Thread-1 (]: On test.lab8.not_null_pedidos_pedido_id.5a7d3526b0: ROLLBACK
+[0m23:13:48.306904 [debug] [Thread-1 (]: On test.lab8.not_null_pedidos_pedido_id.5a7d3526b0: Close
+[0m23:13:48.310040 [info ] [Thread-1 (]: 5 of 16 PASS not_null_pedidos_pedido_id ........................................ [[32mPASS[0m in 0.08s]
+[0m23:13:48.312102 [debug] [Thread-1 (]: Finished running node test.lab8.not_null_pedidos_pedido_id.5a7d3526b0
+[0m23:13:48.315192 [debug] [Thread-1 (]: Began running node test.lab8.not_null_produtos_preco.477260f76d
+[0m23:13:48.319113 [info ] [Thread-1 (]: 6 of 16 START test not_null_produtos_preco ..................................... [RUN]
+[0m23:13:48.324660 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.not_null_pedidos_pedido_id.5a7d3526b0, now test.lab8.not_null_produtos_preco.477260f76d)
+[0m23:13:48.329166 [debug] [Thread-1 (]: Began compiling node test.lab8.not_null_produtos_preco.477260f76d
+[0m23:13:48.346061 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.not_null_produtos_preco.477260f76d"
+[0m23:13:48.351439 [debug] [Thread-1 (]: Timing info for test.lab8.not_null_produtos_preco.477260f76d (compile): 23:13:48.333504 => 23:13:48.350311
+[0m23:13:48.352993 [debug] [Thread-1 (]: Began executing node test.lab8.not_null_produtos_preco.477260f76d
+[0m23:13:48.360026 [debug] [Thread-1 (]: Writing runtime sql for node "test.lab8.not_null_produtos_preco.477260f76d"
+[0m23:13:48.368773 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.not_null_produtos_preco.477260f76d"
+[0m23:13:48.370763 [debug] [Thread-1 (]: On test.lab8.not_null_produtos_preco.477260f76d: BEGIN
+[0m23:13:48.373423 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:13:48.378712 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:48.380242 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.not_null_produtos_preco.477260f76d"
+[0m23:13:48.383380 [debug] [Thread-1 (]: On test.lab8.not_null_produtos_preco.477260f76d: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "test.lab8.not_null_produtos_preco.477260f76d"} */
+select
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      
+    
+    
+
+
+
+select preco
+from main."produtos"
+where preco is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:13:48.388674 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:48.398067 [debug] [Thread-1 (]: Timing info for test.lab8.not_null_produtos_preco.477260f76d (execute): 23:13:48.354266 => 23:13:48.396684
+[0m23:13:48.401968 [debug] [Thread-1 (]: On test.lab8.not_null_produtos_preco.477260f76d: ROLLBACK
+[0m23:13:48.410936 [debug] [Thread-1 (]: On test.lab8.not_null_produtos_preco.477260f76d: Close
+[0m23:13:48.415789 [info ] [Thread-1 (]: 6 of 16 PASS not_null_produtos_preco ........................................... [[32mPASS[0m in 0.09s]
+[0m23:13:48.420445 [debug] [Thread-1 (]: Finished running node test.lab8.not_null_produtos_preco.477260f76d
+[0m23:13:48.423010 [debug] [Thread-1 (]: Began running node test.lab8.not_null_produtos_produto_id.8d489b0c02
+[0m23:13:48.425925 [info ] [Thread-1 (]: 7 of 16 START test not_null_produtos_produto_id ................................ [RUN]
+[0m23:13:48.431773 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.not_null_produtos_preco.477260f76d, now test.lab8.not_null_produtos_produto_id.8d489b0c02)
+[0m23:13:48.436655 [debug] [Thread-1 (]: Began compiling node test.lab8.not_null_produtos_produto_id.8d489b0c02
+[0m23:13:48.452621 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.not_null_produtos_produto_id.8d489b0c02"
+[0m23:13:48.459552 [debug] [Thread-1 (]: Timing info for test.lab8.not_null_produtos_produto_id.8d489b0c02 (compile): 23:13:48.438464 => 23:13:48.458364
+[0m23:13:48.462024 [debug] [Thread-1 (]: Began executing node test.lab8.not_null_produtos_produto_id.8d489b0c02
+[0m23:13:48.473845 [debug] [Thread-1 (]: Writing runtime sql for node "test.lab8.not_null_produtos_produto_id.8d489b0c02"
+[0m23:13:48.481273 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.not_null_produtos_produto_id.8d489b0c02"
+[0m23:13:48.484314 [debug] [Thread-1 (]: On test.lab8.not_null_produtos_produto_id.8d489b0c02: BEGIN
+[0m23:13:48.489752 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:13:48.497293 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:48.498493 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.not_null_produtos_produto_id.8d489b0c02"
+[0m23:13:48.500954 [debug] [Thread-1 (]: On test.lab8.not_null_produtos_produto_id.8d489b0c02: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "test.lab8.not_null_produtos_produto_id.8d489b0c02"} */
+select
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      
+    
+    
+
+
+
+select produto_id
+from main."produtos"
+where produto_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:13:48.507494 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:48.512070 [debug] [Thread-1 (]: Timing info for test.lab8.not_null_produtos_produto_id.8d489b0c02 (execute): 23:13:48.463225 => 23:13:48.511403
+[0m23:13:48.513681 [debug] [Thread-1 (]: On test.lab8.not_null_produtos_produto_id.8d489b0c02: ROLLBACK
+[0m23:13:48.516170 [debug] [Thread-1 (]: On test.lab8.not_null_produtos_produto_id.8d489b0c02: Close
+[0m23:13:48.521933 [info ] [Thread-1 (]: 7 of 16 PASS not_null_produtos_produto_id ...................................... [[32mPASS[0m in 0.09s]
+[0m23:13:48.524820 [debug] [Thread-1 (]: Finished running node test.lab8.not_null_produtos_produto_id.8d489b0c02
+[0m23:13:48.527490 [debug] [Thread-1 (]: Began running node test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd
+[0m23:13:48.531498 [info ] [Thread-1 (]: 8 of 16 START test relationships_pedidos_cliente_id__cliente_id__ref_clientes_ . [RUN]
+[0m23:13:48.537599 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.not_null_produtos_produto_id.8d489b0c02, now test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd)
+[0m23:13:48.541198 [debug] [Thread-1 (]: Began compiling node test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd
+[0m23:13:48.573674 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd"
+[0m23:13:48.588977 [debug] [Thread-1 (]: Timing info for test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd (compile): 23:13:48.546153 => 23:13:48.587548
+[0m23:13:48.590608 [debug] [Thread-1 (]: Began executing node test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd
+[0m23:13:48.595453 [debug] [Thread-1 (]: Writing runtime sql for node "test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd"
+[0m23:13:48.599600 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd"
+[0m23:13:48.601273 [debug] [Thread-1 (]: On test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd: BEGIN
+[0m23:13:48.603916 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:13:48.611241 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:48.614960 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd"
+[0m23:13:48.618836 [debug] [Thread-1 (]: On test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd"} */
+select
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      
+    
+    
+
+with child as (
+    select cliente_id as from_field
+    from main."pedidos"
+    where cliente_id is not null
+),
+
+parent as (
+    select cliente_id as to_field
+    from main."clientes"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:13:48.626916 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:48.634752 [debug] [Thread-1 (]: Timing info for test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd (execute): 23:13:48.591826 => 23:13:48.633260
+[0m23:13:48.637239 [debug] [Thread-1 (]: On test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd: ROLLBACK
+[0m23:13:48.639558 [debug] [Thread-1 (]: On test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd: Close
+[0m23:13:48.643853 [info ] [Thread-1 (]: 8 of 16 PASS relationships_pedidos_cliente_id__cliente_id__ref_clientes_ ....... [[32mPASS[0m in 0.11s]
+[0m23:13:48.646645 [debug] [Thread-1 (]: Finished running node test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd
+[0m23:13:48.649661 [debug] [Thread-1 (]: Began running node test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18
+[0m23:13:48.652603 [info ] [Thread-1 (]: 9 of 16 START test relationships_pedidos_produto_id__produto_id__ref_produtos_ . [RUN]
+[0m23:13:48.657594 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd, now test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18)
+[0m23:13:48.660294 [debug] [Thread-1 (]: Began compiling node test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18
+[0m23:13:48.677773 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18"
+[0m23:13:48.684235 [debug] [Thread-1 (]: Timing info for test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18 (compile): 23:13:48.661647 => 23:13:48.681357
+[0m23:13:48.688714 [debug] [Thread-1 (]: Began executing node test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18
+[0m23:13:48.700510 [debug] [Thread-1 (]: Writing runtime sql for node "test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18"
+[0m23:13:48.719253 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18"
+[0m23:13:48.721324 [debug] [Thread-1 (]: On test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18: BEGIN
+[0m23:13:48.723565 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:13:48.730249 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:48.733652 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18"
+[0m23:13:48.737155 [debug] [Thread-1 (]: On test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18"} */
+select
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      
+    
+    
+
+with child as (
+    select produto_id as from_field
+    from main."pedidos"
+    where produto_id is not null
+),
+
+parent as (
+    select produto_id as to_field
+    from main."produtos"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:13:48.741655 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:48.749253 [debug] [Thread-1 (]: Timing info for test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18 (execute): 23:13:48.690306 => 23:13:48.748687
+[0m23:13:48.750695 [debug] [Thread-1 (]: On test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18: ROLLBACK
+[0m23:13:48.752900 [debug] [Thread-1 (]: On test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18: Close
+[0m23:13:48.758116 [info ] [Thread-1 (]: 9 of 16 PASS relationships_pedidos_produto_id__produto_id__ref_produtos_ ....... [[32mPASS[0m in 0.10s]
+[0m23:13:48.761285 [debug] [Thread-1 (]: Finished running node test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18
+[0m23:13:48.764742 [debug] [Thread-1 (]: Began running node test.lab8.teste_customizado_01_quantidade
+[0m23:13:48.767543 [info ] [Thread-1 (]: 10 of 16 START test teste_customizado_01_quantidade ............................ [RUN]
+[0m23:13:48.772087 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18, now test.lab8.teste_customizado_01_quantidade)
+[0m23:13:48.776157 [debug] [Thread-1 (]: Began compiling node test.lab8.teste_customizado_01_quantidade
+[0m23:13:48.786757 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.teste_customizado_01_quantidade"
+[0m23:13:48.797145 [debug] [Thread-1 (]: Timing info for test.lab8.teste_customizado_01_quantidade (compile): 23:13:48.779398 => 23:13:48.796134
+[0m23:13:48.799586 [debug] [Thread-1 (]: Began executing node test.lab8.teste_customizado_01_quantidade
+[0m23:13:48.805961 [debug] [Thread-1 (]: Writing runtime sql for node "test.lab8.teste_customizado_01_quantidade"
+[0m23:13:48.821333 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.teste_customizado_01_quantidade"
+[0m23:13:48.822942 [debug] [Thread-1 (]: On test.lab8.teste_customizado_01_quantidade: BEGIN
+[0m23:13:48.825623 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:13:48.831264 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:48.833109 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.teste_customizado_01_quantidade"
+[0m23:13:48.836504 [debug] [Thread-1 (]: On test.lab8.teste_customizado_01_quantidade: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "test.lab8.teste_customizado_01_quantidade"} */
+select
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      -- Testa se há algum valor maior ou igual a 450 (não permitido de acordo com nossas regras de negócio, por exemplo)
+SELECT *
+FROM main."pedidos"
+WHERE quantidade < 1
+      
+    ) dbt_internal_test
+[0m23:13:48.841692 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:48.846315 [debug] [Thread-1 (]: Timing info for test.lab8.teste_customizado_01_quantidade (execute): 23:13:48.801186 => 23:13:48.845150
+[0m23:13:48.847994 [debug] [Thread-1 (]: On test.lab8.teste_customizado_01_quantidade: ROLLBACK
+[0m23:13:48.850067 [debug] [Thread-1 (]: On test.lab8.teste_customizado_01_quantidade: Close
+[0m23:13:48.853497 [info ] [Thread-1 (]: 10 of 16 PASS teste_customizado_01_quantidade .................................. [[32mPASS[0m in 0.08s]
+[0m23:13:48.855815 [debug] [Thread-1 (]: Finished running node test.lab8.teste_customizado_01_quantidade
+[0m23:13:48.857938 [debug] [Thread-1 (]: Began running node test.lab8.teste_customizado_02_preco
+[0m23:13:48.860963 [info ] [Thread-1 (]: 11 of 16 START test teste_customizado_02_preco ................................. [RUN]
+[0m23:13:48.866617 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.teste_customizado_01_quantidade, now test.lab8.teste_customizado_02_preco)
+[0m23:13:48.868727 [debug] [Thread-1 (]: Began compiling node test.lab8.teste_customizado_02_preco
+[0m23:13:48.877155 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.teste_customizado_02_preco"
+[0m23:13:48.881371 [debug] [Thread-1 (]: Timing info for test.lab8.teste_customizado_02_preco (compile): 23:13:48.870482 => 23:13:48.880405
+[0m23:13:48.888028 [debug] [Thread-1 (]: Began executing node test.lab8.teste_customizado_02_preco
+[0m23:13:48.895300 [debug] [Thread-1 (]: Writing runtime sql for node "test.lab8.teste_customizado_02_preco"
+[0m23:13:48.898504 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.teste_customizado_02_preco"
+[0m23:13:48.900428 [debug] [Thread-1 (]: On test.lab8.teste_customizado_02_preco: BEGIN
+[0m23:13:48.901970 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:13:48.907456 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:48.910435 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.teste_customizado_02_preco"
+[0m23:13:48.915265 [debug] [Thread-1 (]: On test.lab8.teste_customizado_02_preco: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "test.lab8.teste_customizado_02_preco"} */
+select
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      -- Testa se o preço está dentro de umm intervalo definido nas regras de negócio
+SELECT *
+FROM main."produtos"
+WHERE preco < 10 OR preco > 5000
+      
+    ) dbt_internal_test
+[0m23:13:48.919214 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:48.923001 [debug] [Thread-1 (]: Timing info for test.lab8.teste_customizado_02_preco (execute): 23:13:48.889958 => 23:13:48.922549
+[0m23:13:48.924005 [debug] [Thread-1 (]: On test.lab8.teste_customizado_02_preco: ROLLBACK
+[0m23:13:48.925992 [debug] [Thread-1 (]: On test.lab8.teste_customizado_02_preco: Close
+[0m23:13:48.930637 [info ] [Thread-1 (]: 11 of 16 PASS teste_customizado_02_preco ....................................... [[32mPASS[0m in 0.06s]
+[0m23:13:48.933568 [debug] [Thread-1 (]: Finished running node test.lab8.teste_customizado_02_preco
+[0m23:13:48.936192 [debug] [Thread-1 (]: Began running node test.lab8.teste_customizado_03_email
+[0m23:13:48.942306 [info ] [Thread-1 (]: 12 of 16 START test teste_customizado_03_email ................................. [RUN]
+[0m23:13:48.945674 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.teste_customizado_02_preco, now test.lab8.teste_customizado_03_email)
+[0m23:13:48.950287 [debug] [Thread-1 (]: Began compiling node test.lab8.teste_customizado_03_email
+[0m23:13:48.969332 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.teste_customizado_03_email"
+[0m23:13:48.975668 [debug] [Thread-1 (]: Timing info for test.lab8.teste_customizado_03_email (compile): 23:13:48.952355 => 23:13:48.973787
+[0m23:13:48.981189 [debug] [Thread-1 (]: Began executing node test.lab8.teste_customizado_03_email
+[0m23:13:48.997278 [debug] [Thread-1 (]: Writing runtime sql for node "test.lab8.teste_customizado_03_email"
+[0m23:13:49.009183 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.teste_customizado_03_email"
+[0m23:13:49.011142 [debug] [Thread-1 (]: On test.lab8.teste_customizado_03_email: BEGIN
+[0m23:13:49.013493 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:13:49.020015 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:49.021574 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.teste_customizado_03_email"
+[0m23:13:49.023940 [debug] [Thread-1 (]: On test.lab8.teste_customizado_03_email: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "test.lab8.teste_customizado_03_email"} */
+select
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      -- Testa se o campo de e-mail contém o caracter @
+SELECT *
+FROM main."clientes"
+WHERE email NOT LIKE '%@%'
+      
+    ) dbt_internal_test
+[0m23:13:49.026975 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:49.030807 [debug] [Thread-1 (]: Timing info for test.lab8.teste_customizado_03_email (execute): 23:13:48.987711 => 23:13:49.030387
+[0m23:13:49.031812 [debug] [Thread-1 (]: On test.lab8.teste_customizado_03_email: ROLLBACK
+[0m23:13:49.033788 [debug] [Thread-1 (]: On test.lab8.teste_customizado_03_email: Close
+[0m23:13:49.037197 [info ] [Thread-1 (]: 12 of 16 PASS teste_customizado_03_email ....................................... [[32mPASS[0m in 0.09s]
+[0m23:13:49.039937 [debug] [Thread-1 (]: Finished running node test.lab8.teste_customizado_03_email
+[0m23:13:49.042096 [debug] [Thread-1 (]: Began running node test.lab8.unique_clientes_cliente_id.aa3c741851
+[0m23:13:49.044537 [info ] [Thread-1 (]: 13 of 16 START test unique_clientes_cliente_id ................................. [RUN]
+[0m23:13:49.051194 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.teste_customizado_03_email, now test.lab8.unique_clientes_cliente_id.aa3c741851)
+[0m23:13:49.054241 [debug] [Thread-1 (]: Began compiling node test.lab8.unique_clientes_cliente_id.aa3c741851
+[0m23:13:49.083800 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.unique_clientes_cliente_id.aa3c741851"
+[0m23:13:49.088903 [debug] [Thread-1 (]: Timing info for test.lab8.unique_clientes_cliente_id.aa3c741851 (compile): 23:13:49.061234 => 23:13:49.088138
+[0m23:13:49.090806 [debug] [Thread-1 (]: Began executing node test.lab8.unique_clientes_cliente_id.aa3c741851
+[0m23:13:49.097961 [debug] [Thread-1 (]: Writing runtime sql for node "test.lab8.unique_clientes_cliente_id.aa3c741851"
+[0m23:13:49.102337 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.unique_clientes_cliente_id.aa3c741851"
+[0m23:13:49.106185 [debug] [Thread-1 (]: On test.lab8.unique_clientes_cliente_id.aa3c741851: BEGIN
+[0m23:13:49.108368 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:13:49.115689 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:49.117129 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.unique_clientes_cliente_id.aa3c741851"
+[0m23:13:49.119570 [debug] [Thread-1 (]: On test.lab8.unique_clientes_cliente_id.aa3c741851: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "test.lab8.unique_clientes_cliente_id.aa3c741851"} */
+select
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      
+    
+    
+
+select
+    cliente_id as unique_field,
+    count(*) as n_records
+
+from main."clientes"
+where cliente_id is not null
+group by cliente_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m23:13:49.123939 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:49.129848 [debug] [Thread-1 (]: Timing info for test.lab8.unique_clientes_cliente_id.aa3c741851 (execute): 23:13:49.092748 => 23:13:49.129172
+[0m23:13:49.131461 [debug] [Thread-1 (]: On test.lab8.unique_clientes_cliente_id.aa3c741851: ROLLBACK
+[0m23:13:49.134138 [debug] [Thread-1 (]: On test.lab8.unique_clientes_cliente_id.aa3c741851: Close
+[0m23:13:49.138141 [info ] [Thread-1 (]: 13 of 16 PASS unique_clientes_cliente_id ....................................... [[32mPASS[0m in 0.09s]
+[0m23:13:49.141141 [debug] [Thread-1 (]: Finished running node test.lab8.unique_clientes_cliente_id.aa3c741851
+[0m23:13:49.143441 [debug] [Thread-1 (]: Began running node test.lab8.unique_clientes_email.acff9a4e73
+[0m23:13:49.145894 [info ] [Thread-1 (]: 14 of 16 START test unique_clientes_email ...................................... [RUN]
+[0m23:13:49.151058 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.unique_clientes_cliente_id.aa3c741851, now test.lab8.unique_clientes_email.acff9a4e73)
+[0m23:13:49.154640 [debug] [Thread-1 (]: Began compiling node test.lab8.unique_clientes_email.acff9a4e73
+[0m23:13:49.170910 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.unique_clientes_email.acff9a4e73"
+[0m23:13:49.186922 [debug] [Thread-1 (]: Timing info for test.lab8.unique_clientes_email.acff9a4e73 (compile): 23:13:49.157087 => 23:13:49.185938
+[0m23:13:49.189271 [debug] [Thread-1 (]: Began executing node test.lab8.unique_clientes_email.acff9a4e73
+[0m23:13:49.205578 [debug] [Thread-1 (]: Writing runtime sql for node "test.lab8.unique_clientes_email.acff9a4e73"
+[0m23:13:49.209929 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.unique_clientes_email.acff9a4e73"
+[0m23:13:49.212608 [debug] [Thread-1 (]: On test.lab8.unique_clientes_email.acff9a4e73: BEGIN
+[0m23:13:49.214807 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:13:49.219780 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:49.221580 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.unique_clientes_email.acff9a4e73"
+[0m23:13:49.223542 [debug] [Thread-1 (]: On test.lab8.unique_clientes_email.acff9a4e73: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "test.lab8.unique_clientes_email.acff9a4e73"} */
+select
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      
+    
+    
+
+select
+    email as unique_field,
+    count(*) as n_records
+
+from main."clientes"
+where email is not null
+group by email
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m23:13:49.227167 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:49.231187 [debug] [Thread-1 (]: Timing info for test.lab8.unique_clientes_email.acff9a4e73 (execute): 23:13:49.191711 => 23:13:49.230634
+[0m23:13:49.232291 [debug] [Thread-1 (]: On test.lab8.unique_clientes_email.acff9a4e73: ROLLBACK
+[0m23:13:49.234407 [debug] [Thread-1 (]: On test.lab8.unique_clientes_email.acff9a4e73: Close
+[0m23:13:49.237807 [info ] [Thread-1 (]: 14 of 16 PASS unique_clientes_email ............................................ [[32mPASS[0m in 0.09s]
+[0m23:13:49.240473 [debug] [Thread-1 (]: Finished running node test.lab8.unique_clientes_email.acff9a4e73
+[0m23:13:49.243306 [debug] [Thread-1 (]: Began running node test.lab8.unique_pedidos_pedido_id.6dc453d846
+[0m23:13:49.246489 [info ] [Thread-1 (]: 15 of 16 START test unique_pedidos_pedido_id ................................... [RUN]
+[0m23:13:49.252166 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.unique_clientes_email.acff9a4e73, now test.lab8.unique_pedidos_pedido_id.6dc453d846)
+[0m23:13:49.254162 [debug] [Thread-1 (]: Began compiling node test.lab8.unique_pedidos_pedido_id.6dc453d846
+[0m23:13:49.275411 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.unique_pedidos_pedido_id.6dc453d846"
+[0m23:13:49.293412 [debug] [Thread-1 (]: Timing info for test.lab8.unique_pedidos_pedido_id.6dc453d846 (compile): 23:13:49.257904 => 23:13:49.292596
+[0m23:13:49.297148 [debug] [Thread-1 (]: Began executing node test.lab8.unique_pedidos_pedido_id.6dc453d846
+[0m23:13:49.306003 [debug] [Thread-1 (]: Writing runtime sql for node "test.lab8.unique_pedidos_pedido_id.6dc453d846"
+[0m23:13:49.309621 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.unique_pedidos_pedido_id.6dc453d846"
+[0m23:13:49.311883 [debug] [Thread-1 (]: On test.lab8.unique_pedidos_pedido_id.6dc453d846: BEGIN
+[0m23:13:49.313450 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:13:49.319478 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:49.322082 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.unique_pedidos_pedido_id.6dc453d846"
+[0m23:13:49.323705 [debug] [Thread-1 (]: On test.lab8.unique_pedidos_pedido_id.6dc453d846: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "test.lab8.unique_pedidos_pedido_id.6dc453d846"} */
+select
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      
+    
+    
+
+select
+    pedido_id as unique_field,
+    count(*) as n_records
+
+from main."pedidos"
+where pedido_id is not null
+group by pedido_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m23:13:49.326938 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:49.331168 [debug] [Thread-1 (]: Timing info for test.lab8.unique_pedidos_pedido_id.6dc453d846 (execute): 23:13:49.301605 => 23:13:49.330467
+[0m23:13:49.332491 [debug] [Thread-1 (]: On test.lab8.unique_pedidos_pedido_id.6dc453d846: ROLLBACK
+[0m23:13:49.334572 [debug] [Thread-1 (]: On test.lab8.unique_pedidos_pedido_id.6dc453d846: Close
+[0m23:13:49.340010 [info ] [Thread-1 (]: 15 of 16 PASS unique_pedidos_pedido_id ......................................... [[32mPASS[0m in 0.09s]
+[0m23:13:49.343098 [debug] [Thread-1 (]: Finished running node test.lab8.unique_pedidos_pedido_id.6dc453d846
+[0m23:13:49.346442 [debug] [Thread-1 (]: Began running node test.lab8.unique_produtos_produto_id.0f1d23ad1b
+[0m23:13:49.348467 [info ] [Thread-1 (]: 16 of 16 START test unique_produtos_produto_id ................................. [RUN]
+[0m23:13:49.354392 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.unique_pedidos_pedido_id.6dc453d846, now test.lab8.unique_produtos_produto_id.0f1d23ad1b)
+[0m23:13:49.357741 [debug] [Thread-1 (]: Began compiling node test.lab8.unique_produtos_produto_id.0f1d23ad1b
+[0m23:13:49.369721 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.unique_produtos_produto_id.0f1d23ad1b"
+[0m23:13:49.374738 [debug] [Thread-1 (]: Timing info for test.lab8.unique_produtos_produto_id.0f1d23ad1b (compile): 23:13:49.359161 => 23:13:49.373283
+[0m23:13:49.379178 [debug] [Thread-1 (]: Began executing node test.lab8.unique_produtos_produto_id.0f1d23ad1b
+[0m23:13:49.388688 [debug] [Thread-1 (]: Writing runtime sql for node "test.lab8.unique_produtos_produto_id.0f1d23ad1b"
+[0m23:13:49.391925 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.unique_produtos_produto_id.0f1d23ad1b"
+[0m23:13:49.393656 [debug] [Thread-1 (]: On test.lab8.unique_produtos_produto_id.0f1d23ad1b: BEGIN
+[0m23:13:49.395576 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:13:49.401309 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:49.405748 [debug] [Thread-1 (]: Using sqlite connection "test.lab8.unique_produtos_produto_id.0f1d23ad1b"
+[0m23:13:49.409285 [debug] [Thread-1 (]: On test.lab8.unique_produtos_produto_id.0f1d23ad1b: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "node_id": "test.lab8.unique_produtos_produto_id.0f1d23ad1b"} */
+select
+      count(*) as failures,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_warn,
+      case when count(*) != 0
+        then 'true' else 'false' end as should_error
+    from (
+      
+    
+    
+
+select
+    produto_id as unique_field,
+    count(*) as n_records
+
+from main."produtos"
+where produto_id is not null
+group by produto_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m23:13:49.412388 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m23:13:49.418049 [debug] [Thread-1 (]: Timing info for test.lab8.unique_produtos_produto_id.0f1d23ad1b (execute): 23:13:49.381531 => 23:13:49.416651
+[0m23:13:49.422478 [debug] [Thread-1 (]: On test.lab8.unique_produtos_produto_id.0f1d23ad1b: ROLLBACK
+[0m23:13:49.427224 [debug] [Thread-1 (]: On test.lab8.unique_produtos_produto_id.0f1d23ad1b: Close
+[0m23:13:49.431562 [info ] [Thread-1 (]: 16 of 16 PASS unique_produtos_produto_id ....................................... [[32mPASS[0m in 0.08s]
+[0m23:13:49.434969 [debug] [Thread-1 (]: Finished running node test.lab8.unique_produtos_produto_id.0f1d23ad1b
+[0m23:13:49.442460 [debug] [MainThread]: Using sqlite connection "master"
+[0m23:13:49.443554 [debug] [MainThread]: On master: BEGIN
+[0m23:13:49.445468 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:13:49.448711 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m23:13:49.449681 [debug] [MainThread]: On master: COMMIT
+[0m23:13:49.450917 [debug] [MainThread]: Using sqlite connection "master"
+[0m23:13:49.452211 [debug] [MainThread]: On master: COMMIT
+[0m23:13:49.454344 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m23:13:49.456144 [info ] [MainThread]: 
+[0m23:13:49.458623 [info ] [MainThread]: Running 1 on-run-end hook
+[0m23:13:49.464402 [debug] [MainThread]: Writing injected SQL for node "operation.lab8.lab8-on-run-end-0"
+[0m23:13:49.471165 [info ] [MainThread]: 1 of 1 START hook: lab8.on-run-end.0 ........................................... [RUN]
+[0m23:13:49.473471 [debug] [MainThread]: Using sqlite connection "master"
+[0m23:13:49.475256 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "connection_name": "master"} */
+VACUUM;
+[0m23:13:49.548114 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m23:13:49.553307 [info ] [MainThread]: 1 of 1 OK hook: lab8.on-run-end.0 .............................................. [[32mOK[0m in 0.08s]
+[0m23:13:49.555107 [info ] [MainThread]: 
+[0m23:13:49.559686 [debug] [MainThread]: On master: Close
+[0m23:13:49.568285 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:13:49.570779 [debug] [MainThread]: Connection 'test.lab8.unique_produtos_produto_id.0f1d23ad1b' was properly closed.
+[0m23:13:49.574168 [info ] [MainThread]: 
+[0m23:13:49.577653 [info ] [MainThread]: Finished running 16 tests, 1 hook in 0 hours 0 minutes and 1.93 seconds (1.93s).
+[0m23:13:49.592362 [debug] [MainThread]: Command end result
+[0m23:13:49.633466 [info ] [MainThread]: 
+[0m23:13:49.640483 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:13:49.653302 [info ] [MainThread]: 
+[0m23:13:49.657834 [info ] [MainThread]: Done. PASS=16 WARN=0 ERROR=0 SKIP=0 TOTAL=16
+[0m23:13:49.664715 [debug] [MainThread]: Command `dbt test` succeeded at 23:13:49.662179 after 2.36 seconds
+[0m23:13:49.667246 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa82e122110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa82e17ab90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa82e044790>]}
+[0m23:13:49.669741 [debug] [MainThread]: Flushing usage events
+[0m23:23:34.570569 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81bae7d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81c637290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81be6b4d0>]}
+
+
+============================== 23:23:34.587573 | cd9c4b54-b0ae-4dbd-a03c-2a03793e975b ==============================
+[0m23:23:34.587573 [info ] [MainThread]: Running with dbt=1.5.11
+[0m23:23:34.590265 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/dsa/lab8/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m23:23:34.822841 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cd9c4b54-b0ae-4dbd-a03c-2a03793e975b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81bae4910>]}
+[0m23:23:34.914402 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cd9c4b54-b0ae-4dbd-a03c-2a03793e975b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81b7f5010>]}
+[0m23:23:34.925166 [info ] [MainThread]: Registered adapter: sqlite=1.5.0
+[0m23:23:35.020511 [debug] [MainThread]: checksum: 007b492a958e08141e13011e4198bea48e7f359a98b57e51b7a963fca8fc83af, vars: {}, profile: , target: , version: 1.5.11
+[0m23:23:35.183250 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:23:35.184980 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:23:35.231892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'cd9c4b54-b0ae-4dbd-a03c-2a03793e975b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81b8b6010>]}
+[0m23:23:35.257390 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'cd9c4b54-b0ae-4dbd-a03c-2a03793e975b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81b6e3cd0>]}
+[0m23:23:35.259815 [info ] [MainThread]: Found 3 models, 16 tests, 0 snapshots, 0 analyses, 312 macros, 1 operation, 0 seed files, 0 sources, 0 exposures, 0 metrics, 0 groups
+[0m23:23:35.264734 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cd9c4b54-b0ae-4dbd-a03c-2a03793e975b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81e9c7850>]}
+[0m23:23:35.284413 [info ] [MainThread]: 
+[0m23:23:35.291473 [debug] [MainThread]: Acquiring new sqlite connection 'master'
+[0m23:23:35.306323 [debug] [ThreadPool]: Acquiring new sqlite connection 'list_lab8-dev.db_main'
+[0m23:23:35.442403 [debug] [ThreadPool]: Using sqlite connection "list_lab8-dev.db_main"
+[0m23:23:35.447559 [debug] [ThreadPool]: On list_lab8-dev.db_main: BEGIN
+[0m23:23:35.457324 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:23:35.465802 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m23:23:35.470792 [debug] [ThreadPool]: Using sqlite connection "list_lab8-dev.db_main"
+[0m23:23:35.473581 [debug] [ThreadPool]: On list_lab8-dev.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "connection_name": "list_lab8-dev.db_main"} */
+
+        pragma database_list
+    
+[0m23:23:35.475820 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m23:23:35.488443 [debug] [ThreadPool]: Using sqlite connection "list_lab8-dev.db_main"
+[0m23:23:35.489678 [debug] [ThreadPool]: On list_lab8-dev.db_main: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "connection_name": "list_lab8-dev.db_main"} */
+
+            SELECT
+                'lab8-dev.db' as database
+                ,name
+                ,'main' AS schema
+                ,type as data_type
+            FROM
+                main.sqlite_master
+            WHERE
+                name NOT LIKE 'sqlite_%'
+        
+[0m23:23:35.501508 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m23:23:35.519454 [debug] [ThreadPool]: On list_lab8-dev.db_main: ROLLBACK
+[0m23:23:35.522337 [debug] [ThreadPool]: On list_lab8-dev.db_main: Close
+[0m23:23:35.545904 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cd9c4b54-b0ae-4dbd-a03c-2a03793e975b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81e9c7850>]}
+[0m23:23:35.549708 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:23:35.553023 [info ] [MainThread]: 
+[0m23:23:35.612230 [debug] [Thread-1 (]: Began running node model.lab8.clientes
+[0m23:23:35.632684 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_lab8-dev.db_main, now model.lab8.clientes)
+[0m23:23:35.660507 [debug] [Thread-1 (]: Began compiling node model.lab8.clientes
+[0m23:23:35.728281 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab8.clientes"
+[0m23:23:35.757142 [debug] [Thread-1 (]: Timing info for model.lab8.clientes (compile): 23:23:35.668235 => 23:23:35.754866
+[0m23:23:35.763277 [debug] [Thread-1 (]: Began executing node model.lab8.clientes
+[0m23:23:35.771323 [debug] [Thread-1 (]: Timing info for model.lab8.clientes (execute): 23:23:35.770204 => 23:23:35.770271
+[0m23:23:35.792540 [debug] [Thread-1 (]: Finished running node model.lab8.clientes
+[0m23:23:35.802587 [debug] [Thread-1 (]: Began running node model.lab8.pedidos
+[0m23:23:35.816444 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.lab8.clientes, now model.lab8.pedidos)
+[0m23:23:35.824915 [debug] [Thread-1 (]: Began compiling node model.lab8.pedidos
+[0m23:23:35.847228 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab8.pedidos"
+[0m23:23:35.853178 [debug] [Thread-1 (]: Timing info for model.lab8.pedidos (compile): 23:23:35.828421 => 23:23:35.852243
+[0m23:23:35.861741 [debug] [Thread-1 (]: Began executing node model.lab8.pedidos
+[0m23:23:35.871430 [debug] [Thread-1 (]: Timing info for model.lab8.pedidos (execute): 23:23:35.864638 => 23:23:35.864943
+[0m23:23:35.879259 [debug] [Thread-1 (]: Finished running node model.lab8.pedidos
+[0m23:23:35.884878 [debug] [Thread-1 (]: Began running node model.lab8.produtos
+[0m23:23:35.894563 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.lab8.pedidos, now model.lab8.produtos)
+[0m23:23:35.902390 [debug] [Thread-1 (]: Began compiling node model.lab8.produtos
+[0m23:23:35.916236 [debug] [Thread-1 (]: Writing injected SQL for node "model.lab8.produtos"
+[0m23:23:35.921571 [debug] [Thread-1 (]: Timing info for model.lab8.produtos (compile): 23:23:35.905183 => 23:23:35.919608
+[0m23:23:35.925372 [debug] [Thread-1 (]: Began executing node model.lab8.produtos
+[0m23:23:35.928163 [debug] [Thread-1 (]: Timing info for model.lab8.produtos (execute): 23:23:35.927270 => 23:23:35.927312
+[0m23:23:35.932865 [debug] [Thread-1 (]: Finished running node model.lab8.produtos
+[0m23:23:35.934926 [debug] [Thread-1 (]: Began running node operation.lab8.lab8-on-run-end-0
+[0m23:23:35.939935 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.lab8.produtos, now operation.lab8.lab8-on-run-end-0)
+[0m23:23:35.942189 [debug] [Thread-1 (]: Began compiling node operation.lab8.lab8-on-run-end-0
+[0m23:23:35.950644 [debug] [Thread-1 (]: Writing injected SQL for node "operation.lab8.lab8-on-run-end-0"
+[0m23:23:35.972108 [debug] [Thread-1 (]: Timing info for operation.lab8.lab8-on-run-end-0 (compile): 23:23:35.943897 => 23:23:35.970692
+[0m23:23:35.981152 [debug] [Thread-1 (]: Began executing node operation.lab8.lab8-on-run-end-0
+[0m23:23:35.999261 [debug] [Thread-1 (]: Timing info for operation.lab8.lab8-on-run-end-0 (execute): 23:23:35.993933 => 23:23:35.993990
+[0m23:23:36.009025 [debug] [Thread-1 (]: Finished running node operation.lab8.lab8-on-run-end-0
+[0m23:23:36.011942 [debug] [Thread-1 (]: Began running node test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8
+[0m23:23:36.023112 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly operation.lab8.lab8-on-run-end-0, now test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8)
+[0m23:23:36.029604 [debug] [Thread-1 (]: Began compiling node test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8
+[0m23:23:36.107615 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8"
+[0m23:23:36.123629 [debug] [Thread-1 (]: Timing info for test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8 (compile): 23:23:36.034327 => 23:23:36.121671
+[0m23:23:36.127776 [debug] [Thread-1 (]: Began executing node test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8
+[0m23:23:36.131791 [debug] [Thread-1 (]: Timing info for test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8 (execute): 23:23:36.129616 => 23:23:36.129657
+[0m23:23:36.141542 [debug] [Thread-1 (]: Finished running node test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8
+[0m23:23:36.144417 [debug] [Thread-1 (]: Began running node test.lab8.not_null_clientes_cliente_id.b7ba10d4a1
+[0m23:23:36.153374 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.accepted_values_clientes_cidade__Fortaleza__Rio_de_Janeiro__Porto_Alegre.a34e4e9df8, now test.lab8.not_null_clientes_cliente_id.b7ba10d4a1)
+[0m23:23:36.162676 [debug] [Thread-1 (]: Began compiling node test.lab8.not_null_clientes_cliente_id.b7ba10d4a1
+[0m23:23:36.200918 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.not_null_clientes_cliente_id.b7ba10d4a1"
+[0m23:23:36.209891 [debug] [Thread-1 (]: Timing info for test.lab8.not_null_clientes_cliente_id.b7ba10d4a1 (compile): 23:23:36.165995 => 23:23:36.208450
+[0m23:23:36.213194 [debug] [Thread-1 (]: Began executing node test.lab8.not_null_clientes_cliente_id.b7ba10d4a1
+[0m23:23:36.217382 [debug] [Thread-1 (]: Timing info for test.lab8.not_null_clientes_cliente_id.b7ba10d4a1 (execute): 23:23:36.216019 => 23:23:36.216055
+[0m23:23:36.221688 [debug] [Thread-1 (]: Finished running node test.lab8.not_null_clientes_cliente_id.b7ba10d4a1
+[0m23:23:36.223730 [debug] [Thread-1 (]: Began running node test.lab8.teste_customizado_03_email
+[0m23:23:36.228167 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.not_null_clientes_cliente_id.b7ba10d4a1, now test.lab8.teste_customizado_03_email)
+[0m23:23:36.231306 [debug] [Thread-1 (]: Began compiling node test.lab8.teste_customizado_03_email
+[0m23:23:36.248932 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.teste_customizado_03_email"
+[0m23:23:36.261244 [debug] [Thread-1 (]: Timing info for test.lab8.teste_customizado_03_email (compile): 23:23:36.237073 => 23:23:36.259899
+[0m23:23:36.263791 [debug] [Thread-1 (]: Began executing node test.lab8.teste_customizado_03_email
+[0m23:23:36.271307 [debug] [Thread-1 (]: Timing info for test.lab8.teste_customizado_03_email (execute): 23:23:36.270074 => 23:23:36.270117
+[0m23:23:36.282576 [debug] [Thread-1 (]: Finished running node test.lab8.teste_customizado_03_email
+[0m23:23:36.286127 [debug] [Thread-1 (]: Began running node test.lab8.unique_clientes_cliente_id.aa3c741851
+[0m23:23:36.292128 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.teste_customizado_03_email, now test.lab8.unique_clientes_cliente_id.aa3c741851)
+[0m23:23:36.297879 [debug] [Thread-1 (]: Began compiling node test.lab8.unique_clientes_cliente_id.aa3c741851
+[0m23:23:36.319470 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.unique_clientes_cliente_id.aa3c741851"
+[0m23:23:36.326536 [debug] [Thread-1 (]: Timing info for test.lab8.unique_clientes_cliente_id.aa3c741851 (compile): 23:23:36.300557 => 23:23:36.324687
+[0m23:23:36.329169 [debug] [Thread-1 (]: Began executing node test.lab8.unique_clientes_cliente_id.aa3c741851
+[0m23:23:36.332158 [debug] [Thread-1 (]: Timing info for test.lab8.unique_clientes_cliente_id.aa3c741851 (execute): 23:23:36.331150 => 23:23:36.331212
+[0m23:23:36.337974 [debug] [Thread-1 (]: Finished running node test.lab8.unique_clientes_cliente_id.aa3c741851
+[0m23:23:36.341909 [debug] [Thread-1 (]: Began running node test.lab8.unique_clientes_email.acff9a4e73
+[0m23:23:36.345663 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.unique_clientes_cliente_id.aa3c741851, now test.lab8.unique_clientes_email.acff9a4e73)
+[0m23:23:36.352271 [debug] [Thread-1 (]: Began compiling node test.lab8.unique_clientes_email.acff9a4e73
+[0m23:23:36.367412 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.unique_clientes_email.acff9a4e73"
+[0m23:23:36.377821 [debug] [Thread-1 (]: Timing info for test.lab8.unique_clientes_email.acff9a4e73 (compile): 23:23:36.353810 => 23:23:36.376852
+[0m23:23:36.379925 [debug] [Thread-1 (]: Began executing node test.lab8.unique_clientes_email.acff9a4e73
+[0m23:23:36.382570 [debug] [Thread-1 (]: Timing info for test.lab8.unique_clientes_email.acff9a4e73 (execute): 23:23:36.381757 => 23:23:36.381784
+[0m23:23:36.387588 [debug] [Thread-1 (]: Finished running node test.lab8.unique_clientes_email.acff9a4e73
+[0m23:23:36.392015 [debug] [Thread-1 (]: Began running node test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017
+[0m23:23:36.398277 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.unique_clientes_email.acff9a4e73, now test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017)
+[0m23:23:36.402081 [debug] [Thread-1 (]: Began compiling node test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017
+[0m23:23:36.432958 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017"
+[0m23:23:36.444473 [debug] [Thread-1 (]: Timing info for test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017 (compile): 23:23:36.406792 => 23:23:36.441488
+[0m23:23:36.446987 [debug] [Thread-1 (]: Began executing node test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017
+[0m23:23:36.453747 [debug] [Thread-1 (]: Timing info for test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017 (execute): 23:23:36.452539 => 23:23:36.452578
+[0m23:23:36.473024 [debug] [Thread-1 (]: Finished running node test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017
+[0m23:23:36.483982 [debug] [Thread-1 (]: Began running node test.lab8.not_null_pedidos_pedido_id.5a7d3526b0
+[0m23:23:36.489310 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.accepted_range_pedidos_quantidade__1000__0.e510bc0017, now test.lab8.not_null_pedidos_pedido_id.5a7d3526b0)
+[0m23:23:36.496602 [debug] [Thread-1 (]: Began compiling node test.lab8.not_null_pedidos_pedido_id.5a7d3526b0
+[0m23:23:36.568941 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.not_null_pedidos_pedido_id.5a7d3526b0"
+[0m23:23:36.590464 [debug] [Thread-1 (]: Timing info for test.lab8.not_null_pedidos_pedido_id.5a7d3526b0 (compile): 23:23:36.506226 => 23:23:36.583775
+[0m23:23:36.597554 [debug] [Thread-1 (]: Began executing node test.lab8.not_null_pedidos_pedido_id.5a7d3526b0
+[0m23:23:36.617808 [debug] [Thread-1 (]: Timing info for test.lab8.not_null_pedidos_pedido_id.5a7d3526b0 (execute): 23:23:36.613682 => 23:23:36.613757
+[0m23:23:36.631440 [debug] [Thread-1 (]: Finished running node test.lab8.not_null_pedidos_pedido_id.5a7d3526b0
+[0m23:23:36.639148 [debug] [Thread-1 (]: Began running node test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd
+[0m23:23:36.643856 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.not_null_pedidos_pedido_id.5a7d3526b0, now test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd)
+[0m23:23:36.646228 [debug] [Thread-1 (]: Began compiling node test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd
+[0m23:23:36.699619 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd"
+[0m23:23:36.705871 [debug] [Thread-1 (]: Timing info for test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd (compile): 23:23:36.657405 => 23:23:36.704392
+[0m23:23:36.709843 [debug] [Thread-1 (]: Began executing node test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd
+[0m23:23:36.713472 [debug] [Thread-1 (]: Timing info for test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd (execute): 23:23:36.711955 => 23:23:36.711990
+[0m23:23:36.720442 [debug] [Thread-1 (]: Finished running node test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd
+[0m23:23:36.724926 [debug] [Thread-1 (]: Began running node test.lab8.teste_customizado_01_quantidade
+[0m23:23:36.730402 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.relationships_pedidos_cliente_id__cliente_id__ref_clientes_.1d49a5b6bd, now test.lab8.teste_customizado_01_quantidade)
+[0m23:23:36.732774 [debug] [Thread-1 (]: Began compiling node test.lab8.teste_customizado_01_quantidade
+[0m23:23:36.743626 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.teste_customizado_01_quantidade"
+[0m23:23:36.749783 [debug] [Thread-1 (]: Timing info for test.lab8.teste_customizado_01_quantidade (compile): 23:23:36.735825 => 23:23:36.748763
+[0m23:23:36.758558 [debug] [Thread-1 (]: Began executing node test.lab8.teste_customizado_01_quantidade
+[0m23:23:36.762122 [debug] [Thread-1 (]: Timing info for test.lab8.teste_customizado_01_quantidade (execute): 23:23:36.760652 => 23:23:36.760685
+[0m23:23:36.787495 [debug] [Thread-1 (]: Finished running node test.lab8.teste_customizado_01_quantidade
+[0m23:23:36.803224 [debug] [Thread-1 (]: Began running node test.lab8.unique_pedidos_pedido_id.6dc453d846
+[0m23:23:36.821022 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.teste_customizado_01_quantidade, now test.lab8.unique_pedidos_pedido_id.6dc453d846)
+[0m23:23:36.829223 [debug] [Thread-1 (]: Began compiling node test.lab8.unique_pedidos_pedido_id.6dc453d846
+[0m23:23:36.860581 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.unique_pedidos_pedido_id.6dc453d846"
+[0m23:23:36.871172 [debug] [Thread-1 (]: Timing info for test.lab8.unique_pedidos_pedido_id.6dc453d846 (compile): 23:23:36.839216 => 23:23:36.868821
+[0m23:23:36.873434 [debug] [Thread-1 (]: Began executing node test.lab8.unique_pedidos_pedido_id.6dc453d846
+[0m23:23:36.883470 [debug] [Thread-1 (]: Timing info for test.lab8.unique_pedidos_pedido_id.6dc453d846 (execute): 23:23:36.879227 => 23:23:36.879308
+[0m23:23:36.890478 [debug] [Thread-1 (]: Finished running node test.lab8.unique_pedidos_pedido_id.6dc453d846
+[0m23:23:36.895157 [debug] [Thread-1 (]: Began running node test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f
+[0m23:23:36.909052 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.unique_pedidos_pedido_id.6dc453d846, now test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f)
+[0m23:23:36.911975 [debug] [Thread-1 (]: Began compiling node test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f
+[0m23:23:36.931529 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f"
+[0m23:23:36.942212 [debug] [Thread-1 (]: Timing info for test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f (compile): 23:23:36.913484 => 23:23:36.940104
+[0m23:23:36.944544 [debug] [Thread-1 (]: Began executing node test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f
+[0m23:23:36.947064 [debug] [Thread-1 (]: Timing info for test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f (execute): 23:23:36.946067 => 23:23:36.946096
+[0m23:23:36.961741 [debug] [Thread-1 (]: Finished running node test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f
+[0m23:23:36.967233 [debug] [Thread-1 (]: Began running node test.lab8.not_null_produtos_preco.477260f76d
+[0m23:23:36.971155 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.accepted_range_produtos_preco__5000__10.ec924f225f, now test.lab8.not_null_produtos_preco.477260f76d)
+[0m23:23:36.973056 [debug] [Thread-1 (]: Began compiling node test.lab8.not_null_produtos_preco.477260f76d
+[0m23:23:37.001599 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.not_null_produtos_preco.477260f76d"
+[0m23:23:37.011184 [debug] [Thread-1 (]: Timing info for test.lab8.not_null_produtos_preco.477260f76d (compile): 23:23:36.975922 => 23:23:37.010174
+[0m23:23:37.015295 [debug] [Thread-1 (]: Began executing node test.lab8.not_null_produtos_preco.477260f76d
+[0m23:23:37.020033 [debug] [Thread-1 (]: Timing info for test.lab8.not_null_produtos_preco.477260f76d (execute): 23:23:37.018989 => 23:23:37.019029
+[0m23:23:37.025021 [debug] [Thread-1 (]: Finished running node test.lab8.not_null_produtos_preco.477260f76d
+[0m23:23:37.030203 [debug] [Thread-1 (]: Began running node test.lab8.not_null_produtos_produto_id.8d489b0c02
+[0m23:23:37.035331 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.not_null_produtos_preco.477260f76d, now test.lab8.not_null_produtos_produto_id.8d489b0c02)
+[0m23:23:37.039741 [debug] [Thread-1 (]: Began compiling node test.lab8.not_null_produtos_produto_id.8d489b0c02
+[0m23:23:37.065316 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.not_null_produtos_produto_id.8d489b0c02"
+[0m23:23:37.077799 [debug] [Thread-1 (]: Timing info for test.lab8.not_null_produtos_produto_id.8d489b0c02 (compile): 23:23:37.045740 => 23:23:37.075619
+[0m23:23:37.081350 [debug] [Thread-1 (]: Began executing node test.lab8.not_null_produtos_produto_id.8d489b0c02
+[0m23:23:37.084930 [debug] [Thread-1 (]: Timing info for test.lab8.not_null_produtos_produto_id.8d489b0c02 (execute): 23:23:37.083737 => 23:23:37.083777
+[0m23:23:37.092053 [debug] [Thread-1 (]: Finished running node test.lab8.not_null_produtos_produto_id.8d489b0c02
+[0m23:23:37.097801 [debug] [Thread-1 (]: Began running node test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18
+[0m23:23:37.105217 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.not_null_produtos_produto_id.8d489b0c02, now test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18)
+[0m23:23:37.107948 [debug] [Thread-1 (]: Began compiling node test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18
+[0m23:23:37.131997 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18"
+[0m23:23:37.139624 [debug] [Thread-1 (]: Timing info for test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18 (compile): 23:23:37.109646 => 23:23:37.138567
+[0m23:23:37.144153 [debug] [Thread-1 (]: Began executing node test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18
+[0m23:23:37.147194 [debug] [Thread-1 (]: Timing info for test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18 (execute): 23:23:37.145921 => 23:23:37.145955
+[0m23:23:37.157105 [debug] [Thread-1 (]: Finished running node test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18
+[0m23:23:37.159756 [debug] [Thread-1 (]: Began running node test.lab8.teste_customizado_02_preco
+[0m23:23:37.163845 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.relationships_pedidos_produto_id__produto_id__ref_produtos_.2c2d49ef18, now test.lab8.teste_customizado_02_preco)
+[0m23:23:37.168297 [debug] [Thread-1 (]: Began compiling node test.lab8.teste_customizado_02_preco
+[0m23:23:37.184382 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.teste_customizado_02_preco"
+[0m23:23:37.193961 [debug] [Thread-1 (]: Timing info for test.lab8.teste_customizado_02_preco (compile): 23:23:37.170306 => 23:23:37.192394
+[0m23:23:37.198935 [debug] [Thread-1 (]: Began executing node test.lab8.teste_customizado_02_preco
+[0m23:23:37.201446 [debug] [Thread-1 (]: Timing info for test.lab8.teste_customizado_02_preco (execute): 23:23:37.200215 => 23:23:37.200245
+[0m23:23:37.206600 [debug] [Thread-1 (]: Finished running node test.lab8.teste_customizado_02_preco
+[0m23:23:37.212721 [debug] [Thread-1 (]: Began running node test.lab8.unique_produtos_produto_id.0f1d23ad1b
+[0m23:23:37.217243 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.lab8.teste_customizado_02_preco, now test.lab8.unique_produtos_produto_id.0f1d23ad1b)
+[0m23:23:37.222596 [debug] [Thread-1 (]: Began compiling node test.lab8.unique_produtos_produto_id.0f1d23ad1b
+[0m23:23:37.257051 [debug] [Thread-1 (]: Writing injected SQL for node "test.lab8.unique_produtos_produto_id.0f1d23ad1b"
+[0m23:23:37.266245 [debug] [Thread-1 (]: Timing info for test.lab8.unique_produtos_produto_id.0f1d23ad1b (compile): 23:23:37.227180 => 23:23:37.265260
+[0m23:23:37.269314 [debug] [Thread-1 (]: Began executing node test.lab8.unique_produtos_produto_id.0f1d23ad1b
+[0m23:23:37.275206 [debug] [Thread-1 (]: Timing info for test.lab8.unique_produtos_produto_id.0f1d23ad1b (execute): 23:23:37.273275 => 23:23:37.273307
+[0m23:23:37.279438 [debug] [Thread-1 (]: Finished running node test.lab8.unique_produtos_produto_id.0f1d23ad1b
+[0m23:23:37.287102 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:23:37.290690 [debug] [MainThread]: Connection 'test.lab8.unique_produtos_produto_id.0f1d23ad1b' was properly closed.
+[0m23:23:37.317220 [debug] [MainThread]: Command end result
+[0m23:23:37.493229 [debug] [MainThread]: Acquiring new sqlite connection 'generate_catalog'
+[0m23:23:37.496531 [info ] [MainThread]: Building catalog
+[0m23:23:37.502860 [debug] [ThreadPool]: Acquiring new sqlite connection 'lab8-dev.db.information_schema'
+[0m23:23:37.512167 [debug] [ThreadPool]: Using sqlite connection "lab8-dev.db.information_schema"
+[0m23:23:37.516308 [debug] [ThreadPool]: On lab8-dev.db.information_schema: BEGIN
+[0m23:23:37.545117 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:23:37.574854 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m23:23:37.579360 [debug] [ThreadPool]: Using sqlite connection "lab8-dev.db.information_schema"
+[0m23:23:37.595628 [debug] [ThreadPool]: On lab8-dev.db.information_schema: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "connection_name": "lab8-dev.db.information_schema"} */
+
+        pragma database_list
+    
+[0m23:23:37.600226 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m23:23:37.632098 [debug] [ThreadPool]: Using sqlite connection "lab8-dev.db.information_schema"
+[0m23:23:37.634824 [debug] [ThreadPool]: On lab8-dev.db.information_schema: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "connection_name": "lab8-dev.db.information_schema"} */
+
+            SELECT
+                'lab8-dev.db' as database
+                ,name
+                ,'main' AS schema
+                ,type as data_type
+            FROM
+                main.sqlite_master
+            WHERE
+                name NOT LIKE 'sqlite_%'
+        
+[0m23:23:37.649894 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m23:23:37.671296 [debug] [ThreadPool]: Using sqlite connection "lab8-dev.db.information_schema"
+[0m23:23:37.674431 [debug] [ThreadPool]: On lab8-dev.db.information_schema: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "connection_name": "lab8-dev.db.information_schema"} */
+pragma main.table_info(tb_clientes)
+[0m23:23:37.683414 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m23:23:37.696940 [debug] [ThreadPool]: Using sqlite connection "lab8-dev.db.information_schema"
+[0m23:23:37.704082 [debug] [ThreadPool]: On lab8-dev.db.information_schema: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "connection_name": "lab8-dev.db.information_schema"} */
+pragma main.table_info(tb_produtos)
+[0m23:23:37.729622 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m23:23:37.740204 [debug] [ThreadPool]: Using sqlite connection "lab8-dev.db.information_schema"
+[0m23:23:37.745229 [debug] [ThreadPool]: On lab8-dev.db.information_schema: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "connection_name": "lab8-dev.db.information_schema"} */
+pragma main.table_info(tb_pedidos)
+[0m23:23:37.749801 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m23:23:37.766936 [debug] [ThreadPool]: Using sqlite connection "lab8-dev.db.information_schema"
+[0m23:23:37.772987 [debug] [ThreadPool]: On lab8-dev.db.information_schema: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "connection_name": "lab8-dev.db.information_schema"} */
+pragma main.table_info(pedidos)
+[0m23:23:37.778544 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m23:23:37.789467 [debug] [ThreadPool]: Using sqlite connection "lab8-dev.db.information_schema"
+[0m23:23:37.792028 [debug] [ThreadPool]: On lab8-dev.db.information_schema: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "connection_name": "lab8-dev.db.information_schema"} */
+pragma main.table_info(clientes)
+[0m23:23:37.796804 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m23:23:37.804629 [debug] [ThreadPool]: Using sqlite connection "lab8-dev.db.information_schema"
+[0m23:23:37.807864 [debug] [ThreadPool]: On lab8-dev.db.information_schema: /* {"app": "dbt", "dbt_version": "1.5.11", "profile_name": "lab8", "target_name": "dev", "connection_name": "lab8-dev.db.information_schema"} */
+pragma main.table_info(produtos)
+[0m23:23:37.810514 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m23:23:37.846604 [debug] [ThreadPool]: On lab8-dev.db.information_schema: ROLLBACK
+[0m23:23:37.850750 [debug] [ThreadPool]: On lab8-dev.db.information_schema: Close
+[0m23:23:37.901226 [info ] [MainThread]: Catalog written to /dsa/lab8/target/catalog.json
+[0m23:23:37.906627 [debug] [MainThread]: Command `dbt docs generate` succeeded at 23:23:37.906117 after 3.38 seconds
+[0m23:23:37.910014 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m23:23:37.914637 [debug] [MainThread]: Connection 'lab8-dev.db.information_schema' was properly closed.
+[0m23:23:37.920900 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81fd652d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81fd64490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd81b897910>]}
+[0m23:23:37.931099 [debug] [MainThread]: Flushing usage events
+[0m23:23:57.900802 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcb5f2dce90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcb5f4e7a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcb5f410410>]}
+
+
+============================== 23:23:57.911665 | b6253c10-70c0-4261-ada3-0791bd02e0b3 ==============================
+[0m23:23:57.911665 [info ] [MainThread]: Running with dbt=1.5.11
+[0m23:23:57.917569 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/dsa/lab8/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m23:23:58.160658 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b6253c10-70c0-4261-ada3-0791bd02e0b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcb5f5e3410>]}
+[0m23:23:58.240057 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b6253c10-70c0-4261-ada3-0791bd02e0b3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcb5f2fc8d0>]}
