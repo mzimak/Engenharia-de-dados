@@ -1,0 +1,23 @@
+
+########################################################################
+Este é o link da documentação, procure ec2 e veja que o exemplo é similar ao curso da DSA.
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs
+https://developer.hashicorp.com/terraform/language/resources
+https://registry.terraform.io/browse/providers
+https://developer.hashicorp.com/terraform?product_intent=terraform
+###############################################################################
+
+https://www.terraform.io/
+
+https://developer.hashicorp.com/terraform/language/style#code-validation
+
+https://developer.hashicorp.com/terraform/tutorials/aws-get-started
+
+https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-build
+
+
+****https://developer.hashicorp.com/terraform/language/syntax/configuration
+
+https://github.com/hashicorp/terraform-provider-aws
+
+https://developer.hashicorp.com/terraform/tutorials?utm_source=tf_registry&utm_content=sidebar
