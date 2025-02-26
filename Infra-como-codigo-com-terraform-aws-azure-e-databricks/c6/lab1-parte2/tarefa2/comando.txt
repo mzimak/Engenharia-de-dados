@@ -1,5 +1,0 @@
-terraform init
-
-terraform apply -var-file="variaveis.tfvars"
-
-terraform destroy -var-file="variaveis.tfvars"
